@@ -1,0 +1,5 @@
+192.168.0.2 backup
+109.168.0.4 firewall
+109.168.0.5 backup grouptest
+192.168.1.7 serveursweb
+192.168.2.3 datacenter 

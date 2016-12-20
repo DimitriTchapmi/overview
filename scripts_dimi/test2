@@ -1,0 +1,83 @@
+#dmidecode3.0
+GettingSMBIOSdatafromsysfs.
+SMBIOS2.5present.
+10structuresoccupying449bytes.
+Tableat0x000E1000.
+
+Handle0x0000,DMItype0,20bytes
+BIOSInformation
+Vendor:innotekGmbH
+Version:VirtualBox
+ReleaseDate:12/01/2006
+Address:0xE0000
+RuntimeSize:128kB
+ROMSize:128kB
+Characteristics:
+	ISAissupported
+	PCIissupported
+	BootfromCDissupported
+	Selectablebootissupported
+	8042keyboardservicesaresupported(int9h)
+	CGA/monovideoservicesaresupported(int10h)
+	ACPIissupported
+
+Handle0x0001,DMItype1,27bytes
+SystemInformation
+Manufacturer:innotekGmbH
+ProductName:VirtualBox
+Version:1.2
+SerialNumber:0
+UUID:4DC4D1BB-6B65-420D-8CC8-58B64F5E2A30
+Wake-upType:PowerSwitch
+SKUNumber:NotSpecified
+Family:VirtualMachine
+
+Handle0x0008,DMItype2,15bytes
+BaseBoardInformation
+Manufacturer:OracleCorporation
+ProductName:VirtualBox
+Version:1.2
+SerialNumber:0
+AssetTag:NotSpecified
+Features:
+	Boardisahostingboard
+LocationInChassis:NotSpecified
+ChassisHandle:0x0003
+Type:Motherboard
+ContainedObjectHandles:0
+
+Handle0x0003,DMItype3,13bytes
+ChassisInformation
+Manufacturer:OracleCorporation
+Type:Other
+Lock:NotPresent
+Version:NotSpecified
+SerialNumber:NotSpecified
+AssetTag:NotSpecified
+Boot-upState:Safe
+PowerSupplyState:Safe
+ThermalState:Safe
+SecurityStatus:None
+
+Handle0x0007,DMItype126,42bytes
+Inactive
+
+Handle0x0005,DMItype126,15bytes
+Inactive
+
+Handle0x0006,DMItype126,28bytes
+Inactive
+
+Handle0x0002,DMItype11,7bytes
+OEMStrings
+String1:vboxVer_5.1.6
+String2:vboxRev_110634
+
+Handle0x0008,DMItype128,8bytes
+OEM-specificType
+HeaderandData:
+	80080800FD8C2700
+
+Handle0xFEFF,DMItype127,4bytes
+EndOfTable
+
