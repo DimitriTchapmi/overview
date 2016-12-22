@@ -1,0 +1,362 @@
+# Ce fichier viminfo a été généré par Vim 7.4.
+# Vous pouvez l'éditer, mais soyez prudent.
+
+# 'encoding' dans lequel ce fichier a été écrit
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Dernier motif de recherche  :
+~Msle0~/\<if\>
+
+# Historique ligne de commande (chronologie décroissante) :
+:q!
+:wq
+
+# Historique chaîne de recherche (chronologie décroissante) :
+? \<if\>
+
+# Historique expression (chronologie décroissante) :
+
+# Historique ligne de saisie (chronologie décroissante) :
+
+# Historique ligne de saisie (chronologie décroissante) :
+
+# Registres :
+""1	LINE	0
+	do	
+"2	LINE	0
+	while [ "" == "" ]
+"3	LINE	0
+	test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
+"4	LINE	0
+	        test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
+"5	LINE	0
+	        sudo echo " choix = $choix_pc"
+"6	LINE	0
+		sudo echo " choix = $choix_epse"
+"7	LINE	0
+	#sudo echo "***Erreur, La machine $ip_pc existe déjà chez <<$nom_epse>> "
+"8	LINE	0
+	#if grep -Fxq "$ip_pc" $chemin_epse/$nom_epse/inventaire/lien_pc_group.txt 
+"9	LINE	0
+	
+"-	CHAR	0
+	=
+
+# Marques dans le fichier :
+'0  1  0  ~/scripts_dimi/inventaire
+'1  1  0  ~/scripts_dimi/traitement_inv.sh
+'2  1  0  ~/scripts_dimi/suppr_pc.sh
+'3  5  0  ~/scripts_dimi/change_group_pc.sh
+'4  1  0  ~/scripts_dimi/suppr_grpe.sh
+'5  1  0  ~/scripts_dimi/change_group_pc.sh
+'6  38  1  ~/scripts_dimi/ihm_shell.sh
+'7  37  37  ~/scripts_dimi/ihm_shell.sh
+'8  30  67  ~/scripts_dimi/ihm_shell.sh
+'9  26  19  ~/scripts_dimi/ihm_shell.sh
+
+# Liste de sauts (le plus récent en premier) :
+-'  1  0  ~/scripts_dimi/inventaire
+-'  1  0  ~/scripts_dimi/traitement_inv.sh
+-'  1  0  ~/scripts_dimi/suppr_pc.sh
+-'  5  0  ~/scripts_dimi/change_group_pc.sh
+-'  1  0  ~/scripts_dimi/change_group_pc.sh
+-'  1  0  ~/scripts_dimi/suppr_grpe.sh
+-'  38  1  ~/scripts_dimi/ihm_shell.sh
+-'  1  0  ~/scripts_dimi/ihm_shell.sh
+-'  37  37  ~/scripts_dimi/ihm_shell.sh
+-'  30  67  ~/scripts_dimi/ihm_shell.sh
+-'  26  19  ~/scripts_dimi/ihm_shell.sh
+-'  33  16  ~/scripts_dimi/ihm_shell.sh
+-'  25  14  ~/scripts_dimi/ihm_shell.sh
+-'  27  8  ~/scripts_dimi/ihm_shell.sh
+-'  35  0  ~/scripts_dimi/ihm_shell.sh
+-'  11  27  ~/scripts_dimi/ihm_shell.sh
+-'  2  15  ~/scripts_dimi/ihm_shell.sh
+-'  19  31  ~/scripts_dimi/ihm_shell.sh
+-'  13  27  ~/scripts_dimi/ihm_shell.sh
+-'  9  39  ~/scripts_dimi/ihm_shell.sh
+-'  1  0  /var/projets/calltech/inventaire/lien_pc_group.txt
+-'  1  0  ~/scripts_dimi/init_arbre_pc.sh
+-'  7  1  /home/scripts/init_arbre_pc.sh
+-'  1  0  /home/scripts/init_arbre_pc.sh
+-'  1  0  /home/scripts/init_arbre_epse.sh
+-'  1  0  /home/scripts/ajout_pc_grpe.sh
+-'  1  0  /home/scripts/init_arbre.sh
+-'  1  0  /home/scripts/diff.txt
+-'  21  0  /home/scripts/inventaire
+-'  1  0  /home/scripts/inventaire
+-'  1  0  /home/scripts/suppr_pc.sh
+-'  2  0  /home/scripts/suppr_pc.sh
+-'  1  0  /home/scripts/traitement_inv.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  9  46  /home/scripts/suppr_pc.sh
+-'  8  11  /home/scripts/suppr_pc.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/traitement_inv.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  10  46  /home/scripts/suppr_pc.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/traitement_inv.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/traitement_inv.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/traitement_inv.sh
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  14  25  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/suppr_grpe.sh
+-'  1  0  /home/scripts/lien_pc_group.txt
+-'  1  0  /home/scripts/lien_pc_group.txt
+
+# Historique des marques dans les fichiers (les plus récentes en premier) :
+
+> ~/scripts_dimi/inventaire
+	"	1	0
+
+> ~/scripts_dimi/traitement_inv.sh
+	"	1	0
+
+> ~/scripts_dimi/ihm_shell.sh
+	"	45	91
+	^	45	92
+	.	45	91
+	+	32	4
+	+	27	17
+	+	3	11
+	+	27	69
+	+	30	51
+	+	31	13
+	+	32	36
+	+	23	0
+	+	22	0
+	+	34	0
+	+	32	0
+	+	35	5
+	+	36	38
+	+	27	10
+	+	27	9
+	+	27	0
+	+	28	8
+	+	30	0
+	+	30	8
+	+	32	1
+	+	30	0
+	+	32	64
+	+	27	0
+	+	4	6
+	+	28	18
+	+	35	11
+	+	4	4
+	+	32	5
+	+	28	12
+	+	32	1
+	+	28	13
+	+	32	5
+	+	4	4
+	+	32	16
+	+	28	17
+	+	32	67
+	+	37	11
+	+	64	0
+	+	37	45
+	+	38	0
+	+	38	0
+	+	37	12
+	+	38	33
+	+	35	18
+	+	36	9
+	+	36	0
+	+	37	0
+	+	38	0
+	+	36	0
+	+	36	1
+	+	39	18
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	22
+	+	7	12
+	+	8	0
+	+	7	13
+	+	39	37
+	+	40	0
+	+	39	36
+	+	40	2
+	+	41	28
+	+	41	37
+	+	44	44
+	+	45	23
+	+	58	2
+	+	55	1
+	+	63	3
+	+	49	1
+	+	55	0
+	+	54	0
+	+	50	0
+	+	51	8
+	+	52	8
+	+	53	8
+	+	49	11
+	+	4	13
+	+	49	11
+	+	5	7
+	+	49	15
+	+	51	43
+	+	52	14
+	+	53	32
+	+	52	14
+	+	53	14
+	+	55	0
+	+	55	1
+	+	55	0
+	+	55	90
+	+	55	60
+	+	59	1
+	+	59	1
+	+	59	1
+	+	60	14
+	+	56	50
+	+	53	27
+	+	45	0
+	+	55	0
+	+	45	91
+
+> ~/scripts_dimi/suppr_pc.sh
+	"	1	0
+
+> ~/scripts_dimi/change_group_pc.sh
+	"	5	0
+
+> ~/scripts_dimi/suppr_grpe.sh
+	"	1	0
+
+> ~/scripts_dimi/ajout_pc_grpe.sh
+	"	1	0
+
+> ~/scripts_dimi/init_arbre_epse.sh
+	"	1	0
+
+> /var/projets/calltech/inventaire/lien_pc_group.txt
+	"	1	0
+
+> ~/scripts_dimi/init_arbre_pc.sh
+	"	1	0
+
+> /home/scripts/init_arbre_pc.sh
+	"	7	1
+	.	7	0
+	+	7	56
+	+	7	60
+	+	10	0
+	+	7	0
+	+	7	3
+	+	7	62
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	1
+	+	7	74
+	+	9	0
+	+	8	1
+	+	7	8
+	+	7	0
+	+	7	0
+	+	8	1
+	+	8	0
+	+	7	0
+	+	15	0
+	+	7	0
+
+> /home/scripts/init_arbre_epse.sh
+	"	1	0
+	^	6	3
+	.	11	0
+	+	5	0
+	+	6	2
+	+	8	0
+	+	11	0
+
+> /home/scripts/ajout_pc_grpe.sh
+	"	1	0
+
+> /home/scripts/init_arbre.sh
+	"	1	0
+
+> /home/scripts/diff.txt
+	"	1	0
+
+> /home/scripts/inventaire
+	"	21	0
+
+> /home/scripts/suppr_pc.sh
+	"	1	0
+	^	1	11
+	.	1	11
+	+	1	11
+	+	6	14
+	+	8	114
+	+	8	0
+	+	9	0
+	+	8	18
+	+	6	0
+	+	1	11
+
+> /home/scripts/traitement_inv.sh
+	"	1	0
+
+> /home/scripts/suppr_grpe.sh
+	"	14	25
+
+> /home/scripts/lien_pc_group.txt
+	"	1	0
