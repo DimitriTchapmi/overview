@@ -1,6 +1,8 @@
 #!/bin/bash
 choix_epse="epse"
 choix_pc="pc"
+choix_dst="dst"
+test2=""
 test=""
 choix_action="0"
 nbr_ligne=1
@@ -36,3 +38,26 @@ sudo echo "1. Changer le groupe de la machine "
 sudo echo "2. Supprimer la machine "
 while [ "$choix_action" -ne 1 ] && [ "$choix_action" -ne 2 ]
 do
+	sudo echo "Entrez le choix : 1 ou 2"
+	read choix_action
+done
+#appel des scripts conernés pour les actions
+grpe_pc=`sudo cat $chemin_epse/$choix_epse/inventaire/lien_pc_group.txt | grep ^$choix_pc | cut -d " " -f 2`
+case "$choix_action" in
+
+1)
+	while [ "$test2" == "" ]
+	do
+        	sudo echo "Choisissez le groupe de destination : "
+        	read choix_dst
+        	test2=`sed -n /' '$choix_dst/p $chemin_epse/$choix_epse/inventaire/lien_pc_group.txt`
+	done
+	sudo bash change_group_pc.sh $choix_epse $choix_pc $grpe_pc $choix_dst
+	sudo echo "***Modification effectueé avec succès... "
+;;
+2)
+	sudo bash suppr_pc.sh $choix_epse $choix_pc $grpe_pc
+	sudo echo "***La machine a été supprimée... "
+;;
+
+esac
