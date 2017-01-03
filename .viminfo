@@ -10,11 +10,16 @@
 # Dernier motif de recherche  :
 ~Msle0~/\<if\>
 
+# Dernières chaînes de substitution :
+$
+
 # Historique ligne de commande (chronologie décroissante) :
 :q!
 :wq
+:s
 
 # Historique chaîne de recherche (chronologie décroissante) :
+? @$
 ? \<if\>
 
 # Historique expression (chronologie décroissante) :
@@ -24,41 +29,116 @@
 # Historique ligne de saisie (chronologie décroissante) :
 
 # Registres :
+"0	CHAR	0
+	i
 ""1	LINE	0
-	do	
-"2	LINE	0
-	while [ "" == "" ]
-"3	LINE	0
-	test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
-"4	LINE	0
-	        test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
-"5	LINE	0
-	        sudo echo " choix = $choix_pc"
-"6	LINE	0
-		sudo echo " choix = $choix_epse"
-"7	LINE	0
-	#sudo echo "***Erreur, La machine $ip_pc existe déjà chez <<$nom_epse>> "
-"8	LINE	0
-	#if grep -Fxq "$ip_pc" $chemin_epse/$nom_epse/inventaire/lien_pc_group.txt 
-"9	LINE	0
+	#!/bin/bash
 	
+	        cat /proc/cpuinfo > test
+	        dmidecode > test2
+	        lshw -C network > test3
+	        lshw -C cpu > test4
+	        df -h > test5
+	        lshw -C storage > test6
+	        sed -i "s/^[ \t]//g" test2
+	        sed -i "s/ //g" test2
+	        touch inventaire
+	        echo "BI0S information" > inventaire
+	        sed -n /'Vendor'/p test2 >> inventaire
+	        sed -n /'ReleaseDate'/p test2 >> inventaire
+	        sed -n '10p' test2 >> inventaire
+	        echo -e "\nsystem information" >> inventaire
+	        sed -n '22p' test2 >> inventaire
+	        sed -n /'ProductName'/p test2 >> inventaire
+	        sed -n '25p' test2 >> inventaire
+	        echo -e "\ninventaire information" >> inventaire
+	        sed -n /'cpu'/p test >> inventaire
+	        sed -n /'model'/p test >> inventaire
+	        sed -n /'flags'/p test >> inventaire
+	        sed -n /'width'/p test4 >> inventaire
+	        echo -e "\nmemory information" >> inventaire
+	        sed -n '88p' test2 >> inventaire
+	        sed -n '80p' test2 >> inventaire
+	        echo -e "\nnetwork information" >> inventaire
+	        net=`sed -n /'description'/= test3`
+	        net2=`sed -n /'product'/= test3 `
+	        net3=`sed -n /'vendor'/= test3`
+	        net4=`sed -n /'logical name'/= test3`
+	        net5=`sed -n /'serail'/= test3`
+	        tmp=`sed -n /'description'/p test3`
+	        cp=`echo $tmp|tr -d -c "\\:"| wc -c`
+	        #echo $cp
+	        #echo $net|awk '{print $2}'|cut -d: -f2
+	        if [ $cp -le 1 ]; then
+	        sed -n /'description'/p test3 >> inventaire
+	        sed -n /'product'/p test3 >> inventaire
+	        sed -n /'vendor'/p test3 >> inventaire
+	        sed -n /'logical name'/p test3 >> inventaire
+	        sed -n /'serial'/p test3 >> inventaire
+	        else
+	        for i in `seq 1 $cp`
+	        do
+	                desc=`echo $net|awk '{print $i}'|cut -d' ' -f$i`
+	                sed -n ''$desc'p' test3 >> inventaire
+	                prod=`echo $net2|awk '{print $i}'|cut -d' ' -f$i`
+	                sed -n ''$prod'p' test3 >> inventaire
+"2	LINE	0
+	sudo sed -i 's/^ *//' $chemin_epse/$nom_epse/inventaire/default/$ip_pc/$1 
+"3	LINE	0
+	sudo cp /home/transfert/nouveau/$1 $chemin_epse/$nom_epse/inventaire/default/$ip_pc/
+"4	LINE	0
+	do	
+"5	LINE	0
+	while [ "" == "" ]
+"6	LINE	0
+	test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
+"7	LINE	0
+	        test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
+"8	LINE	0
+	        sudo echo " choix = $choix_pc"
+"9	LINE	0
+		sudo echo " choix = $choix_epse"
 "-	CHAR	0
-	=
+	i
 
 # Marques dans le fichier :
-'0  1  0  ~/scripts_dimi/inventaire
-'1  1  0  ~/scripts_dimi/traitement_inv.sh
-'2  1  0  ~/scripts_dimi/suppr_pc.sh
-'3  5  0  ~/scripts_dimi/change_group_pc.sh
-'4  1  0  ~/scripts_dimi/suppr_grpe.sh
-'5  1  0  ~/scripts_dimi/change_group_pc.sh
-'6  38  1  ~/scripts_dimi/ihm_shell.sh
-'7  37  37  ~/scripts_dimi/ihm_shell.sh
-'8  30  67  ~/scripts_dimi/ihm_shell.sh
-'9  26  19  ~/scripts_dimi/ihm_shell.sh
+'0  134  63  ~/scripts/scripts_dimi/cmd_ps.txt
+'1  136  34  ~/scripts/scripts_dimi/script_ubuntu.sh
+'2  234  16  ~/scripts/scripts_dimi/script_ubuntu.sh
+'3  1  0  ~/scripts/scripts_dimi/script_ubuntu.sh
+'4  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'5  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
+'6  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
+'7  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
+'8  37  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
+'9  1  5  ~/scripts/scripts_dimi/calltech_192.168.10.2
 
 # Liste de sauts (le plus récent en premier) :
--'  1  0  ~/scripts_dimi/inventaire
+-'  134  63  ~/scripts/scripts_dimi/cmd_ps.txt
+-'  1  0  ~/scripts/scripts_dimi/cmd_ps.txt
+-'  136  34  ~/scripts/scripts_dimi/script_ubuntu.sh
+-'  1  0  ~/scripts/scripts_dimi/script_ubuntu.sh
+-'  234  16  ~/scripts/scripts_dimi/script_ubuntu.sh
+-'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
+-'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
+-'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
+-'  37  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
+-'  1  5  ~/scripts/scripts_dimi/calltech_192.168.10.2
+-'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_frequency.txt
+-'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_family.txt
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/productname.txt
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/serialnumber.txt
+-'  24  11  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  7  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  12  10  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  10  10  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  14  17  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  25  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
+-'  22  45  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  4  0  ~/scripts_dimi/traitement_inv.sh
 -'  1  0  ~/scripts_dimi/traitement_inv.sh
 -'  1  0  ~/scripts_dimi/suppr_pc.sh
 -'  5  0  ~/scripts_dimi/change_group_pc.sh
@@ -133,36 +213,168 @@
 -'  1  0  /home/scripts/lien_pc_group.txt
 -'  1  0  /home/scripts/lien_pc_group.txt
 -'  1  0  /home/scripts/traitement_inv.sh
--'  14  25  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  14  25  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/traitement_inv.sh
--'  14  25  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  14  25  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
 
 # Historique des marques dans les fichiers (les plus récentes en premier) :
 
-> ~/scripts_dimi/inventaire
+> ~/scripts/scripts_dimi/cmd_ps.txt
+	"	134	63
+	^	134	64
+	.	134	64
+	+	134	64
+
+> ~/scripts/scripts_dimi/script_ubuntu.sh
+	"	136	34
+	^	136	35
+	.	136	0
+	+	1	11
+	+	271	0
+	+	136	0
+
+> ~/scripts/scripts_dimi/traitement_inv.sh
+	"	1	0
+	^	41	11
+	.	41	10
+	+	7	14
+	+	10	117
+	+	11	17
+	+	7	1
+	+	12	34
+	+	14	34
+	+	16	34
+	+	16	34
+	+	18	34
+	+	18	34
+	+	16	117
+	+	18	131
+	+	20	34
+	+	20	132
+	+	22	166
+	+	22	130
+	+	23	8
+	+	20	34
+	+	22	34
+	+	24	33
+	+	24	128
+	+	24	38
+	+	24	130
+	+	24	0
+	+	10	20
+	+	12	25
+	+	14	25
+	+	16	24
+	+	18	9
+	+	20	9
+	+	22	9
+	+	24	17
+	+	22	17
+	+	20	17
+	+	18	17
+	+	16	17
+	+	7	6
+	+	7	71
+	+	10	10
+	+	7	0
+	+	7	0
+	+	12	10
+	+	8	16
+	+	7	0
+	+	14	10
+	+	16	10
+	+	18	10
+	+	20	10
+	+	22	10
+	+	24	11
+	+	26	20
+	+	26	108
+	+	26	21
+	+	28	116
+	+	28	120
+	+	28	0
+	+	30	0
+	+	33	0
+	+	30	20
+	+	30	111
+	+	28	32
+	+	30	25
+	+	29	9
+	+	30	111
+	+	32	20
+	+	32	111
+	+	32	30
+	+	33	11
+	+	34	20
+	+	34	21
+	+	35	9
+	+	34	111
+	+	34	111
+	+	35	20
+	+	36	20
+	+	36	105
+	+	36	21
+	+	38	20
+	+	38	107
+	+	38	21
+	+	40	20
+	+	40	117
+	+	40	21
+	+	41	10
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/ram_taille.txt
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
+	"	1	1
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
+	"	1	1
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
+	"	37	0
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	72	0
+
+> ~/scripts/scripts_dimi/calltech_192.168.10.2
+	"	1	5
+	^	1	6
+	.	3	0
+	+	25	0
+	+	3	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/cpu_frequency.txt
+	"	1	1
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/cpu_family.txt
+	"	1	1
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/productname.txt
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/serialnumber.txt
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/releasedate_bios.txt
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/marque_bios.txt
+	"	1	0
+
+> ~/scripts/scripts_dimi/init_arbre_pc.sh
 	"	1	0
 
 > ~/scripts_dimi/traitement_inv.sh
+	"	4	0
+
+> ~/sites/test
+	"	1	3
+	^	1	4
+	.	1	3
+	+	1	3
+
+> ~/scripts_dimi/inventaire
 	"	1	0
 
 > ~/scripts_dimi/ihm_shell.sh
