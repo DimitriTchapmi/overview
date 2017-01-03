@@ -2,7 +2,7 @@
 
 nom_epse=$1
 ip_pc=$2
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 
 ###création du dossier inventaire###
 sudo mkdir $chemin_epse/$nom_epse/inventaire/default/$ip_pc
