@@ -10,12 +10,12 @@
         vartotal=$memtotal/100
         varused=$memused/100
         result=$((100*($varused)/($vartotal)))
-        echo "Memoire utilisé:"$result"%" > supervision
+        echo "Memoire utilisé:"$result > supervision # en pourcentage
         cpuusr=`sed -n /'Cpu'/p cpu |awk '{print $2}'`
         cpusys=`sed -n /'Cpu'/p cpu |awk '{print $4}'`
         result=`echo $cpuusr + $cpusys|bc -l`
         aff=`echo "$result * 100" |bc -l`
-        echo "Cpu utilisé:"$aff"%" >> supervision
+        echo "Cpu utilisé:"$aff >> supervision # en pourcentage
         disksize=`sed -n /'^\/dev'/p disk |awk '{print $2}'`
         diskuse=`sed -n /'^\/dev'/p disk |awk '{print $5}'`
         echo "Taille disque:"$disksize >> supervision
@@ -24,5 +24,5 @@
         debsor=`sed -n /'tx'/p network |awk '{print $2}'`
         #result1=`echo "$debent / 100" |bc -l`
         #result2=`echo "$debsor / 100" |bc -l`
-        echo "Débit entrant:"$debent "kbit/s" >> supervision
-        echo "Débit sortant:"$debsor "kbit/s" >> supervision
+        echo "Débit entrant:"$debent >> supervision # en kb/s
+        echo "Débit sortant:"$debsor >> supervision # en kb/s
