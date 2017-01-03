@@ -2,7 +2,7 @@
 
 nom_epse=$1
 
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 
 ###création du dossier inventaire###
 sudo mkdir -p $chemin_epse/$nom_epse/inventaire/default/
