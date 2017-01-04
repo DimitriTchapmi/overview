@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Dernier motif de recherche  :
-~Msle0~/\<if\>
+~MSle0~/ip
 
 # Dernières chaînes de substitution :
 $
@@ -19,6 +19,7 @@ $
 :s
 
 # Historique chaîne de recherche (chronologie décroissante) :
+?/ip
 ? @$
 ? \<if\>
 
@@ -102,30 +103,46 @@ $
 	i
 
 # Marques dans le fichier :
-'0  134  63  ~/scripts/scripts_dimi/cmd_ps.txt
-'1  136  34  ~/scripts/scripts_dimi/script_ubuntu.sh
-'2  234  16  ~/scripts/scripts_dimi/script_ubuntu.sh
-'3  1  0  ~/scripts/scripts_dimi/script_ubuntu.sh
-'4  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'5  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
-'6  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
-'7  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
-'8  37  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
-'9  1  5  ~/scripts/scripts_dimi/calltech_192.168.10.2
+'0  29  0  ~/scripts/scripts_dimi/inventaire
+'1  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'2  16  57  ~/scripts/scripts_dimi/init_arbre_pc.sh
+'3  86  0  ~/.bashrc
+'4  118  0  ~/.bashrc
+'5  1  0  ~/.bashrc
+'6  42  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'7  1  0  /etc/init.d/cron
+'8  1  0  ~/scripts/scripts_dimi/change_group_pc.sh
+'9  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
 
 # Liste de sauts (le plus récent en premier) :
+-'  29  0  ~/scripts/scripts_dimi/inventaire
+-'  58  0  ~/scripts/scripts_dimi/inventaire
+-'  1  0  ~/scripts/scripts_dimi/inventaire
+-'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  16  57  ~/scripts/scripts_dimi/init_arbre_pc.sh
+-'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
+-'  86  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  118  0  ~/.bashrc
+-'  42  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  /etc/init.d/cron
+-'  1  0  ~/scripts/scripts_dimi/change_group_pc.sh
+-'  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
+-'  1  0  ~/scripts/scripts_dimi/calltech_192.168.10.2
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/releasedate_bios.txt
+-'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/ram_taille.txt
+-'  11  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
+-'  1  0  ~/scripts/scripts_dimi/vi
 -'  134  63  ~/scripts/scripts_dimi/cmd_ps.txt
 -'  1  0  ~/scripts/scripts_dimi/cmd_ps.txt
 -'  136  34  ~/scripts/scripts_dimi/script_ubuntu.sh
 -'  1  0  ~/scripts/scripts_dimi/script_ubuntu.sh
 -'  234  16  ~/scripts/scripts_dimi/script_ubuntu.sh
--'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
 -'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
 -'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
 -'  37  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
--'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
--'  1  5  ~/scripts/scripts_dimi/calltech_192.168.10.2
 -'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_frequency.txt
 -'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_family.txt
 -'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/productname.txt
@@ -136,7 +153,6 @@ $
 -'  10  10  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  14  17  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  25  0  ~/scripts/scripts_dimi/traitement_inv.sh
--'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
 -'  22  45  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  4  0  ~/scripts_dimi/traitement_inv.sh
 -'  1  0  ~/scripts_dimi/traitement_inv.sh
@@ -198,42 +214,28 @@ $
 -'  1  0  /home/scripts/lien_pc_group.txt
 -'  1  0  /home/scripts/lien_pc_group.txt
 -'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/traitement_inv.sh
--'  14  25  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  14  25  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/suppr_grpe.sh
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/lien_pc_group.txt
--'  1  0  /home/scripts/traitement_inv.sh
 
 # Historique des marques dans les fichiers (les plus récentes en premier) :
 
-> ~/scripts/scripts_dimi/cmd_ps.txt
-	"	134	63
-	^	134	64
-	.	134	64
-	+	134	64
-
-> ~/scripts/scripts_dimi/script_ubuntu.sh
-	"	136	34
-	^	136	35
-	.	136	0
-	+	1	11
-	+	271	0
-	+	136	0
+> ~/scripts/scripts_dimi/inventaire
+	"	29	0
+	^	35	32
+	.	34	0
+	+	34	19
+	+	39	22
+	+	37	26
+	+	38	0
+	+	37	26
+	+	38	16
+	+	39	21
+	+	34	27
+	+	35	33
+	+	34	0
 
 > ~/scripts/scripts_dimi/traitement_inv.sh
 	"	1	0
 	^	41	11
-	.	41	10
+	.	41	17
 	+	7	14
 	+	10	117
 	+	11	17
@@ -317,10 +319,65 @@ $
 	+	40	20
 	+	40	117
 	+	40	21
-	+	41	10
+	+	41	17
+
+> ~/scripts/scripts_dimi/init_arbre_pc.sh
+	"	16	57
+	^	16	58
+	.	17	0
+	+	16	58
+	+	17	0
+
+> ~/.bashrc
+	"	86	0
+	^	118	0
+	.	117	2
+	+	117	2
+
+> ~/scripts/scripts_dimi/script_ubuntu.sh
+	"	129	9
+	^	129	10
+	.	129	0
+	+	1	11
+	+	262	0
+	+	1	0
+	+	1	0
+	+	1	11
+	+	129	0
+
+> ~/scripts/scripts_dimi/calltech_192.168.10.2
+	"	1	7
+	^	1	6
+	.	3	0
+	+	25	0
+	+	3	0
+
+> /etc/init.d/cron
+	"	1	0
+
+> ~/scripts/scripts_dimi/change_group_pc.sh
+	"	1	0
+
+> ~/scripts/scripts_dimi/ajout_pc_grpe.sh
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
+	"	1	0
+
+> /var/projets/calltech/inventaire/default/192.168.10.2/releasedate_bios.txt
+	"	1	0
 
 > /var/projets/calltech/inventaire/default/192.168.10.2/ram_taille.txt
 	"	1	0
+
+> ~/scripts/scripts_dimi/vi
+	"	1	0
+
+> ~/scripts/scripts_dimi/cmd_ps.txt
+	"	134	63
+	^	134	64
+	.	134	64
+	+	134	64
 
 > /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
 	"	1	1
@@ -331,18 +388,8 @@ $
 > /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
 	"	1	1
 
-> /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
-	"	37	0
-
 > /usr/share/vim/vim74/doc/help.txt
 	"	72	0
-
-> ~/scripts/scripts_dimi/calltech_192.168.10.2
-	"	1	5
-	^	1	6
-	.	3	0
-	+	25	0
-	+	3	0
 
 > /var/projets/calltech/inventaire/default/192.168.10.2/cpu_frequency.txt
 	"	1	1
@@ -356,13 +403,7 @@ $
 > /var/projets/calltech/inventaire/default/192.168.10.2/serialnumber.txt
 	"	1	0
 
-> /var/projets/calltech/inventaire/default/192.168.10.2/releasedate_bios.txt
-	"	1	0
-
 > /var/projets/calltech/inventaire/default/192.168.10.2/marque_bios.txt
-	"	1	0
-
-> ~/scripts/scripts_dimi/init_arbre_pc.sh
 	"	1	0
 
 > ~/scripts_dimi/traitement_inv.sh

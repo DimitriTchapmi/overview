@@ -13,4 +13,4 @@ sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/graphes/heures
 sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/graphes/semaines
 sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/processus/
 sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/alertes/
-
+sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/bases/

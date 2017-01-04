@@ -28,7 +28,7 @@
         cpu4=`sed -n /'width'/= test4`
         tmp=`sed -n /'model name'/p test`
         cp=`echo $tmp|tr -d -c "\\:"| wc -c`
-        echo $cp
+        #echo $cp
         if [ $cp -le 1 ]; then
         sed -n /'cpu'/p test >> inventaire
         sed -n /'model'/p test >> inventaire
@@ -91,25 +91,21 @@
         done
         fi
         echo -e "\nStorage information" >> inventaire
-        stk=`sed -n /'description'/= test6`
-        stk2=`sed -n /'product'/= test6`
-        stk3=`sed -n /'vendor'/= test6`
-        tmp=`sed -n /'description'/p test6`
-        cp=`echo $tmp|tr -d -c "\\:"| wc -c`
-        #echo $cp
+        stk=`sed -n /'disk'/p test5 |awk ' {print $1}'`
+        stk2=`sed -n /'disk'/p test5 |awk '{print $4}'`
+        cp=`echo $stk | wc -w`
+        echo $cp
         if [ $cp -le 1 ]; then
-        sed -n /'description'/p test6 >> inventaire
-        sed -n /'product'/p test6 >> inventaire
-        sed -n /'vendor'/p test6 >> inventaire
+        echo "       Disque:/dev/"$stk >> inventaire
+        echo "       Taille disque:"$stk2 >> inventaire
+        echo -e "\n" >> inventaire
         else
         for i in `seq 1 $cp`
         do
-                desc=`echo $stk|awk '{print $i}'|cut -d' ' -f$i`
-                sed -n ''$desc'p' test6 >> inventaire
-                prod=`echo $stk2|awk '{print $i}'|cut -d' ' -f$i`
-                sed -n ''$prod'p' test6 >> inventaire
-                fab=`echo $stk3|awk '{print $i}'|cut -d' ' -f$i`
-                sed -n ''$fab'p' test6 >> inventaire
+                disk=`echo $stk|awk '{print $i}'|cut -d' ' -f$i`
+                echo "       Disque:/dev/"$disk  >> inventaire
+                disk1=`echo $stk|awk '{print $i}'|cut -d' ' -f$i`
+                echo "       Taille disque:"$disk1 >> inventaire
                 echo -e "\n" >> inventaire
         done
         fi
@@ -118,19 +114,16 @@
         #echo $val
         val2=`sed -n /'part'/p test5 |awk '{print $4}'`
         if [ $cp -le 1 ]; then
-        echo "       partition:/dev/"$val >> inventaire
-        echo "       taille partition:"$val2 >> inventaire
+        echo "       Partition:/dev/"$val >> inventaire
+        echo "       Taille partition:"$val2 >> inventaire
         else
         for i in `seq 1 $cp`
         do
                 part=`echo $val|awk '{print $i}'|cut -d' ' -f$i`
-                echo "       partition:/dev/"$part  >>inventaire
+                echo "       Partition:/dev/"$part  >>inventaire
                 taille=`echo $val2|awk '{print $i}'|cut -d' ' -f$i`
-                echo "       taille partition:"$taille  >>inventaire
+                echo "       Taille partition:"$taille  >>inventaire
                 echo -e "\n" >> inventaire
 
         done
         fi
-        #rm test test2 test3 test4 test5 test6
-        #sed -i "s/^ //g" inventaire
-        #sed 's/.*/\L&/' inventaire

@@ -1,12 +1,3 @@
-ll
-cd /home/dimitri/
-ls
-cd scripts_dimi/
-ls
-vi ihm_shell.sh
-chmod +x ihm_shell.sh 
-ll
-ls
 ls -la
 ./ihm_shell.sh 
 vi ihm_shell.sh
@@ -347,3 +338,163 @@ vi script_ubuntu.sh
 vi script_ubuntu.sh
 vi script_ubuntu.sh
 exit
+cd /home/dimitri/scripts/scripts_dimi/
+vi calltech_192.168.10.2 
+vi script_ubuntu.sh 
+sudo ./script_ubuntu.sh 
+ls la
+ls -la
+vi inventaire 
+vi script_ubuntu.sh 
+sudo ./script_ubuntu.sh 
+ls -la
+vi inventaire 
+vi inventaire 
+ls -la
+cd scripts/
+ls -la
+cd scripts_dimi/
+ls -la
+ps -auwx > cmd_ps.txt
+vi cmd_ps.txt 
+drwxr-xr-x 8 dimitri dimitri 4096 déc.  29 15:13 ..
+rm cmd_ps.txt 
+git pull
+ls -la
+cd ..
+ls
+cd ..
+cd ..
+ls
+cd scripts/
+ls
+cd ..
+cd dimitri/
+ls -la
+git pull
+git pull origin master
+ls -la
+cd ..
+ls
+cd dimitri/scripts/
+ls
+git status
+cd scripts_dimi/
+ls -la
+git status
+git commit -m "modif script traitement"
+cd ../..
+cd scripts/
+ls
+git status
+git commit -am "modif script traitement"
+git status
+git push origin master
+cd scripts_dimi/
+ls -la
+vi vi init_arbre.sh 
+vi init_arbre_pc.sh 
+ls -la /var/projets/calltech/inventaire/default/
+ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
+cd /var/projets/calltech/inventaire/default/192.168.10.2/
+vi ram_taille.txt 
+vi releasedate_bios.txt 
+vi calltech_192.168.10.2 
+cd /home/dimitri/scripts/scripts_dimi/
+ls -la
+vi traitement_inv.sh 
+vi calltech_192.168.10.2 
+cd /home/transfert/
+mkdir testgit
+cd testgit/
+git init
+git clone --bare git@github.com:DimitriTchapmi/overview.git
+ls -la
+cd overview.git/
+ls -la
+cd ..
+rm *
+rm -r overview.git/
+sudo rm overview.git/
+sudo rm -r overview.git/
+ls la
+ls -la
+git clone git@github.com:DimitriTchapmi/overview.git
+ls -la
+cd ..
+rm -r testgit/
+sudo rm -r testgit/
+cd /home/dimitri/scripts/scripts_dimi/
+ll
+ls
+vi init_arbre_pc.sh 
+vi change_group_pc.sh 
+vi ajout_pc_grpe.sh 
+vi change_group_pc.sh 
+vi /etc/init.d/cron 
+vi traitement_inv.sh 
+ls
+cd scripts/scripts_dimi/
+ls -la
+man ls | grep color
+ls -la --color
+ls -la 
+cd 
+pwd
+ls -la
+vi .bashrc
+vi .bashrc
+ls -la
+ls
+ls -la
+vi .bashrc
+sudo chown overview:overview .bashrc 
+ls -la
+chmod 644 .bashrc 
+sudo chmod 644 .bashrc 
+ls -la
+exit
+ls
+cd scripts/scripts_dimi/
+ls -la
+ls -la
+ls -la
+cd scripts/scripts_dimi/
+ls -la
+vi inventaire 
+grep vendor | wc -l inventaire 
+vi inventaire 
+tr ' ' '\n' < inventaire | grep -c vendor
+vi inventaire 
+tr ' ' '\n' < inventaire | grep -c ip
+tr ' ' '\n' < inventaire | grep -c ip:
+i$ tr ' ' '\n' < inventaire | grep -c vendor
+2
+awk '/vendor/{ print NR; exit }' inventaire 
+ls -la
+source .bashrc 
+ls -la
+cd scripts/scripts_dimi/
+ls -la
+cd scripts/scripts_dimi/
+ls -la
+cd 
+ls
+ls -la
+ll
+chown dimitri:dimitri .bashrc 
+sudo chown dimitri:dimitri .bashrc 
+ll
+ls -la
+source .bashrc 
+ls -la
+cd scripts/
+ls -la
+cd scripts_dimi/
+ls -la
+vi init_arbre_pc.sh 
+git pull
+vi traitement_inv.sh 
+rm .traitement_inv.sh.swp 
+vi traitement_inv.sh 
+vi inventaire 

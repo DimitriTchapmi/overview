@@ -1,15 +1,15 @@
 BI0S information
-Vendor:innotekGmbH
-ReleaseDate:12/01/2006
-Version:VirtualBox
+	Vendor: innotek GmbH
+	Release Date: 12/01/2006
+	Version: VirtualBox
 
-system information
-	ACPIissupported
-ProductName:VirtualBox
-ProductName:VirtualBox
-SystemInformation
+System information
+	Manufacturer: innotek GmbH
+	Product Name: VirtualBox
+	Product Name: VirtualBox
+	Serial Number: 0
 
-inventaire information
+Processor information
 cpu family	: 6
 cpu MHz		: 2591.996
 cpu cores	: 1
@@ -20,26 +20,39 @@ flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
        width: 64 bits
 
 memory information
+	Runtime Size: 128 kB
+	ROM Size: 128 kB
 
-
-network information
+Network information
        description: Ethernet interface
        product: 82540EM Gigabit Ethernet Controller
        vendor: Intel Corporation
        logical name: enp0s3
        serial: 08:00:27:55:b8:3a
-       driverversion=7.3.21-k8-NAPI
+       ip:10.8.110.203
 
-storage information
-       description: IDE interface
-       product: 82371AB/EB/MB PIIX4 IDE
+Network information
+       description: Wireless interface
+       product: 82540EM Gigabit wireless Controller
        vendor: Intel Corporation
+       logical name: enp0s2
+       serial: 07:00:27:55:b8:3b
+       ip:10.8.110.205
+
+Storage information
+       Disque:/dev/sda
+       Taille disque:10G
 
 
-       description: SATA controller
-       product: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
-       vendor: Intel Corporation
+       Partition:/dev/sda1
+       Taille partition:487M
 
 
-       partition:
-       taille partition:
+       Partition:/dev/sda2
+       Taille partition:1K
+
+
+       Partition:/dev/sda5
+       Taille partition:9,5G
+
+
