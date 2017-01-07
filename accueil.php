@@ -40,7 +40,8 @@ if(!isset($_GET["entreprise"])){
                     break;
                 case "inventaire":
                     exec("cat projets/".$_GET["entreprise"]."/inventaire/".$_GET["groupe"]."/".$_GET["machine"]."/ram_taille",$valeur);
-                    echo $valeur;
+                    echo "<table><tr>";
+                    echo"<td>Taille totale de la RAM</td><td>".$valeur[1]."</td></tr>";
                     
 
                     break;
