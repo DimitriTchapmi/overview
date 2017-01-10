@@ -1,213 +1,3 @@
-ls -la
-./ihm_shell.sh 
-vi ihm_shell.sh
-./ihm_shell.sh 
-./ihm_shell.sh 
-vi ajout_pc_grpe.sh 
-vi suppr_grpe.sh 
-./ihm_shell.sh 
-./ihm_shell.sh 
-nl -b ihm_shell.sh 
-ls | nl ihm_shell.sh 
-ls /var/projets/calltech/inventaire/
-vi traitement_inv.sh 
-exit
-ls
-cd scripts_dimi/
-ls
-vi init_arbre_epse.sh 
-ls | nl ../scripts_dimi/
-ls | nl init_arbre_epse.sh 
-man ls
-wc -l ../scripts_dimi/
-wc -l ihm_shell.sh 
-ls -d ../scripts_dimi/
-cd ..
-ls
-cd ..
-ls
-ls -d dimitri/
-cd dimitri/scripts_dimi/
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-exit
-cd scripts_dimi/
-./ihm_shell.sh 
-vi ihm_shell.sh 
-./ihm_shell.sh 
-vi ihm_shell.sh 
-./ihm_shell.sh 
-exit
-ls
-cd scripts_dimi/
-ls
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-cd scripts_dimi/
-./ihm_shell.sh 
-vi suppr_grpe.sh 
-vi suppr_pc.sh 
-vi ajout_pc_grpe.sh 
-ls
-vi traitement_inv.sh 
-./ihm_shell.sh 
-./ihm_shell.sh 
-cd scripts_dimi/
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-exit
-cd scripts_dimi/
-ls
-grep -Fxq 10.8.96.5 /var/projets/calltech/inventaire/lien_pc_group.txt 
-grep -Fxq 10.8.96 /var/projets/calltech/inventaire/lien_pc_group.txt 
-grep -Fxq 10.8 /var/projets/calltech/inventaire/lien_pc_group.txt 
-cat /var/projets/calltech/inventaire/lien_pc_group.txt
-grep -Fx 10.8. /var/projets/calltech/inventaire/lien_pc_group.txt 
-grep -Fx 10.8.96.5 /var/projets/calltech/inventaire/lien_pc_group.txt 
-grep 10.8.96.5 /var/projets/calltech/inventaire/lien_pc_group.txt 
-./ihm_shell.sh 
-grep -Fx 10.8.96.5 /var/projets/calltech/inventaire/lien_pc_group.txt 
-grep 10.8.96.5 /var/projets/calltech/inventaire/lien_pc_group.txt 
-sed /'10.8.96.5'/p var/projets/calltech/inventaire/lien_pc_group.txt
-sed /'10.8.96.5'/p /var/projets/calltech/inventaire/lien_pc_group.txt
-sed /'10.8.96.5'/ /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n /'10.8.96.5'/p /var/projets/calltech/inventaire/lien_pc_group.txt
-ls /var/projets/calltech/inventaire/lien_pc_group.txt
-cat /var/projets/calltech/inventaire/lien_pc_group.txt
-cat /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n /'10.8.96.5'/p /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n /'10.8.96.'/p /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n /'10.8.96.5 '/p /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n /'10.8.96. '/p /var/projets/calltech/inventaire/lien_pc_group.txt
-./ihm_shell.sh 
-./ihm_shell.sh 
-./ihm_shell.sh 
-grep  "10.8.96.5 " /var/projets/calltech/inventaire/lien_pc_group.txt 
-grep  "10.8.96. " /var/projets/calltech/inventaire/lien_pc_group.txt 
-exit
-/etc/init.d/networking restart
-ifconfig
-/etc/init.d/networking restart
-/etc/init.d/networking restart
-exit
-cp dimitri/scripts/scripts_dimi .
-cp dimitri/scripts/scripts_dimi/* scripts/ 
-sudo cp dimitri/scripts/scripts_dimi/* scripts/ 
-ls scripts/
-cd dimitri/
-ls
-d scripts/
-cd scripts/
-ls
-git status
-git pull
-cd ..
-ls -la
-git commit -m "restructuration"
-git push origin master
-ls -la
-exit
-cd scripts_dimi/
-vi ihm_shell.sh 
-vi ihm_shell.sh 
-vi inventaire 
-cd ..
-ls
-ls -la
-mkdir scripts
-mv scripts_dimi/ scripts
-ls
-rm test 
-ls
-ls -la
-mkdir sites
-ls -la
-git status
-ls -la
-git add .
-git status
-git add scripts
-git status
-cd sites/
-ls
-vi test 
-ls
-cd ..
-ls
-git status
-git add sites/
-git status
-ls ../dimitri/scripts/
-cp scripts/scripts_dimi/* ../dimitri/scripts/scripts_dimi/
-cd ..
-ls
-cd overview/
-ls
-cd..
-ls
-cd ..
-ls
-ls scripts/
-ls -la
-ls -la scripts/
-rm scripts/
-rm -r scripts/
-sudo rm -r scripts/
-cp dimitri/scripts/ .
-ls dimitri/scripts/
-ls dimitri/scripts/scripts_dimi/
-cp dimitri/scripts/scripts_dimi/ .
-cp dimitri/scripts/scripts_dimi .
-sudo cp dimitri/scripts/scripts_dimi .
-ls
-ls -la
-sudo su
-exit
-cd scripts_dimi/
-ls
-cd ..
-git status
-git add scripts_dimi/ihm_shell.sh 
-git status
-git commit -m "ajout ihm shell"
-git pull
-git push origin master
-cd scripts_dimi/
-vi suppr_pc.sh 
-vi suppr_grpe.sh 
-ls
-vi change_group_pc.sh 
-vi suppr_grpe.sh 
-vi traitement_inv.sh 
-vi change_group_pc.sh 
-vi suppr_pc.sh 
-ls
-./ihm_shell.sh 
-sed -n '/ serveurs_video/p' /var/projets/calltech/inventaire/lien_pc_group.txt`
-sed -n / serveurs_video/p /var/projets/calltech/inventaire/lien_pc_group.txt`
-sed -n / serveurs_video/d /var/projets/calltech/inventaire/lien_pc_group.txt`
-sed -n /' 'serveurs_video/d /var/projets/calltech/inventaire/lien_pc_group.txt`
-cat /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n / serveurs_video/p /var/projets/calltech/inventaire/lien_pc_group.txt
-sed -n '/ serveurs_video/p' /var/projets/calltech/inventaire/lien_pc_group.txt
-pattern="serveurs_video"
-echo $serveurs_video
-echo "$pattern"
-sed -n /' '$pattern/p /var/projets/calltech/inventaire/lien_pc_group.txt
-vi traitement_inv.sh 
-./ihm_shell.sh 
-cat /var/projets/calltech/inventaire/lien_pc_group.txt 
-./ihm_shell.sh 
-cat /var/projets/calltech/inventaire/lien_pc_group.txt 
-git status
-git add ihm_shell.sh 
-git status
-git commit -m "script ihm shell valide"
 git push origin master
 vi traitement_inv.sh 
 exit
@@ -498,3 +288,213 @@ vi traitement_inv.sh
 rm .traitement_inv.sh.swp 
 vi traitement_inv.sh 
 vi inventaire 
+cd scripts/scripts_dimi/
+vi inventaire 
+vi inventaire 
+cd scripts/scripts_dimi/
+ls -la
+cd
+cp .bashrc scripts/scripts_dimi/
+cd scripts/scripts_dimi
+ls -la
+source .bashrc 
+
+ll
+git pull origin master
+git status
+git commit -m "ajout creation base sur init_arbre_pc"
+git commit -am "ajout creation base sur init_arbre_pc"
+git status
+git push origin master
+git pull origin master
+git status
+git push origin master
+vi traitement_inv.sh 
+cat inventaire | grep -n description:
+cat inventaire | grep -n description: | cut -d ":" -f 1
+vi traitement_inv.sh 
+cd scripts/scripts_dimi/
+l
+ll
+vi inventaire 
+ll ..
+ls ..
+vi ../guillaume/script_install.sh 
+vi ../guillaume/test 
+vi inventaire 
+cd scripts/scripts_dimi/
+ll
+source .bashrc 
+ll
+vi traitement_inv.sh 
+cd scripts/scripts_dimi/
+ll
+source .bashrc 
+ll
+vi traitement_inv.sh 
+mv calltech_192.168.10.2 calltech_10.8.96.5
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+cp calltech_10.8.96.5 /home/transfert/nouveau/
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+exit
+cd scripts/scripts_dimi/
+vi inventaire 
+sed -e -n 35p inventaire 
+sed -n 35p inventaire 
+label_number=36
+sed -n $label_numberp inventaire 
+echo $label_number
+sed -n "$label_number"p inventaire 
+sed -n "$label_number"p | cut -d ":" -f 2
+sed -n "$label_number"p | cut -d ":" -f 2 inventaire 
+vi inventaire 
+sed -n "$label_number"p inventaire | cut -d ":" -f 2
+sed -n "$label_number"p inventaire | cut -d ":" -f 2
+sed -n "$label_number + 1"p inventaire 
+sed -n `$label_number + 1`p inventaire 
+sed -n eval "$($label_number + 1)"p inventaire 
+sed -n "eval "$($label_number + 1)""p inventaire 
+sed -n $($label_number + 1)p inventaire 
+sed -n "$($label_number + 1)"p inventaire 
+vi inventaire 
+echo $label_number
+echo -n $($label_number + 1)
+sed -n "$($label_number + 1)"p
+sed -n 'expr $label_number + 1'p
+sed -n $'expr $label_number + 1'p
+sed -n 'expr $label_number + 1'p inventaire 
+sed -n $'expr $label_number + 1'p inventaire 
+sed -n $(expr "$label_number" + 1)p inventaire 
+vi inventaire 
+vi inventaire 
+vi change_group_pc.sh 
+ll
+ls -la
+vi suppr_grpe.sh 
+vi ihm_shell.sh 
+ls /var/projets/oracle/inventaire/
+ls /var/projets/oracle/inventaire/default/
+ls /var/projets/projetx/
+ls /var/projets/projetx/inventaire/
+ls /var/projets/projetx/inventaire/serveursweb/
+cd /var/projets/projetx/inventaire/
+vi lien_pc_group.txt 
+vi lien_pc_group.txt 
+ls serveursweb/
+cd ../../calltech/inventaire/
+ls
+vi lien_pc_group.txt 
+ls serveurs_sms/
+ls serveurs_sms/10.8.96.5/
+ls serveurs_sms/10.8.96.5/
+ls serveurs_sms/10.8.96.5/
+ls -la serveurs_sms/10.8.96.5/
+ls
+vi lien_pc_group.txt 
+ls serveurs_sms/10.8.96.5/
+ls serveurs_video/
+cd default/10.8.96.5/
+ls
+vi nc1_ip.txt 
+vi nc1_vendor.txt 
+cat nc1_serial.txt 
+cat nc1_logicalname.txt 
+cat nc1_description.txt 
+q!
+exit
+cd scripts/scripts_dimi/
+ls -la
+vi inventaire 
+vi traitement_inv.sh 
+vi inventaire 
+vi traitement_inv.sh 
+vi traitement_inv.sh calltech_10.8.96.5 
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi inventaire 
+vi /home/transfert/nouveau/calltech_10.8.96.5 
+sudo rm /home/transfert/nouveau/calltech_10.8.96.5
+sudo cp calltech_10.8.96.5 /home/transfert/nouveau/
+vi /home/transfert/nouveau/calltech_10.8.96.5 
+vi calltech_10.8.96.5 
+vi inventaire 
+rm calltech_10.8.96.5 
+sudo mv inventaire calltech_10.8.96.5
+vi calltech_10.8.96.5 
+sudo cp calltech_10.8.96.5 /home/transfert/nouveau/
+vi /home/transfert/nouveau/calltech_10.8.96.5 
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi calltech_10.8.96.5 
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi /home/transfert/nouveau/calltech_10.8.96.5 
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+exit
+cd /var/projets/calltech/inventaire/default/
+ls
+ls 10.8.96.5/
+cd 10.8.96.5/
+ls -la
+vi nc1_ip.txt 
+vi nc1_product.txt 
+cd ..
+rm 10.8.96.5/*
+sudo rm 10.8.96.5/*
+ls
+ls 10.8.96.5/
+ls 10.8.96.5/
+ls 10.8.96.5/
+ls -la 10.8.96.5/
+vi 10.8.96.5/
+vi 10.8.96.5/calltech_10.8.96.5 
+sudo rm 10.8.96.5/*
+ls -la 10.8.96.5/
+cd 10.8.96.5/
+vi calltech_10.8.96.5 
+vi calltech_10.8.96.5 
+sudo vi calltech_10.8.96.5 
+sudo rm 10.8.96.5/*
+cd ..
+sudo rm 10.8.96.5/*
+ls -la 10.8.96.5/
+sudo rm 10.8.96.5/*
+vi 10.8.96.5/calltech_10.8.96.5 
+ls -la 10.8.96.5/
+sudo rm 10.8.96.5/*
+vi 10.8.96.5/calltech_10.8.96.5 
+ls -la 10.8.96.5/
+cat 10.8.96.5/calltech_10.8.96.5 
+sudo cat 10.8.96.5/calltech_10.8.96.5 | grep ^Vendor | cut -d ":" -f 2 
+sudo cat 10.8.96.5/calltech_10.8.96.5 | grep ^Vendor 
+sudo cat 10.8.96.5/calltech_10.8.96.5 | grep ^        Vendor 
+sudo cat 10.8.96.5/calltech_10.8.96.5 | grep ^"        Vendor" 
+sudo cat 10.8.96.5/calltech_10.8.96.5 | grep ^"       Vendor" 
+sudo grep ^"       Vendor" calltech_10.8.96.5 
+sudo grep ^"       Vendor" 10.8.96.5/calltech_10.8.96.5 
+sudo grep ^"        Vendor" 10.8.96.5/calltech_10.8.96.5 
+cd 10.8.96.5/
+LS
+ls
+ls -la 
+exit
+cd scripts/scripts_dimi/
+vi traitement_inv.sh 
+vi traitement_inv.sh 
+cd scripts/scriptrs
+cd scripts/scripts_dimi/
+vi calltech_10.8.96.5 
+cd /var/projets/calltech/inventaire/default/
+ls
+ls 10.8.96.5/
+CD 10.8.96.5/
+cd 10.8.96.5/
+vi calltech_10.8.96.5 
+ls -la
+vi calltech_10.8.96.5 
