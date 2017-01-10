@@ -48,7 +48,7 @@
         done
         fi
         echo -e "\nmemory information" >> inventaire
-        sed -n /'Size'/p test2 >> inventaire
+        sed -n /'\tSize: '/p test2 >> inventaire
         sed -n /'Number Of Devices'/p test2 >> inventaire
         echo -e "\nNetwork information" >> inventaire
         net=`sed -n /'description'/= test3`
