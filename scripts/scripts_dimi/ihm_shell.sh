@@ -6,7 +6,7 @@ test2=""
 test=""
 choix_action="0"
 nbr_ligne=1
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 sudo echo "        **********IHM-Shell**********"
 #selection d'epse
 sudo echo "*)Choisissez une entreprise... "

@@ -2,7 +2,7 @@
 
 nom_epse=$1
 group_pc=$2
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 
 if [ ! -d $chemin_epse/$nom_epse/inventaire/$group_pc ]; then
   sudo echo "Ce groupe n'existe pas ! "

@@ -3,7 +3,7 @@
 nom_epse=$1
 ip_pc=$2
 group_pc=$3
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 
 ###suppression du dossier inventaire###
 sudo rm -r $chemin_epse/$nom_epse/inventaire/$group_pc/$ip_pc

@@ -4,7 +4,7 @@ nom_epse=$1
 ip_pc=$2
 group_src=$3
 group_dst=$4
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 
 if [ ! -d "$chemin_epse/$nom_epse/inventaire/$group_dst" ]; then
 	sudo echo "***Erreur, Le groupe de destination n'existe pas !*** "

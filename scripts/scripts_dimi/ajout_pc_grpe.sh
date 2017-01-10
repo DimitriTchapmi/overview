@@ -2,7 +2,7 @@
 nom_epse=$1
 ip_pc=$2
 group_pc=$3
-chemin_epse="/var/projets"
+chemin_epse="/var/www/overview/projets"
 
 if [ ! -d "$chemin_epse/$nom_epse/inventaire/default/$ip_pc" ]; then
 	 sudo echo "***Erreur, La machine $ip_pc n'existe pas chez <<$nom_epse>> ***"
