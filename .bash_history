@@ -1,97 +1,3 @@
-git push origin master
-vi traitement_inv.sh 
-exit
-cd scripts/scripts_dimi/
-ls -la
-vi calltech_192.168.10.2 
-ls /var/projets/calltech/inventaire/
-ls /var/projets/calltech/inventaire/default/
-ls -la /var/projets/calltech/inventaire/default/
-./init_arbre_pc.sh calltech 192.168.10.2
-ls -la /var/projets/calltech/inventaire/default/
-cat /var/projets/calltech/inventaire/lien_pc_group.txt 
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-cat /var/projets/calltech/inventaire/default/192.168.10.2/version_bios.txt 
-cat /var/projets/calltech/inventaire/default/192.168.10.2/serialnumber.txt 
-cat /var/projets/calltech/inventaire/default/192.168.10.2/marque_bios.txt 
-ls /home/transfert/nouveau/
-mv /home/transfert/nouveau/192.168.10.2_calltech /home/transfert/nouveau/192.168.10.2_calltechcalltech_192.168.10.2
-ls /home/transfert/nouveau/
-ls -la
-cp calltech_192.168.10.2 /home/transfert/nouveau/
-ls /home/transfert/nouveau/
-sudo ./traitement_inv.sh  calltech_192.168.10.2 
-vi traitement_inv.sh 
-cat /var/projets/calltech/inventaire/default/192.168.10.2/marque_bios.txt 
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-vi traitement_inv.sh 
-sudo ./traitement_inv.sh  calltech_192.168.10.2 
-exit
-ll
-ls -la
-cd ..
-ls
-cd dimitri/
-cd scripts/
-ls -la
-cd scripts_dimi/
-ls -la
-rm .traitement_inv.sh.swp 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-sudo grep ^"cpu family" calltech_192.168.10.2 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi init_arbre_pc.sh 
-vi init_arbre_pc.sh 
-vi traitement_inv.sh 
-./traitement_inv.sh calltech_192.168.10.2 
-sudo su
-exit
-cd /var/projets/calltech/inventaire/
-ls
-cd default/
-ls
-ls -la
-chown -R dimitri:dimitri /var/projets/calltech/inventaire/default/192.168.10.2/
-sudo chown -R dimitri:dimitri /var/projets/calltech/inventaire/default/192.168.10.2/
-ls -la 
-sudo chown -R dimitri:dimitri /var/projets/calltech/inventaire/default/
-ls -la 
-cd /home/dimitri/scripts/scripts_dimi/
-rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-./traitement_inv.sh calltech_192.168.10.2 
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-ls -la /home/transfert/nouveau/
-vi /var/projets/calltech/inventaire/default/192.168.10.2
-ls /var/projets/calltech/inventaire/default/192.168.10.2
-rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/*
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-cp calltech_192.168.10.2 /home/transfert/nouveau/
-ls -la /home/transfert/nouveau/
-./traitement_inv.sh 
-ls -la /home/transfert/nouveau/
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-./traitement_inv.sh calltech_192.168.10.2 
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-sudo rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-vi calltech_192.168.10.2 
-./traitement_inv.sh calltech_192.168.10.2 
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-vi /var/projets/calltech/inventaire/default/192.168.10.2/marque_bios.txt 
-vi /var/projets/calltech/inventaire/default/192.168.10.2/releasedate_bios.txt 
-rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-sudo rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-./traitement_inv.sh calltech_192.168.10.2 
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-cd /var/projets/calltech/inventaire/default/192.168.10.2/
-ls -la
 vi serialnumber.txt 
 vi productname.txt 
 vi cpu_family.txt 
@@ -498,3 +404,97 @@ cd 10.8.96.5/
 vi calltech_10.8.96.5 
 ls -la
 vi calltech_10.8.96.5 
+cd scripts/scripts_dimi/
+ls
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+vi calltech_10.8.96.5 
+vi traitement_inv.sh 
+./traitement_inv.sh calltech_10.8.96.5 
+vi traitement_inv.sh 
+vi traitement_inv.sh 
+vi traitement_inv.sh 
+vi traitement_inv.sh 
+vi calltech_10.8.96.5 
+clear
+vi traitement_inv.sh 
+ci calltech_10.8.96.5 
+vi calltech_10.8.96.5 
+vi traitement_inv.sh 
+git pull origin master
+git status
+git commit -m "modif different mem card"
+git commit -am "modif different mem card"
+git status
+git push origin master
+cat /sys/class/block/sda/device/{model,vendor}
+hdparm -I /dev/vhci
+hdparm -I /dev/sda
+sudo hdparm -I /dev/
+./ihm_shell.sh 
+vi creer_group.sh 
+vi ihm_shell.sh 
+ls -la
+vi suppr_grpe.sh 
+vi suppr_pc.sh 
+vi creer_group.sh 
+vi change_group_pc.sh 
+vi init_arbre_pc.sh 
+vi ajout_pc_grpe.sh 
+git status
+git commit -am "modif chemin scripts"
+git push origin master
+ls -la
+exit
+cd scripts/scripts_dimi/
+cat calltech_10.8.96.5 | grep -n description: | cut -d ":" -f 1
+ls -la /var/projets/calltech/inventaire/default/10.8.96.5/
+cat calltech_10.8.96.5 | grep -n description: | cut -d ":" -f 1
+vi calltech_10.8.96.5 
+cd /var/projets/calltech/inventaire/default/10.8.96.5/
+cd ..
+sudo rm 10.8.96.5/*
+vi /home/transfert/nouveau/calltech_10.8.96.5 
+ls -la
+ls -la 10.8.96.5/
+sudo rm 10.8.96.5/*
+ls -la 10.8.96.5/
+vi 10.8.96.5/nc1_ip.txt 
+sudo rm 10.8.96.5/*
+ls -la 10.8.96.5/
+vi 10.8.96.5/calltech_10.8.96.5 
+sed -i 's/^ *//' 10.8.96.5/calltech_10.8.96.5 
+vi 10.8.96.5/calltech_10.8.96.5 
+vi 10.8.96.5/calltech_10.8.96.5 
+cat 10.8.96.5/calltech_10.8.96.5 | grep -n Disque: | cut -d ":" -f 1`
+cat 10.8.96.5/calltech_10.8.96.5 | grep -n Disque: | cut -d ":" -f 1
+vi 10.8.96.5/calltech_10.8.96.5 
+cat 10.8.96.5/calltech_10.8.96.5 
+vi test.sh
+chmod +x test.sh 
+./test.sh 
+cd 10.8.96.5/
+./test.sh 
+./../test.sh 
+cd ..
+q!
+clear
+vi 10.8.96.5/calltech_10.8.96.5 
+ls
+rm test.sh 
+cd 10.8.96.5/
+vi test.sh
+cd ..
+cd ..
+cd ..
+cd ..
+ls -la
+ls -la ~/scripts/scripts_dimi
+ls oracle/
+ls oracle/inventaire/
+ls projetx/inventaire/
+vi /home/dimitri/scripts/scripts_dimi/init_arbre_epse.sh 
+exit

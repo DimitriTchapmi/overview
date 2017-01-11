@@ -14,3 +14,5 @@ sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/graphes/semaines
 sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/processus/
 sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/alertes/
 sudo mkdir $chemin_epse/$nom_epse/supervision/$ip_pc/bases/
+###création du fichier lien pc_group
+sudo echo "$ip_pc default" > $chemin_epse/$nom_epse/inventaire/lien_pc_group.txt
