@@ -112,20 +112,21 @@ $
 		
 
 # Marques dans le fichier :
-'0  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
-'1  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'2  18  7  ~/scripts/scripts_dimi/ihm_shell.sh
-'3  26  0  ~/scripts/scripts_dimi/ihm_shell.sh
-'4  1  0  ~/scripts/scripts_dimi/creer_group.sh
-'5  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
-'6  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
-'7  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
-'8  1  0  ~/scripts/scripts_dimi/init_arbre.sh
-'9  56  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'0  57  42  ~/scripts/scripts_dimi/ihm_shell.sh
+'1  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
+'2  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'3  18  7  ~/scripts/scripts_dimi/ihm_shell.sh
+'4  26  0  ~/scripts/scripts_dimi/ihm_shell.sh
+'5  1  0  ~/scripts/scripts_dimi/creer_group.sh
+'6  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
+'7  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
+'8  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
+'9  1  0  ~/scripts/scripts_dimi/init_arbre.sh
 
 # Liste de sauts (le plus récent en premier) :
--'  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  57  42  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  18  7  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  26  0  ~/scripts/scripts_dimi/ihm_shell.sh
@@ -225,9 +226,9 @@ $
 # Historique des marques dans les fichiers (les plus récentes en premier) :
 
 > ~/scripts/scripts_dimi/ihm_shell.sh
-	"	52	63
-	^	52	64
-	.	52	62
+	"	57	42
+	^	57	43
+	.	55	16
 	+	9	13
 	+	54	0
 	+	52	8
@@ -236,6 +237,9 @@ $
 	+	49	1
 	+	53	1
 	+	52	62
+	+	54	9
+	+	56	0
+	+	55	16
 
 > ~/scripts/scripts_dimi/traitement_inv.sh
 	"	1	0

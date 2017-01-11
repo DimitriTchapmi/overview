@@ -51,7 +51,8 @@ case "$choix_action" in
         	sudo echo "Choisissez le groupe de destination : "
         	ls -l  $chemin_epse/$choix_epse/inventaire/ | grep "^d" | cut -d " " -f 9
 		read choix_dst
-        	test2=`sed -n /' '$choix_dst/p $chemin_epse/$choix_epse/inventaire/lien_pc_group.txt`
+        	#test2=`sed -n /' '$choix_dst/p $chemin_epse/$choix_epse/inventaire/lien_pc_group.txt`
+		test2=`ls -nl $chemin_epse/$choix_epse/inventaire/ | grep "^d" | cut -d " " -f 9`
 	done
 	sudo bash change_group_pc.sh $choix_epse $choix_pc $grpe_pc $choix_dst
 	sudo echo "***Modification effectueé avec succès... "
