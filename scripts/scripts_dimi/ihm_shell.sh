@@ -49,7 +49,8 @@ case "$choix_action" in
 	while [ "$test2" == "" ]
 	do
         	sudo echo "Choisissez le groupe de destination : "
-        	read choix_dst
+        	ls -l  $chemin_epse/$choix_epse/inventaire/ | grep "^d" | cut -d " " -f 9
+		read choix_dst
         	test2=`sed -n /' '$choix_dst/p $chemin_epse/$choix_epse/inventaire/lien_pc_group.txt`
 	done
 	sudo bash change_group_pc.sh $choix_epse $choix_pc $grpe_pc $choix_dst
