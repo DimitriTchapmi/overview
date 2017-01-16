@@ -12,7 +12,7 @@ else
         exit
 fi
 
-mv -t /etc/overview supervision.sh inventaire.sh
+mv -t /etc/overview supervision.sh inventaire.sh id_rsa
 
 cd /etc/overview
 chmod 700 supervision.sh inventaire.sh
@@ -24,7 +24,7 @@ echo $ip > ip
 echo $entreprise > entreprise
 
 echo "Vérification des paquets nécessaires"
-dependances=(lshw lsblk vnstat lsof)
+dependances=(lshw vnstat lsof)
 for elem in ${dependances[@]}
 do
     check=`dpkg -l | grep $elem | cut -d " " -f1`
@@ -41,4 +41,4 @@ touch /etc/cron.d/overview
 echo "# Execution du script supervision toutes les minutes" > /etc/cron.d/overview
 echo "*/1 * * * * root /etc/overview/supervision.sh" > /etc/cron.d/overview
 
-#./inventaire.sh
+./inventaire.sh
