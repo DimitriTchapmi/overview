@@ -8,6 +8,10 @@ sudo echo "epse=$nom_epse"
 sudo cp /home/transfert/nouveau/$1 $chemin_epse/$nom_epse/inventaire/default/$ip_pc/
 sudo sed -i 's/^ *//' $chemin_epse/$nom_epse/inventaire/default/$ip_pc/$1
 fichier="$chemin_epse/$nom_epse/inventaire/default/$ip_pc/$1"
+
+sudo /var/www/overview/code/scripts/guillaume/create_bases_ram.sh $nom_epse $ip_pc
+sudo /var/www/overview/code/scripts/guillaume/create_bases_cpu.sh $nom_epse $ip_pc 1
+
 #marque_bios
 sudo cat $fichier | grep ^Vendor | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/marque_bios.txt
 #ReleaseDate_bios
@@ -51,6 +55,10 @@ do
 	sudo sed -n $(expr "$card_line" + 3)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/nc"$cpte"_logicalname.txt
 	sudo sed -n $(expr "$card_line" + 4)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/nc"$cpte"_serial.txt
 	sudo sed -n $(expr "$card_line" + 5)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/nc"$cpte"_ip.txt
+
+        $nom=`cat nc"$cpte"_logicalname.txt`
+        sudo /var/www/overview/code/scripts/guillaume/create_bases_carte.sh $nom_epse $ip_pc $nom
+        
 	let "cpte=cpte+1"
 done 
 #Storage informations
