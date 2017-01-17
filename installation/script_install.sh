@@ -24,7 +24,7 @@ echo $ip > ip
 echo $entreprise > entreprise
 
 echo "Vérification des paquets nécessaires"
-dependances=(lshw vnstat lsof)
+dependances=(lshw vnstat lsof bc)
 for elem in ${dependances[@]}
 do
     check=`dpkg -l | grep $elem | cut -d " " -f1`
