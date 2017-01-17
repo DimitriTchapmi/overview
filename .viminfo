@@ -17,17 +17,17 @@
 $
 
 # Historique ligne de commande (chronologie décroissante) :
-:wq
 :q!
+:wq
+:w
 :WQ
 :%s/$1/$fichier/g
 :§
-:w
 :s
 
 # Historique chaîne de recherche (chronologie décroissante) :
-?/var/www/overview/projet
 ? @$
+?/var/www/overview/projet
 ? $1
 ?/ip
 ? \<if\>
@@ -39,8 +39,8 @@ $
 # Historique ligne de saisie (chronologie décroissante) :
 
 # Registres :
-"0	CHAR	0
-	d
+""0	CHAR	0
+		
 "1	LINE	0
 	#!/bin/bash
 	
@@ -108,36 +108,52 @@ $
 	        sudo echo " choix = $choix_pc"
 "9	LINE	0
 		sudo echo " choix = $choix_epse"
-""-	CHAR	0
+"-	CHAR	0
 		
 
 # Marques dans le fichier :
-'0  57  42  ~/scripts/scripts_dimi/ihm_shell.sh
-'1  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
-'2  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'3  18  7  ~/scripts/scripts_dimi/ihm_shell.sh
-'4  26  0  ~/scripts/scripts_dimi/ihm_shell.sh
-'5  1  0  ~/scripts/scripts_dimi/creer_group.sh
-'6  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
-'7  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
-'8  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
-'9  1  0  ~/scripts/scripts_dimi/init_arbre.sh
+'0  1  0  /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
+'1  1  0  supervision/192.168.10.2/alertes/alertes
+'2  1  0  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
+'3  58  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+'4  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+'5  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'6  1  0  /var/projets/calltech/inventaire/lien_pc_group.txt
+'7  8  0  /var/projets/calltech/inventaire/serveurs_sms/10.8.96.5
+'8  7  30  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
+'9  1  0  ~/scripts/scripts_dimi/change_group_pc.sh
 
 # Liste de sauts (le plus récent en premier) :
--'  57  42  ~/scripts/scripts_dimi/ihm_shell.sh
--'  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
--'  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  1  0  /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
+-'  1  0  supervision/192.168.10.2/alertes/alertes
+-'  1  0  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
+-'  58  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+-'  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
 -'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  /var/projets/calltech/inventaire/lien_pc_group.txt
+-'  8  0  /var/projets/calltech/inventaire/serveurs_sms/10.8.96.5
+-'  1  0  /var/projets/calltech/inventaire/serveurs_sms/10.8.96.5
+-'  7  30  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
+-'  1  0  ~/scripts/scripts_dimi/change_group_pc.sh
+-'  3  8  /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
+-'  2  3  ~/scripts/scripts_dimi/fichier_alerte.sh
+-'  1  0  ~/scripts/scripts_dimi/fichier_alerte.sh
+-'  1  0  ~/scripts/scripts_dimi/alerte.sh
+-'  9  108  ~/scripts/scripts_dimi/alerte.sh
+-'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
+-'  8  0  ~/scripts/scripts_dimi/alerte.sh
+-'  65  0  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  1  0  ~/scripts/scripts_dimi/mycron
+-'  57  42  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  18  7  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  26  0  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  1  0  ~/scripts/scripts_dimi/creer_group.sh
--'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
 -'  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
 -'  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
 -'  1  0  ~/scripts/scripts_dimi/init_arbre.sh
 -'  56  0  ~/scripts/scripts_dimi/traitement_inv.sh
--'  58  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
--'  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
 -'  68  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  4  16  /var/projets/calltech/inventaire/default/test.sh
 -'  1  0  /var/projets/calltech/inventaire/default/test.sh
@@ -161,7 +177,6 @@ $
 -'  10  59  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  13  0  ~/scripts/scripts_dimi/inventaire
 -'  22  0  ~/scripts/scripts_dimi/inventaire
--'  1  0  /var/projets/calltech/inventaire/lien_pc_group.txt
 -'  6  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  1  0  /var/projets/projetx/inventaire/lien_pc_group.txt
 -'  54  17  ~/scripts/scripts_dimi/traitement_inv.sh
@@ -176,7 +191,6 @@ $
 -'  118  0  ~/.bashrc
 -'  43  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  1  0  /etc/init.d/cron
--'  1  0  ~/scripts/scripts_dimi/change_group_pc.sh
 -'  1  0  ~/scripts/scripts_dimi/calltech_192.168.10.2
 -'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
 -'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/releasedate_bios.txt
@@ -207,39 +221,34 @@ $
 -'  5  0  ~/scripts_dimi/change_group_pc.sh
 -'  1  0  ~/scripts_dimi/change_group_pc.sh
 -'  1  0  ~/scripts_dimi/suppr_grpe.sh
--'  38  1  ~/scripts_dimi/ihm_shell.sh
--'  1  0  ~/scripts_dimi/ihm_shell.sh
--'  37  37  ~/scripts_dimi/ihm_shell.sh
--'  30  67  ~/scripts_dimi/ihm_shell.sh
--'  26  19  ~/scripts_dimi/ihm_shell.sh
--'  33  16  ~/scripts_dimi/ihm_shell.sh
--'  25  14  ~/scripts_dimi/ihm_shell.sh
--'  27  8  ~/scripts_dimi/ihm_shell.sh
--'  35  0  ~/scripts_dimi/ihm_shell.sh
--'  11  27  ~/scripts_dimi/ihm_shell.sh
--'  2  15  ~/scripts_dimi/ihm_shell.sh
--'  19  31  ~/scripts_dimi/ihm_shell.sh
--'  13  27  ~/scripts_dimi/ihm_shell.sh
--'  9  39  ~/scripts_dimi/ihm_shell.sh
--'  1  0  ~/scripts_dimi/init_arbre_pc.sh
 
 # Historique des marques dans les fichiers (les plus récentes en premier) :
 
-> ~/scripts/scripts_dimi/ihm_shell.sh
-	"	57	42
-	^	57	43
-	.	55	16
-	+	9	13
-	+	54	0
-	+	52	8
-	+	49	1
-	+	49	1
-	+	49	1
-	+	53	1
-	+	52	62
-	+	54	9
-	+	56	0
-	+	55	16
+> /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
+	"	1	0
+	^	3	12
+	.	3	11
+	+	4	4
+	+	4	0
+	+	5	0
+	+	4	8
+	+	3	11
+
+> supervision/192.168.10.2/alertes/alertes
+	"	1	0
+
+> ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
+	"	1	0
+	^	7	31
+	.	7	26
+	+	6	0
+	+	7	21
+	+	8	0
+	+	7	22
+	+	7	26
+
+> ~/scripts/scripts_dimi/calltech_10.8.96.5
+	"	58	0
 
 > ~/scripts/scripts_dimi/traitement_inv.sh
 	"	1	0
@@ -346,11 +355,66 @@ $
 	+	67	0
 	+	68	0
 
-> ~/scripts/scripts_dimi/creer_group.sh
+> /var/projets/calltech/inventaire/lien_pc_group.txt
+	"	1	0
+
+> ~/scripts/scripts_dimi/change_group_pc.sh
+	"	1	0
+	^	7	38
+	.	7	13
+	+	7	13
+
+> ~/scripts/scripts_dimi/fichier_alerte.sh
+	"	2	3
+
+> ~/scripts/scripts_dimi/alerte.sh
+	"	1	0
+	^	9	109
+	.	9	108
+	+	1	11
+	+	7	12
+	+	6	10
+	+	5	11
+	+	6	20
+	+	7	15
+	+	10	0
+	+	9	18
+	+	9	18
+	+	2	0
+	+	9	31
+	+	4	0
+	+	5	11
+	+	6	20
+	+	7	14
+	+	9	108
+
+> ~/scripts/scripts_dimi/suppr_grpe.sh
 	"	1	0
 	^	5	38
 	.	5	13
 	+	5	13
+
+> ~/scripts/scripts_dimi/ihm_shell.sh
+	"	10	0
+	^	57	43
+	.	55	16
+	+	9	13
+	+	54	0
+	+	52	8
+	+	49	1
+	+	49	1
+	+	49	1
+	+	53	1
+	+	52	62
+	+	54	9
+	+	56	0
+	+	55	16
+
+> ~/scripts/scripts_dimi/suppr_pc.sh
+	"	1	0
+	^	6	38
+	.	6	13
+	+	6	13
 
 > ~/scripts/scripts_dimi/init_arbre_pc.sh
 	"	1	0
@@ -360,6 +424,15 @@ $
 	+	19	0
 	+	17	37
 	+	18	28
+
+> ~/scripts/scripts_dimi/mycron
+	"	1	0
+
+> ~/scripts/scripts_dimi/creer_group.sh
+	"	1	0
+	^	5	38
+	.	5	13
+	+	5	13
 
 > ~/scripts/scripts_dimi/init_arbre_epse.sh
 	"	1	0
@@ -372,27 +445,6 @@ $
 
 > ~/scripts/scripts_dimi/init_arbre.sh
 	"	1	0
-
-> ~/scripts/scripts_dimi/change_group_pc.sh
-	"	7	37
-	^	7	38
-	.	7	13
-	+	7	13
-
-> ~/scripts/scripts_dimi/suppr_pc.sh
-	"	6	37
-	^	6	38
-	.	6	13
-	+	6	13
-
-> ~/scripts/scripts_dimi/suppr_grpe.sh
-	"	5	37
-	^	5	38
-	.	5	13
-	+	5	13
-
-> ~/scripts/scripts_dimi/calltech_10.8.96.5
-	"	58	0
 
 > /var/projets/calltech/inventaire/default/10.8.96.5/test.sh
 	"	8	21
@@ -474,9 +526,6 @@ $
 
 > /var/projets/calltech/inventaire/default/10.8.96.5/nc1_vendor.txt
 	"	1	1
-
-> /var/projets/calltech/inventaire/lien_pc_group.txt
-	"	1	0
 
 > /var/projets/projetx/inventaire/lien_pc_group.txt
 	"	1	0

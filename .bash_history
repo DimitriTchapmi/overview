@@ -1,163 +1,3 @@
-vi serialnumber.txt 
-vi productname.txt 
-vi cpu_family.txt 
-vi cpu_frequency.txt 
-cd /home/dimitri/scripts/scripts_dimi/
-vi calltech_192.168.10.2 
-vi /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2 
-vi calltech_192.168.10.2 
-vi /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2 
-sudo rm /var/projets/calltech/inventaire/default/192.168.10.2/*
-./traitement_inv.sh calltech_192.168.10.2 
-cd /var/projets/calltech/inventaire/default/192.168.10.2/
-ls -la
-vi cpu_flags.txt 
-vi model_cpu_name.txt 
-vi cpu_type.txt 
-vi model_cpu_name.txt 
-vi ram_taille.txt 
-exit
-ls -la
-cd scripts/scripts_dimi/
-ls -la
-vi traitement_inv.sh 
-vi calltech_192.168.10.2 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi traitement_inv.sh 
-vi script_ubuntu.sh
-vi script_ubuntu.sh
-vi script_ubuntu.sh
-exit
-cd /home/dimitri/scripts/scripts_dimi/
-vi calltech_192.168.10.2 
-vi script_ubuntu.sh 
-sudo ./script_ubuntu.sh 
-ls la
-ls -la
-vi inventaire 
-vi script_ubuntu.sh 
-sudo ./script_ubuntu.sh 
-ls -la
-vi inventaire 
-vi inventaire 
-ls -la
-cd scripts/
-ls -la
-cd scripts_dimi/
-ls -la
-ps -auwx > cmd_ps.txt
-vi cmd_ps.txt 
-drwxr-xr-x 8 dimitri dimitri 4096 déc.  29 15:13 ..
-rm cmd_ps.txt 
-git pull
-ls -la
-cd ..
-ls
-cd ..
-cd ..
-ls
-cd scripts/
-ls
-cd ..
-cd dimitri/
-ls -la
-git pull
-git pull origin master
-ls -la
-cd ..
-ls
-cd dimitri/scripts/
-ls
-git status
-cd scripts_dimi/
-ls -la
-git status
-git commit -m "modif script traitement"
-cd ../..
-cd scripts/
-ls
-git status
-git commit -am "modif script traitement"
-git status
-git push origin master
-cd scripts_dimi/
-ls -la
-vi vi init_arbre.sh 
-vi init_arbre_pc.sh 
-ls -la /var/projets/calltech/inventaire/default/
-ls -la /var/projets/calltech/inventaire/default/192.168.10.2/
-cd /var/projets/calltech/inventaire/default/192.168.10.2/
-vi ram_taille.txt 
-vi releasedate_bios.txt 
-vi calltech_192.168.10.2 
-cd /home/dimitri/scripts/scripts_dimi/
-ls -la
-vi traitement_inv.sh 
-vi calltech_192.168.10.2 
-cd /home/transfert/
-mkdir testgit
-cd testgit/
-git init
-git clone --bare git@github.com:DimitriTchapmi/overview.git
-ls -la
-cd overview.git/
-ls -la
-cd ..
-rm *
-rm -r overview.git/
-sudo rm overview.git/
-sudo rm -r overview.git/
-ls la
-ls -la
-git clone git@github.com:DimitriTchapmi/overview.git
-ls -la
-cd ..
-rm -r testgit/
-sudo rm -r testgit/
-cd /home/dimitri/scripts/scripts_dimi/
-ll
-ls
-vi init_arbre_pc.sh 
-vi change_group_pc.sh 
-vi ajout_pc_grpe.sh 
-vi change_group_pc.sh 
-vi /etc/init.d/cron 
-vi traitement_inv.sh 
-ls
-cd scripts/scripts_dimi/
-ls -la
-man ls | grep color
-ls -la --color
-ls -la 
-cd 
-pwd
-ls -la
-vi .bashrc
-vi .bashrc
-ls -la
-ls
-ls -la
-vi .bashrc
-sudo chown overview:overview .bashrc 
-ls -la
-chmod 644 .bashrc 
-sudo chmod 644 .bashrc 
-ls -la
-exit
-ls
-cd scripts/scripts_dimi/
-ls -la
-ls -la
-ls -la
-cd scripts/scripts_dimi/
-ls -la
-vi inventaire 
 grep vendor | wc -l inventaire 
 vi inventaire 
 tr ' ' '\n' < inventaire | grep -c vendor
@@ -498,3 +338,163 @@ ls oracle/inventaire/
 ls projetx/inventaire/
 vi /home/dimitri/scripts/scripts_dimi/init_arbre_epse.sh 
 exit
+cd scripts/scripts_dimi/
+vi ihm_shell.sh 
+vi ajout_pc_grpe.sh 
+exit
+cd scripts/scripts_dimi/
+git pull
+git pull origin master
+cd ..
+cd ..
+ls -la
+ls -la scripts/
+cd scripts/scripts_dimi
+ls -la
+rm diff.txt 
+rm test*
+ls -la
+vi init_arbre.sh 
+vi init_arbre.sh 
+vi ajout_pc_grpe.sh 
+vi init_arbre_pc.sh 
+git status
+git commit -am "modif goupe default"
+git status
+git pull
+git pull origin master
+git status
+git push origin master
+vi init_arbre_pc.sh 
+vi init_arbre_epse.sh 
+vi init_arbre_pc.sh 
+vi creer_group.sh 
+vi ihm_shell.sh 
+
+vi ihm_shell.sh 
+vi ihm_shell.sh 
+vi traitement_inv.sh 
+vi ihm_shell.sh 
+git status
+git commit -am "modif ihm afficher groupes"
+git pull origin master
+git push origin master
+vi ihm_shell.sh 
+git status
+git commit -am "bonne modif ihm afficher groupes"
+git push origin master
+vi ihm_shell.sh 
+vi init_arbre_pc.sh 
+sudo echo "00 09 * * 1-5 /chemin/script.sh" >> mycron
+sudo crontab -e
+sudo crontab -e
+sudo crontab -e
+echo "00 09 * *  /chemin/script.sh" >> mycron
+sudo crontab -e
+crontab -e
+sudo crontab -e
+crontab -e
+ls
+vi mycron 
+rm mycron 
+crontab -l > mycron
+ls
+vi mycron 
+rm mycron 
+sudo crontab -l > mycron
+rm mycron 
+vi ihm_shell.sh 
+vi change_group_pc.sh 
+exit
+cd scripts/scripts_dimi/
+ls
+vi suppr_pc.sh 
+vi ihm_shell.sh 
+vi init_arbre_pc.sh 
+vi init_arbre_pc.sh 
+vi alerte.sh 
+exit
+cd scripts/scripts_dimi/
+ls -la
+vi alerte.sh
+vi alerte.sh
+cd /etc/cron.daily/
+ll
+ls -la
+cat apport 
+cd ..
+cd cron.d
+ll
+ls 
+cat popularity-contest 
+exit
+cd /var/www/projets/
+ls
+exit
+cd scripts/scripts_dimi/
+ls
+vi alerte.sh 
+vi alerte.sh 
+rm .alerte.sh.swp 
+vi alerte.sh 
+exit
+cd scripts/scripts_dimi/
+ls
+vi alerte.sh 
+chmod +x alerte.sh 
+cat alerte.sh 
+./alerte.sh calltech 192.168.10.2 ram 90 30
+exit
+cd /var/www/projets/
+ls
+cd ..
+ls
+ls html/
+sudo rm -r html/graphite/
+ls
+ls html/
+vi /home/dimitri/scripts/scripts_dimi/suppr_pc.sh 
+vi /home/dimitri/scripts/scripts_dimi/ihm_shell.sh 
+vi /home/dimitri/scripts/scripts_dimi/suppr_grpe.sh 
+chown -R dimitri:dimitri /var/www/overview/projets
+ls
+mkdir overview
+sudo mkdir overview
+sudo mv projets overview/
+ls
+ls -la overview/
+chown -R dimitri:dimitri /var/www/overview/projets
+sudo chown -R dimitri:dimitri /var/www/overview/projets
+clear
+sudo chmod -R 760 /var/www/overview/projets
+ls -la overview/projets/oracle/supervision/
+ls -la overview/projets/calltech/supervision/192.168.10.2/alertes/
+ls -la overview/projets/calltech/supervision/192.168.10.2/alertes/
+vi overview/projets/calltech/supervision/192.168.10.2/alertes/alertes 
+exit
+cd scripts/scripts_dimi/
+ls
+vi alerte.sh 
+vi alerte.sh 
+man cp
+vi alerte.sh 
+cd /var/www/
+ls -la
+ls -la
+rm -r carbon/
+sudo rm -r carbon/
+sudo rm -r ceres/
+sudo rm -r graphite-web/
+sudo rm -r whisper/
+ls -la
+mkdir projets
+sudo mkdir projets
+ls -la
+cd projets/
+rm -r /var/projects/
+sudo rm -r /var/projects/
+ls -la
+cp /var/projets/* .
+sudo cp -r /var/projets/* .
+ls -la
+ls -la
