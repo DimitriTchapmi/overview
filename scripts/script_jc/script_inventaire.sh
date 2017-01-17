@@ -116,12 +116,13 @@ ip=$2
         for i in `seq 1 $cp`
         do
                 disk=`echo $stk|awk '{print $i}'|cut -d' ' -f$i`
-                echo "       Disque:/dev/"$disk  >> /etc/overview/$entreprise/$ip
+                echo "       Disque_"$i":/dev/"$disk  >> /etc/overview/$entreprise/$ip
                 if [ -s /sys/class/block/$stk/device/model ]; then
                         diskmodel=`cat /sys/class/block/$disk/device/model`
+                        echo "       Modèle:"$diskmodel >> inventaire
                         else echo "       Modèle:inconnu" >> /etc/overview/$entreprise/$ip
                 fi
-                disk1=`echo $stk1|awk '{print $i}'|cut -d' ' -f$i`
+                disk1=`echo $stk2|awk '{print $i}'|cut -d' ' -f$i`
                 echo "       Taille disque:"$disk1 >> /etc/overview/$entreprise/$ip
                 echo -e "\n" >> /etc/overview/$entreprise/$ip
         done
