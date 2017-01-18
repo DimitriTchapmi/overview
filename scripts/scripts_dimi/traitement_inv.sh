@@ -67,6 +67,8 @@ for disk_line in `cat $fichier | grep -n Disque_ | cut -d ":" -f 1`
 do
 	sudo sed -n "$disk_line"p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_nom.txt
 	nom_disque=`cat $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_nom.txt`
+	nom_disque_base=`echo $nom_disque |cut -d / -f 3`
+	commande="sudo /var/www/overview/code/scripts/guillaume/create_bases_disk.sh $nom_epse $ip_pc $nom_disque_base"
 	sudo sed -n $(expr "$disk_line" + 1)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_modele.txt
 	sudo sed -n $(expr "$disk_line" + 2)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_taille.txt
 sudo echo "disknumber: $disk_number"
@@ -76,6 +78,10 @@ sudo echo "disknumber: $disk_number"
 		sudo echo "partition_line: $partition_line"
 		sudo sed -n "$partition_line"p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_part"$partition_number"_nom.txt
 		sudo sed -n $(expr "$partition_line" + 1)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_part"$partition_number"_taille.txt
+
+		nom_partition_base=`sudo cat $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_part"$partition_number"_nom.txt | cut -d / -f 3`
+        commande=$commande" "$nom_partition_base
+
  		let "partition_number=partition_number+1"	
 	done
 	let "disk_number=disk_number+1"
