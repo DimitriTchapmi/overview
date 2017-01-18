@@ -17,8 +17,8 @@
 $
 
 # Historique ligne de commande (chronologie décroissante) :
-:q!
 :wq
+:q!
 :w
 :WQ
 :%s/$1/$fichier/g
@@ -39,9 +39,62 @@ $
 # Historique ligne de saisie (chronologie décroissante) :
 
 # Registres :
-""0	CHAR	0
+"0	CHAR	0
 		
-"1	LINE	0
+""1	LINE	0
+	1235
+<758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd758379U8290793dd
+		Vendor: innotek GmbH
+		Release Date: 12/01/2006
+		Version: VirtualBox
+	
+	System information
+		Manufacturer: innotek GmbH
+		Product Name: VirtualBox
+		Product Name: VirtualBox
+		Serial Number: 0
+	
+	Processor information
+	cpu family	: 6
+	cpu MHz		: 2591.996
+	cpu cores	: 1
+	cpuid level	: 22
+	model		: 78
+	model name	: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+	322
+<flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc pni pclmulqdq monitor ssse3 cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch rdseed clflushopt
+	       width: 64 bits
+	
+	memory information
+		Runtime Size: 128 kB
+		ROM Size: 128 kB
+	
+	Network information
+	       description: Ethernet interface
+	       product: 82540EM Gigabit Ethernet Controller
+	       vendor: Intel Corporation
+	       logical name: enp0s3
+	       serial: 08:00:27:55:b8:3a
+	       ip:10.8.110.203
+	
+	Network information
+	       description: Wireless interface
+	       product: 82540EM Gigabit wireless Controller
+	       vendor: Intel Corporation
+	       logical name: enp0s2
+	       serial: 07:00:27:55:b8:3b
+	       ip:10.8.110.205
+	
+	Storage information
+	       Disque:/dev/sda
+	       Taille disque:10G
+	
+	
+	       Partition:/dev/sda1
+	       Taille partition:487M
+	
+	
+"2	LINE	0
 	#!/bin/bash
 	
 	        cat /proc/cpuinfo > test
@@ -92,44 +145,62 @@ $
 	                sed -n ''$desc'p' test3 >> inventaire
 	                prod=`echo $net2|awk '{print $i}'|cut -d' ' -f$i`
 	                sed -n ''$prod'p' test3 >> inventaire
-"2	LINE	0
-	sudo sed -i 's/^ *//' $chemin_epse/$nom_epse/inventaire/default/$ip_pc/$1 
 "3	LINE	0
-	sudo cp /home/transfert/nouveau/$1 $chemin_epse/$nom_epse/inventaire/default/$ip_pc/
+	sudo sed -i 's/^ *//' $chemin_epse/$nom_epse/inventaire/default/$ip_pc/$1 
 "4	LINE	0
-	do	
+	sudo cp /home/transfert/nouveau/$1 $chemin_epse/$nom_epse/inventaire/default/$ip_pc/
 "5	LINE	0
-	while [ "" == "" ]
+	do	
 "6	LINE	0
-	test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
+	while [ "" == "" ]
 "7	LINE	0
-	        test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
+	test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
 "8	LINE	0
-	        sudo echo " choix = $choix_pc"
+	        test=grep $choix_pc $chemin_epse/$choix_epse/lien_pc_group.txt
 "9	LINE	0
-		sudo echo " choix = $choix_epse"
+	        sudo echo " choix = $choix_pc"
 "-	CHAR	0
 		
 
 # Marques dans le fichier :
-'0  1  0  /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
-'1  1  0  supervision/192.168.10.2/alertes/alertes
-'2  1  0  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
-'3  58  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
-'4  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
-'5  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'6  1  0  /var/projets/calltech/inventaire/lien_pc_group.txt
-'7  8  0  /var/projets/calltech/inventaire/serveurs_sms/10.8.96.5
-'8  7  30  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
-'9  1  0  ~/scripts/scripts_dimi/change_group_pc.sh
+'0  82  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'1  74  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'2  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+'3  48  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+'4  76  44  ~/scripts/scripts_dimi/traitement_inv.sh
+'5  78  38  ~/scripts/scripts_dimi/traitement_inv.sh
+'6  69  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'7  77  1  ~/scripts/scripts_dimi/traitement_inv.sh
+'8  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_part1_nom.txt
+'9  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_part2_nom.txt
 
 # Liste de sauts (le plus récent en premier) :
+-'  82  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  74  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+-'  48  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+-'  76  44  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  78  38  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  69  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  77  1  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_part1_nom.txt
+-'  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_part2_nom.txt
+-'  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_part1_nom.txt
+-'  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_nom.txt
+-'  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_taille.txt
+-'  10  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  72  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  70  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  1  0  ~/installation/script_install.sh
+-'  66  15  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  64  0  ~/scripts/scripts_dimi/traitement_inv.sh
+-'  37  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+-'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
+-'  34  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
 -'  1  0  /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
 -'  1  0  supervision/192.168.10.2/alertes/alertes
 -'  1  0  ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
--'  58  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
--'  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
--'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  1  0  /var/projets/calltech/inventaire/lien_pc_group.txt
 -'  8  0  /var/projets/calltech/inventaire/serveurs_sms/10.8.96.5
 -'  1  0  /var/projets/calltech/inventaire/serveurs_sms/10.8.96.5
@@ -140,7 +211,6 @@ $
 -'  1  0  ~/scripts/scripts_dimi/fichier_alerte.sh
 -'  1  0  ~/scripts/scripts_dimi/alerte.sh
 -'  9  108  ~/scripts/scripts_dimi/alerte.sh
--'  1  0  ~/scripts/scripts_dimi/init_arbre_pc.sh
 -'  8  0  ~/scripts/scripts_dimi/alerte.sh
 -'  65  0  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
@@ -174,7 +244,6 @@ $
 -'  8  0  /var/projets/calltech/inventaire/default/10.8.96.5
 -'  58  0  ~/scripts/scripts_dimi/inventaire
 -'  15  12  ~/scripts/scripts_dimi/traitement_inv.sh
--'  10  59  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  13  0  ~/scripts/scripts_dimi/inventaire
 -'  22  0  ~/scripts/scripts_dimi/inventaire
 -'  6  0  ~/scripts/scripts_dimi/traitement_inv.sh
@@ -203,133 +272,13 @@ $
 -'  1  0  ~/scripts/scripts_dimi/script_ubuntu.sh
 -'  234  16  ~/scripts/scripts_dimi/script_ubuntu.sh
 -'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
--'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/model_cpu_name.txt
--'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_flags.txt
--'  37  0  /var/projets/calltech/inventaire/default/192.168.10.2/calltech_192.168.10.2
--'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_frequency.txt
--'  1  1  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_family.txt
--'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/productname.txt
--'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/serialnumber.txt
--'  25  11  ~/scripts/scripts_dimi/traitement_inv.sh
--'  7  0  ~/scripts/scripts_dimi/traitement_inv.sh
--'  13  10  ~/scripts/scripts_dimi/traitement_inv.sh
--'  26  0  ~/scripts/scripts_dimi/traitement_inv.sh
--'  23  45  ~/scripts/scripts_dimi/traitement_inv.sh
--'  4  0  ~/scripts_dimi/traitement_inv.sh
--'  1  0  ~/scripts_dimi/traitement_inv.sh
--'  1  0  ~/scripts_dimi/suppr_pc.sh
--'  5  0  ~/scripts_dimi/change_group_pc.sh
--'  1  0  ~/scripts_dimi/change_group_pc.sh
--'  1  0  ~/scripts_dimi/suppr_grpe.sh
 
 # Historique des marques dans les fichiers (les plus récentes en premier) :
 
-> /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
-	"	1	0
-	^	3	12
-	.	3	11
-	+	4	4
-	+	4	0
-	+	5	0
-	+	4	8
-	+	3	11
-
-> supervision/192.168.10.2/alertes/alertes
-	"	1	0
-
-> ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
-	"	1	0
-	^	7	31
-	.	7	26
-	+	6	0
-	+	7	21
-	+	8	0
-	+	7	22
-	+	7	26
-
-> ~/scripts/scripts_dimi/calltech_10.8.96.5
-	"	58	0
-
 > ~/scripts/scripts_dimi/traitement_inv.sh
-	"	1	0
-	^	56	1
-	.	68	0
-	+	32	111
-	+	30	32
-	+	32	25
-	+	31	9
-	+	32	111
-	+	34	20
-	+	34	111
-	+	34	30
-	+	35	11
-	+	36	20
-	+	36	21
-	+	37	9
-	+	36	111
-	+	36	111
-	+	37	20
-	+	38	20
-	+	38	105
-	+	38	21
-	+	40	20
-	+	40	107
-	+	40	21
-	+	42	20
-	+	42	117
-	+	42	21
-	+	42	150
-	+	5	0
-	+	43	78
-	+	46	2
-	+	43	0
-	+	46	12
-	+	55	3
-	+	41	8
-	+	46	8
-	+	55	0
-	+	46	3
-	+	47	8
-	+	48	1
-	+	47	0
-	+	43	26
-	+	48	105
-	+	49	101
-	+	48	128
-	+	49	136
-	+	50	134
-	+	50	38
-	+	51	140
-	+	53	39
-	+	54	6
-	+	55	7
-	+	55	7
-	+	13	0
-	+	10	60
-	+	3	0
-	+	9	72
-	+	10	59
-	+	69	0
-	+	8	33
-	+	4	21
-	+	3	18
-	+	9	0
-	+	43	75
-	+	46	3
-	+	48	0
-	+	47	12
-	+	43	0
-	+	48	1
-	+	44	0
-	+	55	5
-	+	43	30
-	+	58	70
-	+	59	2
-	+	47	1
-	+	68	3
-	+	65	4
-	+	62	0
-	+	58	12
+	"	82	0
+	^	82	0
+	.	13	0
 	+	45	7
 	+	48	15
 	+	49	22
@@ -354,6 +303,159 @@ $
 	+	65	0
 	+	67	0
 	+	68	0
+	+	64	0
+	+	65	0
+	+	66	0
+	+	67	0
+	+	68	0
+	+	70	0
+	+	70	146
+	+	70	151
+	+	70	154
+	+	70	154
+	+	72	0
+	+	82	0
+	+	2	13
+	+	66	47
+	+	72	1
+	+	12	0
+	+	13	0
+	+	60	7
+	+	59	8
+	+	60	8
+	+	82	3
+	+	12	0
+	+	13	0
+	+	60	7
+	+	59	8
+	+	64	0
+	+	72	1
+	+	82	4
+	+	82	0
+	+	84	0
+	+	74	0
+	+	82	0
+	+	81	0
+	+	74	3
+	+	81	0
+	+	72	0
+	+	75	1
+	+	77	2
+	+	82	0
+	+	84	0
+	+	75	1
+	+	75	1
+	+	75	1
+	+	80	0
+	+	74	49
+	+	69	13
+	+	74	61
+	+	77	18
+	+	77	133
+	+	74	18
+	+	77	31
+	+	77	163
+	+	78	159
+	+	78	41
+	+	79	8
+	+	70	146
+	+	71	141
+	+	71	35
+	+	76	30
+	+	77	1
+	+	76	26
+	+	77	25
+	+	72	0
+	+	77	2
+	+	77	2
+	+	69	16
+	+	76	18
+	+	12	0
+	+	13	0
+	+	60	7
+	+	59	8
+	+	82	4
+	+	60	7
+	+	59	8
+	+	12	0
+	+	13	0
+
+> ~/scripts/scripts_dimi/calltech_10.8.96.5
+	"	1	0
+	^	37	0
+	.	48	0
+	+	1	1231
+	+	1	16
+	+	48	0
+
+> /home/transfert/nouveau/calltech_10.8.96.5
+	"	47	0
+	^	47	0
+	.	46	0
+	+	1	0
+	+	1	16
+	+	1	16
+	+	48	21
+	+	46	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_nom.txt
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_nom.txt
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_part1_nom.txt
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_part2_nom.txt
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_part1_nom.txt
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_taille.txt
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/calltech_10.8.96.5
+	"	1	0
+
+> ~/installation/script_install.sh
+	"	1	0
+
+> /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/nc1_logicalname.txt
+	"	1	1
+
+> ~/scripts/scripts_dimi/init_arbre_pc.sh
+	"	1	0
+	^	18	58
+	.	18	28
+	+	16	58
+	+	19	0
+	+	17	37
+	+	18	28
+
+> /var/www/overview/projets/calltech/supervision/192.168.10.2/alertes/alertes
+	"	1	0
+	^	3	12
+	.	3	11
+	+	4	4
+	+	4	0
+	+	5	0
+	+	4	8
+	+	3	11
+
+> supervision/192.168.10.2/alertes/alertes
+	"	1	0
+
+> ~/scripts/scripts_dimi/suppr_fichier_alerte.sh
+	"	1	0
+	^	7	31
+	.	7	26
+	+	6	0
+	+	7	21
+	+	8	0
+	+	7	22
+	+	7	26
 
 > /var/projets/calltech/inventaire/lien_pc_group.txt
 	"	1	0
@@ -415,15 +517,6 @@ $
 	^	6	38
 	.	6	13
 	+	6	13
-
-> ~/scripts/scripts_dimi/init_arbre_pc.sh
-	"	1	0
-	^	18	58
-	.	18	28
-	+	16	58
-	+	19	0
-	+	17	37
-	+	18	28
 
 > ~/scripts/scripts_dimi/mycron
 	"	1	0
@@ -499,9 +592,6 @@ $
 	+	4	11
 
 > /var/projets/calltech/inventaire/default/10.8.96.5/nc1_ip.txt
-	"	1	0
-
-> /home/transfert/nouveau/calltech_10.8.96.5
 	"	1	0
 
 > ~/scripts/scripts_dimi/inventaire
