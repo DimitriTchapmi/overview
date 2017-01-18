@@ -163,18 +163,20 @@ $
 		
 
 # Marques dans le fichier :
-'0  82  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'1  74  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'2  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
-'3  48  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
-'4  76  44  ~/scripts/scripts_dimi/traitement_inv.sh
-'5  78  38  ~/scripts/scripts_dimi/traitement_inv.sh
-'6  69  0  ~/scripts/scripts_dimi/traitement_inv.sh
-'7  77  1  ~/scripts/scripts_dimi/traitement_inv.sh
-'8  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd2_part1_nom.txt
-'9  1  0  /var/www/overview/projets/calltech/inventaire/default/10.8.96.5/hdd1_part2_nom.txt
+'0  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
+'1  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
+'2  82  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'3  74  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'4  1  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+'5  48  0  ~/scripts/scripts_dimi/calltech_10.8.96.5
+'6  76  44  ~/scripts/scripts_dimi/traitement_inv.sh
+'7  78  38  ~/scripts/scripts_dimi/traitement_inv.sh
+'8  69  0  ~/scripts/scripts_dimi/traitement_inv.sh
+'9  77  1  ~/scripts/scripts_dimi/traitement_inv.sh
 
 # Liste de sauts (le plus récent en premier) :
+-'  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
 -'  82  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  1  0  ~/scripts/scripts_dimi/traitement_inv.sh
 -'  74  0  ~/scripts/scripts_dimi/traitement_inv.sh
@@ -212,15 +214,13 @@ $
 -'  1  0  ~/scripts/scripts_dimi/alerte.sh
 -'  9  108  ~/scripts/scripts_dimi/alerte.sh
 -'  8  0  ~/scripts/scripts_dimi/alerte.sh
--'  65  0  ~/scripts/scripts_dimi/ihm_shell.sh
--'  1  0  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  66  0  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  1  0  ~/scripts/scripts_dimi/mycron
--'  57  42  ~/scripts/scripts_dimi/ihm_shell.sh
--'  52  63  ~/scripts/scripts_dimi/ihm_shell.sh
--'  18  7  ~/scripts/scripts_dimi/ihm_shell.sh
--'  26  0  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  58  42  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  53  63  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  19  7  ~/scripts/scripts_dimi/ihm_shell.sh
+-'  27  0  ~/scripts/scripts_dimi/ihm_shell.sh
 -'  1  0  ~/scripts/scripts_dimi/creer_group.sh
--'  1  0  ~/scripts/scripts_dimi/init_arbre_epse.sh
 -'  1  0  ~/scripts/scripts_dimi/ajout_pc_grpe.sh
 -'  1  0  ~/scripts/scripts_dimi/init_arbre.sh
 -'  56  0  ~/scripts/scripts_dimi/traitement_inv.sh
@@ -274,6 +274,30 @@ $
 -'  1  0  /var/projets/calltech/inventaire/default/192.168.10.2/cpu_type.txt
 
 # Historique des marques dans les fichiers (les plus récentes en premier) :
+
+> ~/scripts/scripts_dimi/ihm_shell.sh
+	"	1	0
+	^	1	0
+	.	62	11
+	+	9	13
+	+	55	0
+	+	53	8
+	+	50	1
+	+	50	1
+	+	50	1
+	+	54	1
+	+	53	62
+	+	55	9
+	+	57	0
+	+	56	16
+	+	58	11
+	+	10	16
+	+	58	11
+	+	10	59
+	+	62	11
+
+> ~/scripts/scripts_dimi/init_arbre_epse.sh
+	"	1	0
 
 > ~/scripts/scripts_dimi/traitement_inv.sh
 	"	82	0
@@ -496,22 +520,6 @@ $
 	.	5	13
 	+	5	13
 
-> ~/scripts/scripts_dimi/ihm_shell.sh
-	"	10	0
-	^	57	43
-	.	55	16
-	+	9	13
-	+	54	0
-	+	52	8
-	+	49	1
-	+	49	1
-	+	49	1
-	+	53	1
-	+	52	62
-	+	54	9
-	+	56	0
-	+	55	16
-
 > ~/scripts/scripts_dimi/suppr_pc.sh
 	"	1	0
 	^	6	38
@@ -526,9 +534,6 @@ $
 	^	5	38
 	.	5	13
 	+	5	13
-
-> ~/scripts/scripts_dimi/init_arbre_epse.sh
-	"	1	0
 
 > ~/scripts/scripts_dimi/ajout_pc_grpe.sh
 	"	1	0

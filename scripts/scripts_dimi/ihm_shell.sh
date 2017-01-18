@@ -7,6 +7,7 @@ test=""
 choix_action="0"
 nbr_ligne=1
 chemin_epse="/var/www/overview/projets"
+chemin_scripts="/var/www/overview/code/scripts/scripts_dimi"
 sudo echo "        **********IHM-Shell**********"
 #selection d'epse
 sudo echo "*)Choisissez une entreprise... "
@@ -54,11 +55,11 @@ case "$choix_action" in
         	#test2=`sed -n /' '$choix_dst/p $chemin_epse/$choix_epse/inventaire/lien_pc_group.txt`
 		test2=`ls -nl $chemin_epse/$choix_epse/inventaire/ | grep "^d" | cut -d " " -f 9`
 	done
-	sudo bash change_group_pc.sh $choix_epse $choix_pc $grpe_pc $choix_dst
+	sudo bash chemin_scripts/change_group_pc.sh $choix_epse $choix_pc $grpe_pc $choix_dst
 	sudo echo "***Modification effectueé avec succès... "
 ;;
 2)
-	sudo bash suppr_pc.sh $choix_epse $choix_pc $grpe_pc
+	sudo bash chemin_scripts/suppr_pc.sh $choix_epse $choix_pc $grpe_pc
 	sudo echo "***La machine a été supprimée... "
 ;;
 
