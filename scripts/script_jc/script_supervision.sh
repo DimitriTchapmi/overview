@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+entreprise=`cat /etc/overview/entreprise`
+ip=`cat /etc/overview/ip`
+
 moyenne() {
         somme=`awk '{s+=$1}END{print s}' RS=" " /etc/overview/tmp1`
         echo $somme / $cp |bc -l|awk '{printf "%0.1f", $0}'
@@ -15,7 +19,7 @@ moyenne() {
         #varfree=`echo $memfree/1000 |bc -l`
         result=`echo $memtotal - $memfree|bc -l`
         val=`echo $((100 * $result / $memtotal)) |bc -l`
-        echo "ram:"$val > /etc/overview/$entreprise_$ip # en pourcentage
+        echo "ram:"$val > /etc/overview/$entreprise"_"$ip # en pourcentage
         lshw -C cpu > tmp
         var=`sed -n /'Cpu'/= /etc/overview/cpu`
         cp=`echo $var| wc -w`
@@ -32,7 +36,7 @@ moyenne() {
         echo $varusr $varsys
         result=`echo $varusr + $varsys |bc|awk '{printf "%0.1f", $0}'`
         let "cp2++"
-        echo "cpu_"$cp2":"$result>> /etc/overview/$entreprise_$ip # en pourcentage cpu utilisé
+        echo "cpu_"$cp2":"$result>> /etc/overview/$entreprise"_"$ip # en pourcentage cpu utilisé
         else
         for i in `seq 1 $cp2`
         do
@@ -43,21 +47,21 @@ moyenne() {
                 aff=`echo 100*$result |bc -l`
                 val=`echo $aff/100 |bc -l`
                 let "cp2++"
-                echo "cpu_"$cp2":"$val >> /etc/overview/$entreprise_$ip
+                echo "cpu_"$cp2":"$val >> /etc/overview/$entreprise"_"$ip
         done
         fi
         var=`sed -n /'part'/= /etc/overview/partition`
         cp=`echo $var |wc -w`
         if [ $cp -le 1 ]; then
-        partname=`sed -n /'part'/p /etc/overview/partition |awk '{print $1}'`
-        mntpoint=`sed -n /'part'/p /etc/overview/partition|awk '{print $7}'`
+        partname=`sed -n /'part'/p /etc/overview/disk |awk '{print $1}'`
+        mntpoint=`sed -n /'part'/p /etc/overview/disk|awk '{print $7}'`
         partsize=`sed -n /'^\/dev'/p /etc/overview/partition |awk '{print $2}'`
         partuse=`sed -n /'^\/dev'/p /etc/overview/partition|awk '{print $3}'`
-        echo "total_part_"$partname"_"$mntpoint":"$partsize >> /etc/overview/$entreprise_$ip
-        echo "utilisé_part_"$partname"_"$mntpoint":"$partuse >> /etc/overview/$entreprise_$ip
-        disksize=`sed -n /'disk'/p /etc/overview/partition |awk '{print $4}'`
-        diskname=`sed -n /'disk'/p /etc/overview/partition |awk '{print $1}'`
-        echo "disque_"$diskname":"$disksize >> /etc/overview/$entreprise_$ip
+        echo "total_part_"$partname"_"$mntpoint":"$partsize >> /etc/overview/$entreprise"_"$ip
+        echo "utilisé_part_"$partname"_"$mntpoint":"$partuse >> /etc/overview/$entreprise"_"$ip
+        disksize=`sed -n /'disk'/p /etc/overview/disk |awk '{print $4}'`
+        diskname=`sed -n /'disk'/p /etc/overview/disk |awk '{print $1}'`
+        echo "disque_"$diskname":"$disksize >> /etc/overview/$entreprise"_"$ip
         else
         for i in `seq 1 $cp`
         do
@@ -69,13 +73,13 @@ moyenne() {
                 val2=`echo $mntpoint |awk '{print $i}'`
                 val3=`echo $partsize |awk '{print $i}'`
                 val4=`echo $partuse |awk '{print $i}'`
-                echo "total_part_"$val"_"$val2":"$val3 >> /etc/overview/$entreprise_$ip
-                echo "utilisé_part_"$val"_"$val2":"$val4 >> /etc/overview/$entreprise_$ip
+                echo "total_part_"$val"_"$val2":"$val3 >> /etc/overview/$entreprise"_"$ip
+                echo "utilisé_part_"$val"_"$val2":"$val4 >> /etc/overview/$entreprise"_"$ip
                 disksize=`sed -n /'disk'/p /etc/overview/partition |awk '{print $4}'`
                 diskname=`sed -n /'disk'/p /etc/overview/partition |awk '{print $1}'`
                 val5=`echo $disksize |awk '{print $i}'`
                 val6=`echo $diskname |awk '{print $i}'`
-                echo "disque_"$val5":"$val6 >> /etc/overview/$entreprise_$ip
+                echo "disque_"$val5":"$val6 >> /etc/overview/$entreprise"_"$ip
         done
         fi
         lshw -C network > /etc/overview/tmp
@@ -85,8 +89,8 @@ moyenne() {
                 vnstat -i $var -tr 5 > /etc/overview/network
                 debent=`sed -n /'rx'/p /etc/overview/network |awk '{print $2}'`
                 debsor=`sed -n /'tx'/p /etc/overview/network |awk '{print $2}'`
-                echo "carte_"$var":"$debent >> /etc/overview/$entreprise_$ip # en kb/s
-                echo "carte_"$var":"$debsor >> /etc/overview/$entreprise_$ip # en kb/s
+                echo "carte_"$var":"$debent >> /etc/overview/$entreprise"_"$ip # en kb/s
+                echo "carte_"$var":"$debsor >> /etc/overview/$entreprise"_"$ip # en kb/s
         else
         for i in `seq 1 $cp`
         do
@@ -94,8 +98,8 @@ moyenne() {
                 vnstat -i $eth -tr 5 > /etc/overview/network
                 debent=`sed -n /'rx'/p /etc/overview/network |awk '{print $2}'`
                 debsor=`sed -n /'tx'/p /etc/overview/network |awk '{print $2}'`
-                echo "carte_"$var":"$debent >> /etc/overview/$entreprise_$ip # en kb/s
-                echo "carte_"$var":"$debsor >> /etc/overview/$entreprise_$ip # en kb/s
+                echo "carte_"$var":"$debent >> /etc/overview/$entreprise"_"$ip # en kb/s
+                echo "carte_"$var":"$debsor >> /etc/overview/$entreprise"_"$ip # en kb/s
         done
         fi
 

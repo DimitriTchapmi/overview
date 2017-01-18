@@ -56,7 +56,7 @@ do
 	sudo sed -n $(expr "$card_line" + 4)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/nc"$cpte"_serial.txt
 	sudo sed -n $(expr "$card_line" + 5)p $fichier | cut -d ":" -f 2  > $chemin_epse/$nom_epse/inventaire/default/$ip_pc/nc"$cpte"_ip.txt
 
-        $nom=`cat nc"$cpte"_logicalname.txt`
+        nom=`cat $chemin_epse/$nom_epse/inventaire/default/$ip_pc/nc"$cpte"_logicalname.txt`
         sudo /var/www/overview/code/scripts/guillaume/create_bases_carte.sh $nom_epse $ip_pc $nom
         
 	let "cpte=cpte+1"
