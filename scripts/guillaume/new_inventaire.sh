@@ -5,4 +5,5 @@ machine=`echo $1 | cut -d _ -f2`
 
 sudo /var/www/overview/code/scripts/scripts_dimi/init_arbre_pc.sh $entreprise $machine
 sudo /var/www/overview/code/scripts/scripts_dimi/traitement_inv.sh $1
+sudo rm /home/transfert/nouveau/$1
 
