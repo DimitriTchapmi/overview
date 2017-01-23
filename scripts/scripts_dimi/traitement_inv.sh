@@ -81,8 +81,10 @@ sudo echo "disknumber: $disk_number"
 
 		nom_partition_base=`sudo cat $chemin_epse/$nom_epse/inventaire/default/$ip_pc/hdd"$disk_number"_part"$partition_number"_nom.txt | cut -d / -f 3`
         commande=$commande" "$nom_partition_base
+        echo $commande
 
  		let "partition_number=partition_number+1"	
 	done
+        exec $commande
 	let "disk_number=disk_number+1"
 done
