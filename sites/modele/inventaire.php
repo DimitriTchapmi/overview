@@ -25,6 +25,16 @@ function getMachineById($id){
 	return $donnees;
 }
 
+function getEntrepriseById($id){
+	global $bdd;
+	$donnees = 0;
+	$i=0;
+	$req = $bdd->prepare('SELECT id,nom FROM entreprise WHERE id = ?');
+	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
+	$donnees = $req->fetch();
+	return $donnees;
+}
+
 
 
 function getTagsByMachine($machine){
@@ -61,12 +71,28 @@ function add_tag($tag, $machine){
 	
 }
 
-function change_groupe ($entreprise, $groupe){
+function change_groupe ($machine, $groupe){
 	global $bdd;
-	$entreprise = intval($entreprise);
+	$machine = intval($machine);
+	$a_groupe = GetGroupeByMachine($machine)["groupe"];
+	$nom_machine = getMachineById($machine)["nom"];
+	$nom_epse = getEntrepriseById(getMachineById($machine)["entreprise"])["nom"];
+	//$commande = "sudo scripts/change_group_pc.sh ".$entreprise." ".$nom_machine." ".$a_groupe." ".$groupe;
+	//exec($commande);
 	$req = $bdd-> prepare("UPDATE machines SET groupe = ? WHERE id = ?");
-		$req->execute(array($groupe,$entreprise)) or die ( print_r($req->errorInfo()) );
+	$req->execute(array($groupe,$machine)) or die ( print_r($req->errorInfo()) );
 }
+
+function GetGroupeByMachine($machine){
+	global $bdd;
+	$donnees = 0;
+	$i=0;
+	$req = $bdd->prepare('SELECT id, groupe FROM machines WHERE id = ?');
+	$req->execute(array($machine)) or die ( print_r($req->errorInfo()) );
+	$donnees = $req->fetch();
+	return $donnees;
+}
+
 
 
 ?>
