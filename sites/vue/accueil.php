@@ -86,7 +86,7 @@ include ('header.php');
        <div class="row" style="margin:auto">
         <div class="col-sm-3 col-md-offset-1 text-center">
             <div class="our-team">
-                <img src="img/dimi.jpg" alt="">
+                <img src="../img/dimi.jpg" alt="">
                 <div class="team-prof">
                     <h3>DimiBrownZyx</h3>
                     <span>Membre de l'équipe et sapeur officiel overview</span>
@@ -95,7 +95,7 @@ include ('header.php');
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="img/JC.jpg" alt="">
+                <img src="../img/JC.jpg" alt="">
                 <div class="team-prof">
                     <h3>Jean-Christophe Thiburce</h3>
                     <span>Membre de l'équipe charos en chef</span>
@@ -104,7 +104,7 @@ include ('header.php');
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="img/gui.jpg" alt="">
+                <img src="../img/gui.jpg" alt="">
                 <div class="team-prof">
                     <h3>Guillaume Jauffret</h3>
                     <span>Chef de projet</span>
