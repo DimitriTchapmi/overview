@@ -77,8 +77,8 @@ function change_groupe ($machine, $groupe){
 	$a_groupe = GetGroupeByMachine($machine)["groupe"];
 	$nom_machine = getMachineById($machine)["nom"];
 	$nom_epse = getEntrepriseById(getMachineById($machine)["entreprise"])["nom"];
-	//$commande = "sudo scripts/change_group_pc.sh ".$entreprise." ".$nom_machine." ".$a_groupe." ".$groupe;
-	//exec($commande);
+	$commande = "sudo scripts/change_group_pc.sh ".$entreprise." ".$nom_machine." ".$a_groupe." ".$groupe;
+	exec($commande);
 	$req = $bdd-> prepare("UPDATE machines SET groupe = ? WHERE id = ?");
 	$req->execute(array($groupe,$machine)) or die ( print_r($req->errorInfo()) );
 }
