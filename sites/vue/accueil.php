@@ -89,7 +89,7 @@ include ('header.php');
                 <img src="../imlkg/dimi.jpg" alt="">
                 <div class="team-prof">
                     <h3>DimiBrownZyx</h3>
-                    <span>Membre de l'équipe et sapeur officiel overview</span>
+                    <span>Membre de l'équipe</span>
                 </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ include ('header.php');
                 <img src="../imklkg/JC.jpg" alt="">
                 <div class="team-prof">
                     <h3>Jean-Christophe Thiburce</h3>
-                    <span>Membre de l'équipe charos en chef</span>
+                    <span>Membre de l'équipe</span>
                 </div>
             </div>
           </div>
