@@ -12,7 +12,7 @@ if(!isset($_SESSION["id_user"])){
 					$_SESSION["id_user"] = $retour;
 					$_SESSION["login_user"] = $_POST["nom"];
 					$_SESSION["pass_user"] = $_POST["pass1"];
-					$commande = " sudo bash scripts/init_arbre_epse.sh ".$_POST["nom"] ;
+					$commande = "sudo scripts/init_arbre_epse.sh ".$_POST["nom"] ;
 					exec($commande);
 					include("vue/tableau_bord.php");
 				}else{
