@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-    
-    <head>
-    
-        <meta charset="utf-8">
-        <title>Mon application</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Connexion à mon application">
-        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-        <!-- ci-dessous notre fichier CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/app.css" />
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700,300" />
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-    
-    </body>
-</html>
+
+<?php include ('header.php');
 
 
-<div class="container">
-<div class="row">
-<div class="col-xs-12">
-    
-    <div class="main">
-            
-        <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-1">
-                    
-            <?php
+echo'<div class="tabcontainer">
+<h2 style="margin:135px auto -120px; color:red;text-align:center"></h2>';
+
+echo "<div class='tabcontainer'>";
 echo "<form action='gestion' method='post'>";
-echo "<table>";
+echo "<table class='table table-striped'>
+<thead>";
 echo "<tr>";
-	echo "<td>Machine</td><td>Groupe</td><td>Tags</td>";
+	echo "<td>Machine</td><td>Groupe</td><td>Tags</td></thead><tbody>";
 for($i=0;$i<count($machines);$i++){
 	$tags = getTagsByMachine($machines[$i]["id"]);
 	echo "<tr>";
-	echo "<td>".$machines[$i]["nom"]."</td>";
+	echo "<td> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
 	echo "<td>".$machines[$i]["groupe"]."</td>";
 	$html_tags = tags_html($tags);
 	echo "<td>".$html_tags."</td>";
 	echo "<td><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
 	echo "</tr>";
 }
-echo "<table>";
+echo "
+ </tbody>
+  </table>";
 echo '<div class="col-md-offset-0 col-md-8"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer"/></div>';
+echo "<h2> Groupes</h2>";
+echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajout de groupe</a></li>
+              <div id="popup1" class="popup_block">
+              <div class="login">
+  <div class="login-triangle"></div>
+  <h2 class="login-header">Ajout de groupe</h2>
+  <form class="form-horizontal" action="gestion" role="form" method="post">
+    <p><input type="text" name="nom" id="login" placeholder="nom"></p>
+    <p><input type="submit" name="add_groupe" value="Ajouter"></p>
+</div>
+</div></div></button>';
+
+echo "<h2> Tags</h2>";
+echo ' Tag <div class="form-group">
+<div class="col-md-8"><input name="tag"class="form-control" type="text"></div>
+                </div>
+                <div class="col-md-offset-0 col-md-8"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
+                </div>';
+
 echo "</form>";
 
+
+//include("footer.php");
 ?>
-            
-        </div>
-        </div>
-        
-    </div>
-</div>
-</div>
-</div>
+
