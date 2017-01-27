@@ -16,10 +16,9 @@ function tags_html($tags){
 
 if (isset($_SESSION["id_user"])) {
 	if(isset($_POST["id"])){
-		for($i=0;$i<count($_POST["id"]);$i++) {
-			change_groupe($_POST["id"][$i], $_POST["groupe"][$i]);
-			//ajouter fonction pour changement de groupe sur le serveur
-		}
+			change_groupe($_POST["id"], $_POST["groupe"]);
+			update_tags($_POST["tags"],$_POST["rm_tags"]); // ATTENTION SI RM_tags pas défini
+
 	}
 		$nom_entreprise =($_SESSION["id_user"]);
 		$machines = getMachinesByEntreprise($nom_entreprise);
