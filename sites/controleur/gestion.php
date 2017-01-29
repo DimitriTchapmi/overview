@@ -1,5 +1,5 @@
 <?php
-include("/modele/inventaire.php");
+include("modele/inventaire.php");
 
 	if(isset($_SESSION["id_user"])){
 		if(isset($_POST["action"])){
