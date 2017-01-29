@@ -41,4 +41,4 @@ else # l'alerte n'est pas déclenchée
 fi
 
 sudo sed -i "/^$2/ d" /var/www/overview/projets/$entreprise/supervision/$machine/alertes
-sudo echo $nom_item:$seuil:$battement:$temps_atteint:$temps_redescendu:$flag >>alertes
+sudo echo $nom_item:$seuil:$battement:$temps_atteint:$temps_redescendu:$flag >> /var/www/overview/projets/$entreprise/supervision/$machine/alertes
