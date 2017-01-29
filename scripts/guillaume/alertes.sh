@@ -30,7 +30,8 @@ if [ $flag -eq 1 ] # si alerte déjà déclenchée
      		let "flag=0"
      fi
 else # l'alerte n'est pas déclenchée
-     if [ $3 -gt $seuil ] # valeur au dessus du seuil
+    result = `echo $3 > $seuil | bc`
+     if [ $result ] # valeur au dessus du seuil
      	then
          let "temps_atteint++"
          if [ $temps_atteint -eq $battement ] # si plusieurs valeurs au dessus de seuil, on déclenche l'alerte
