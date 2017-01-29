@@ -5,8 +5,8 @@
 entreprise=`echo $1 | cut -d _ -f1`
 machine=`echo $1 | cut -d _ -f2`
 
-ligne=`cat /var/www/overview/projets/$entreprise/supervision/$machine/alerte | grep $2`
-num_ligne=`cat /var/www/overview/projets/$entreprise/supervision/$machine/alerte | grep $2 | cut -d : -f 1`
+ligne=`cat /var/www/overview/projets/$entreprise/supervision/$machine/alertes | grep $2`
+num_ligne=`cat /var/www/overview/projets/$entreprise/supervision/$machine/alertes | grep $2 | cut -d : -f 1`
 
 nom_item=`echo $ligne | cut -d : -f 1`
 seuil=`echo $ligne | cut -d : -f 2`
