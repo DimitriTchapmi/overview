@@ -36,6 +36,14 @@ function getEntrepriseById($id){
 	return $donnees;
 }
 
+function getIdByTag($nom_tag){
+	global $bdd;
+	$donnees = 0;
+	$req = $bdd->prepare('SELECT id,nom FROM tags WHERE nom = ?');
+	$req->execute(array($nom_tag)) or die ( print_r($req->errorInfo()) );
+	$donnees = $req->fetch();
+	return $donnees;
+}
 
 
 function getTagsByMachine($machine){
@@ -54,7 +62,7 @@ function getTagsByMachine($machine){
 
 function add_tag($tag, $machine){
 	global $bdd;
-	echo $machine;
+	var_dump($machine,$tag);
 	$req = $bdd-> prepare("SELECT id FROM tags WHERE nom = ?");
 			$req->execute(array($tag)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
@@ -79,29 +87,39 @@ function add_tag($tag, $machine){
 
 
 function remove_tag_machine($id_tag, $machine){
+	global $bdd;
+	$machine=intval($machine);
+	$id_tag=intval($id_tag);
 	$req = $bdd->prepare('DELETE FROM machines_tags WHERE tag = ? AND machine = ? ;');
 			$req->execute(array($id_tag,$machine)) or die ( print_r($req->errorInfo()));
 }
 
 function existeTag ($nom_tag,$machine){
+	global $bdd;
 	$req = $bdd-> prepare("select count(1) from tags JOIN machines_tags ON tags.id = machines_tags.tag AND machines_tags.machine= ? AND tags.nom = ? ;");
 			$req->execute(array($machine, $nom_tag)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
-	return $donnees;
+	return $donnees["0"];
 }
 
 
-function update_tags($tags,$rm_tags,$machine){
+function update_tags($tags,$rm_tags,$machine){ // nom des tags 
+	global $bdd;
+
+	foreach ($rm_tags as $tag) {
+		$id_tag = getIdByTag($tag)["id"];
+		if($id_tag){
+			remove_tag_machine($id_tag,$machine);
+		}
+
+	}
+
 	foreach ($tags as $tag) {
 		if (!existeTag($tag, $machine)){
 			add_tag($tag,$machine);
-	foreach ($rm_tags as $tag) {
-		$nom_tag = getIdByTag($tag); // FONCTION A FAIRE
-		remove_tag_machine($tag);
-	}
-
 		}
 	}
+
 }
 
 
@@ -111,8 +129,8 @@ function change_groupe ($machine, $groupe){
 	$a_groupe = GetGroupeByMachine($machine)["groupe"];
 	$nom_machine = getMachineById($machine)["nom"];
 	$nom_epse = getEntrepriseById(getMachineById($machine)["entreprise"])["nom"];
-	$commande = "sudo scripts/change_group_pc.sh ".$entreprise." ".$nom_machine." ".$a_groupe." ".$groupe;
-	exec($commande);
+	//$commande = "sudo scripts/change_group_pc.sh ".$entreprise." ".$nom_machine." ".$a_groupe." ".$groupe;
+	//exec($commande);
 	$req = $bdd-> prepare("UPDATE machines SET groupe = ? WHERE id = ?");
 	$req->execute(array($groupe,$machine)) or die ( print_r($req->errorInfo()) );
 }

@@ -26,7 +26,7 @@ include("/modele/inventaire.php");
         */include("vue/gestion_test.php");
         }elseif (isset($_POST["add_groupe"])) {
         	$nom_epse = getEntrepriseById($_SESSION["id_user"])["nom"];
-        	exec("sudo mkdir projets/".$nom_epse."/inventaire/".$_POST["nom"]);
+        	//exec("sudo mkdir projets/".$nom_epse."/inventaire/".$_POST["nom"]);
         	echo "Vous avez ajouté le groupe".$_POST["nom"];
         }elseif (isset($_POST["add_tags"])) {
         	foreach ($_POST["machine"] as $machine){

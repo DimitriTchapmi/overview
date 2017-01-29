@@ -28,7 +28,7 @@ echo '<h2 class="login-header">Gestion de la machine '.$infos["nom"].'</h2>';?>
   <form action="inventaire" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
     <?php echo '<label class="control-label" for="nom">Groupe</label>
     <input type="text" name="groupe" value='.$infos["groupe"].'>
-    <input type="hidden" name="id" value="'.$infos["id"].'
+    <input type="hidden" name="id" value="'.$infos["id"].'">
     <br><br>';?>
     <br><br>
 
