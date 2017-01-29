@@ -39,6 +39,6 @@ else # l'alerte n'est pas déclenchée
          fi
     fi
 fi
-echo $nom_item $seuil $battement $temps_atteint $temps_redescendu $flag
-sed -i "/^$2$3/ d" alerte
-echo $nom_item:$seuil:$battement:$temps_atteint:$temps_redescendu:$flag >>alerte
+
+sudo sed -i "/^$2$3/ d" alerte
+sudo echo $nom_item:$seuil:$battement:$temps_atteint:$temps_redescendu:$flag >>alerte
