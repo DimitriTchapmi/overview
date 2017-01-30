@@ -7,7 +7,7 @@ function liste_groupes($entreprise){
 
 function liste_alertes($entreprise, $machine){
 	exex("cat projets/".$entreprise."/supervision/".$machine."/alertes",$alertes);
-	var $html_alertes = "";
+	$html_alertes = "";
 	for($i=0;$i<count($alertes);$i++){
 		$champs = preg_split(":", $alertes[$i]);
 		$nom_item= $champs[0];

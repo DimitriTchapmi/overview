@@ -17,7 +17,7 @@ function getEntrepriseByMachine($id_machine){
 	global $bdd;
 	$donnees = 0;
 	$i=0;
-	$req = $bdd->prepare('SELECT entreprise FROM machines WHERE machine = ?');
+	$req = $bdd->prepare('SELECT entreprise FROM machines WHERE id = ?'); // M
 	$req->execute(array($id_machine)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
 	return $donnees["entreprise"];
