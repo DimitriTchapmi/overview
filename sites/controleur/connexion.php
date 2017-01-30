@@ -16,10 +16,10 @@ if(!isset($_SESSION["id_user"])){
 					include("controleur/tableau_bord.php");
 				}
 	} else{
-		include_once("vue/connexion.php");
+		include_once("code/sites/vue/connexion.php");
 	
 	}
 }else
-	include_once("controleur/tableau_bord.php");
+	include_once("code/sites/controleur/tableau_bord.php");
 	
 ?>

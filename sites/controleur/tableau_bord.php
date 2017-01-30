@@ -21,7 +21,7 @@ if (isset($_SESSION["id_user"])) {
 	}
 		$nom_entreprise =($_SESSION["id_user"]);
 		$machines = getMachinesByEntreprise($nom_entreprise);
-	include_once("vue/inventaire.php");
+	include_once("code/sites/vue/inventaire.php");
 } else {
-	include('controleur/connexion.php');
+	include('code/sites/controleur/connexion.php');
 }
