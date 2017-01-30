@@ -10,7 +10,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 	if(!isset($_GET["c"])){
 		echo "Page supervision";
 	}elseif ($_GET["c"] == "inv") {
-		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine)
+		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
 	}elseif ($_GET["c"] == "alertes") {
 		$html = liste_alertes($nom_entreprise,$nom_machine);
 		echo $html;
