@@ -9,7 +9,7 @@ function liste_alertes($entreprise, $machine){
 	exec("cat projets/".$entreprise."/supervision/".$machine."/alertes",$alertes);
 	$html_alertes = "";
 	for($i=0;$i<count($alertes);$i++){
-		$champs = preg_split(":", $alertes[$i]);
+		$champs = preg_split("/:/", $alertes[$i]);
 		$nom_item= $champs[0];
 		$seuil=$champs[1];
 		$battement=$champs[2];
