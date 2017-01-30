@@ -26,5 +26,11 @@ function liste_alertes($entreprise, $machine){
 	return $html_alertes;
 }
 
+function recuperer_inventaire($entreprise, $machine, $groupe){
+	exec("cat projets/".$entreprise."/inventaire/".$groupe."/$machine/".$machine."_".$entreprise,$lignes);
+	for($i=0;$i<count($lignes);$i++){
+		echo $lignes[$i];
+	}
+}
 
 ?>
