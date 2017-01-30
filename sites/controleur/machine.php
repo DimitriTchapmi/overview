@@ -8,8 +8,8 @@ if($entreprise_machine == $_SESSION["id_user"]){
 	}elseif ($_GET["c"] == "inv") {
 		echo "Page inventaire";
 	}elseif ($_GET["c"] == "alertes") {
-		$nom_entreprise = getEntrepriseById($_GET["id"])["nom"];
-		$nom_machine = getMachineById($_SESSION["id_user"])["nom"];
+		$nom_entreprise = getEntrepriseById($_SESSION["id_user"])["nom"];
+		$nom_machine = getMachineById($_GET["id"])["nom"];
 		$html = liste_alertes($nom_entreprise,$nom_machine);
 		echo $html;
 	}else{
