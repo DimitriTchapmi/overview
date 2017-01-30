@@ -5,7 +5,7 @@ $entreprise_machine = getEntrepriseByMachine($_GET["id"]);
 if($entreprise_machine == $_SESSION["id_user"]){
 	$nom_entreprise = getEntrepriseById($_SESSION["id_user"])["nom"];
 	$nom_machine = getMachineById($_GET["id"])["nom"];
-	$groupe_machine = GetGroupeByMachine($_GET["id"]);
+	$groupe_machine = GetGroupeByMachine($_GET["id"])["groupe"];
 
 	if(!isset($_GET["c"])){
 		echo "Page supervision";
