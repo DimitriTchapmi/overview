@@ -27,7 +27,7 @@ function liste_alertes($entreprise, $machine){
 }
 
 function recuperer_inventaire($entreprise, $machine, $groupe){
-	exec("cat projets/".$entreprise."/inventaire/".$groupe."/$machine/".$machine."_".$entreprise,$lignes);
+	exec("cat projets/".$entreprise."/inventaire/".$groupe."/$machine/".$entreprise"_".$machine,$lignes);
 	for($i=0;$i<count($lignes);$i++){
 		echo $lignes[$i];
 	}
