@@ -1,5 +1,6 @@
 <?php
 include("code/sites/modele/inventaire.php");
+include("code/sites/modele/serveur.php");
 $entreprise_machine = getEntrepriseByMachine($_GET["id"]);
 if($entreprise_machine == $_SESSION["id_user"]){
 	if(!isset($_GET["c"])){
