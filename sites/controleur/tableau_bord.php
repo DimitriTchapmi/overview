@@ -1,7 +1,6 @@
 <?php
-	include_once("modele/inventaire.php");
-	include_once("modele/co_in.php");
-	include("modele/connexion_bdd.php");
+	include_once("code/sites/modele/inventaire.php");
+	include_once("code/sites/modele/co_in.php");
 
 
 
