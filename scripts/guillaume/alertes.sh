@@ -17,7 +17,8 @@ flag=`echo $ligne | cut -d : -f 6`
 
 if [ $flag -eq 1 ] # si alerte déjà déclenchée
 	then
-	if [ $3 -lt $seuil ] # si la valeur est en dessous du seuil
+    result=`echo "$3 > $seuil" | bc`
+	if [ $result -eq 0 ] # si la valeur est en dessous du seuil
 	 then
 	 let "temps_redescendu++"
     else
@@ -31,8 +32,7 @@ if [ $flag -eq 1 ] # si alerte déjà déclenchée
      		let "flag=0"
      fi
 else # l'alerte n'est pas déclenchée
-    result=`echo "$3 > $seuil" | bc`
-    echo $result
+     result=`echo "$3 > $seuil" | bc`
      if [ $result -eq 1 ] # valeur au dessus du seuil
      	then
          let "temps_atteint++"
