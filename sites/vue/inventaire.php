@@ -25,11 +25,12 @@ for($i=0;$i<count($machines);$i++){
 }
 echo "
  </tbody>
-  </table>";
-echo '<div class="col-md-offset-0 col-md-1" style="padding-left: 1px;"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer"></div>';
-echo '<h2 style="width: 918px; 
+  </table>
+  </form>";
+echo '<div class="col-md-5"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer">';
+echo '<h2 style="width: 400px; 
                  margin-bottom: 47px; 
-                 margin-top: 83px;"> Groupes</h2>';
+                 margin-top: 40px;"> Groupes</h2>';
 echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajout de groupe</a></li>
               <div id="popup1" class="popup_block">
               <div class="login">
@@ -39,18 +40,16 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
     <p><input type="text" name="nom" id="login" placeholder="nom"></p>
     <p><input type="submit" name="add_groupe" value="Ajouter"></p>
 </div>
-</div></div></button>';
-echo '<div class="col-md-4">';
-echo "<h2> Tags</h2>";
-echo  'Tag <div class="form-group">
-<div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
+</div>
+</button>
+</div>
+<div class="col-md-6">
+<h2 style="width: 400px; margin-top: 87px;"> Tags</h2>
+Tag <div class="form-group">
+	<div class="col-md-5"><input name="tag"class="form-control" type="text"></div>
+            <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
                 </div>
-                <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
-                </div>';
-
-echo "</form>";
-echo '</div>';
-
+';
 //include("footer.php");
 ?>
 
