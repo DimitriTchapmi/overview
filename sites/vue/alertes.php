@@ -8,8 +8,8 @@
 <h3> Alertes en cours </h3>
 
 <?php 
-echo "<a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a>";
-echo "<a href='machine?id=".$_GET["id"]."'>Inventaire</a>";
+echo "<a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>";
+echo "<a href='machine?id=".$_GET["id"]."'>Supervision</a><br></br>";
 echo "$html"."<br></br>";
 
 echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajouter une alerte</a></li>
