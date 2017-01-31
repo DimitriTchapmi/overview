@@ -5,11 +5,11 @@
   <title>Overview</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="code/sites/img/logo.png" />
 
     
-  <link rel="stylesheet" href="vue/css/bootstrap.css">
-  <link rel="stylesheet" href="vue/css/style.css">
+  <link rel="stylesheet" href="code/sites/vue/css/bootstrap.css">
+  <link rel="stylesheet" href="code/sites/vue/css/style.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -33,18 +33,18 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- animate.css -->
-<link rel="stylesheet" href="vue/assets/animate/animate.css" />
-<link rel="stylesheet" href="vue/assets/animate/set.css" />
+<link rel="stylesheet" href="code/sites/vue/assets/animate/animate.css" />
+<link rel="stylesheet" href="code/sites/vue/assets/animate/set.css" />
 
 <!-- gallery -->
-<link rel="stylesheet" href="vue/assets/gallery/blueimp-gallery.min.css">
+<link rel="stylesheet" href="code/sites/vue/assets/gallery/blueimp-gallery.min.css">
 
 <!-- favicon -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="code/sites/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="code/sites/images/favicon.ico" type="image/x-icon">
 
 
-<link rel="stylesheet" href="vue/assets/style.css">
+<link rel="stylesheet" href="code/sites/vue/assets/style.css">
 
 
 <style>
@@ -86,7 +86,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
-            <a href="/"><img src="img/logo.png" style=" height:50px;margin-top:15px;"></a>
+            <a href="/"><img src="code/sites/img/logo.png" style=" height:50px;margin-top:15px;"></a>
 
 
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
