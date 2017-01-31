@@ -1,7 +1,7 @@
 <!-- Footer Starts -->
 <div class="footer text-center spacer">
 <p class="wowload flipInX"><a href="#"><i class="fa fa-globe fa-2x"></i></a> <a href="http://www.rainloop.net/"><i class="fa fa-envelope fa-2x"></i></a><a href="https://jappix.com"><i class="fa fa-users fa-2x"></i></a> </p>
-Copyright 2016 Event'IzI. All rights reserved.
+Copyright 2016 Event'IzI. All rights reserved gui.
 </div>
 <!-- # Footer Ends -->
 
