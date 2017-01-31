@@ -24,7 +24,7 @@ echo "
  </tbody>
   </table>
   <input name='action' class='btn btn-success btn btn-success' type='submit' value='Gérer'>
-  ";
+  </form>";
 echo '<div class="col-md-5">';
 echo '<h2 style="width: 400px; 
                  margin-bottom: 47px; 
@@ -47,10 +47,11 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 	<div class="col-md-5"><input name="tag"class="form-control" type="text"></div>
             <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-top: 13px;"/></div>
                 </div>
-             </div>
-               </form>
+             
+
                
 ';
 include("footer.php");
+echo '</div>';
 ?>
 
