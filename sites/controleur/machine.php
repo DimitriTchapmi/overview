@@ -15,8 +15,8 @@ if($entreprise_machine == $_SESSION["id_user"]){
 	}elseif ($_GET["c"] == "alertes") {
 		$html = liste_alertes($nom_entreprise,$nom_machine);
 		$items = getMaterielByMachine($_GET["id"]);
-		if(isset($_POST)){
-			var_dump($_POST);
+		if(isset($_POST["add_alerte"])){
+			ajouter_alerte($nom_entreprise,$nom_machine,$_POST);
 		}
 		include("code/sites/vue/alertes.php");
 

@@ -26,6 +26,13 @@ function liste_alertes($entreprise, $machine){
 	return $html_alertes;
 }
 
+function ajouter_alerte($entreprise,$machine,$infos){
+	$item = str_replace(' ', '', $infos["item"]);
+	exec("echo ".$item.":".$infos["seuil"].":".$infos["battement"].":0:0:0 >> projets/".$entreprise."/supervision/".$machine."/alertes");
+}
+
+
+
 function recuperer_inventaire($entreprise, $machine, $groupe){
 	exec("cat projets/".$entreprise."/inventaire/".$groupe."/$machine/".$entreprise."_".$machine,$lignes);
 	for($i=0;$i<count($lignes);$i++){
