@@ -27,9 +27,9 @@ echo "
  </tbody>
   </table>";
 echo '<div class="col-md-offset-0 col-md-1" style="padding-left: 1px;"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer"></div>';
-echo "<h2 style='width: 918px; 
+echo '<h2 style="width: 918px; 
                  margin-bottom: 47px; 
-                 margin-top: 83px;'> Groupes</h2>";
+                 margin-top: 83px;"> Groupes</h2>';
 echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajout de groupe</a></li>
               <div id="popup1" class="popup_block">
               <div class="login">
