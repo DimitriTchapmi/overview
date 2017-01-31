@@ -22,3 +22,4 @@ for($i=0;$i<count($items);$i++){
 <p><input type="submit" name="add_alerte" value="Ajouter"></p>
 </form>
 </div>
+<?php echo "$html"; ?>
