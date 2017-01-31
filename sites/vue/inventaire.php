@@ -41,7 +41,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 </div>
 </div>
 </button>
-<div class="col-md-4">
+<div class="col-md-8">
 <h2 style="width: 400px;"> Tags</h2>
 Tag <div class="form-group">
 <div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
