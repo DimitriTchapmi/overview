@@ -25,8 +25,9 @@ for($i=0;$i<count($machines);$i++){
 }
 echo "
  </tbody>
-  </table>";
-echo '<div class="col-md-10"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer">';
+  </table>
+  </form>";
+echo '<div class="col-md-5"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer">';
 echo '<h2 style="width: 918px; 
                  margin-bottom: 47px; 
                  margin-top: 83px;"> Groupes</h2>';
@@ -41,17 +42,14 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 </div>
 </div>
 </button>
+</div>
 <div class="col-md-8">
 <h2 style="width: 400px;"> Tags</h2>
 Tag <div class="form-group">
-<div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
+	<div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
+            <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
                 </div>
-                <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
-                </div>
-
-</form>
-</div>
-</div>';
+';
 //include("footer.php");
 ?>
 
