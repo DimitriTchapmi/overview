@@ -14,7 +14,13 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
 	}elseif ($_GET["c"] == "alertes") {
 		$html = liste_alertes($nom_entreprise,$nom_machine);
-		echo $html;
+		$items = getMaterielByMachine($_GET["id"]);
+		if(isset($_POST)){
+			var_dump($_POST);
+		}
+		include("vue/alertes.php");
+
+
 	}else{
 		include("code/sites/vue/page_404.php");
 	}
