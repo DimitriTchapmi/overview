@@ -20,6 +20,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
   <form class="form-horizontal" action="machine?id='.$_GET["id"].'&c=alertes" role="form" method="post">
   	  <select name="item">
   	  '.$html_items.'
+  	  </select>
     <p><input type="text" name="seuil" id="login" placeholder="seuil"></p>
     <p><input type="text" name="battement" id="login" placeholder="battement"></p>
     <p><input type="submit" name="add_alerte" value="Ajouter"></p>

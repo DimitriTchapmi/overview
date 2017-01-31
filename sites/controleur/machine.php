@@ -19,7 +19,6 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		for($i=0;$i<count($items);$i++){
 			$html_items = $html_items."<option value='".$items[$i]["nom"]."'>".$items[$i]["nom"]."</option>";
 		}
-		$html_items = $html_items."</select>";
 
 		if(isset($_POST["add_alerte"])){
 			ajouter_alerte($nom_entreprise,$nom_machine,$_POST);
