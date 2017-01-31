@@ -36,7 +36,6 @@ include("code/sites/modele/inventaire.php");
 	}else{
 		include("code/sites/vue/connexion.php");
 	}
-
 	
 
 
