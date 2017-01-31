@@ -23,7 +23,7 @@ include("code/sites/modele/inventaire.php");
 		echo '<div class="form-group">
                 <div class="col-md-offset-0 col-md-8"><input name="action" class="btn btn-success btn btn-success" type="submit" value="modifier"/></div>
                 </div>';
-        */include("vue/gestion_test.php");
+        */include("code/sites/vue/gestion_test.php");
         }elseif (isset($_POST["add_groupe"])) {
         	$nom_epse = getEntrepriseById($_SESSION["id_user"])["nom"];
         	//exec("sudo mkdir projets/".$nom_epse."/inventaire/".$_POST["nom"]);
@@ -34,7 +34,7 @@ include("code/sites/modele/inventaire.php");
         	}
         }
 	}else{
-		include("vue/connexion.php");
+		include("code/sites/vue/connexion.php");
 	}
 
 	

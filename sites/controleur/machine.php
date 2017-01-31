@@ -15,12 +15,12 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		$html = liste_alertes($nom_entreprise,$nom_machine);
 		echo $html;
 	}else{
-		include("vue/page_404.php");
+		include("code/sites/vue/page_404.php");
 	}
 
 
 }else{
-	include("vue/page_404.php");
+	include("code/sites/vue/page_404.php");
 }
 
 ?>

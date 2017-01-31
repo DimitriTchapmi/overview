@@ -14,22 +14,22 @@ if(!isset($_SESSION["id_user"])){
 					$_SESSION["pass_user"] = $_POST["pass1"];
 					$commande = "sudo scripts/init_arbre_epse.sh ".$_POST["nom"] ;
 					exec($commande);
-					include("vue/tableau_bord.php");
+					include("code/sites/vue/inventaire.php");
 				}else{
 					
 					$message = $retour;
-					include("vue/inscription.php"); // Ajouter le message de $retour
+					include("code/sites/vue/inscription.php"); // Ajouter le message de $retour
 				}
 			}else{
 				$message = "Les deux mots de passe ne sont pas identiques";
-				include("vue/inscription.html"); // Ajouter un message
+				include("code/sites/vue/inscription.html"); // Ajouter un message
 			}
 		}else{
 			$message = "Le mot de passe doit faire entre 4 et 8 caractères";
-			include("vue/inscription.php"); // Ajouter un message
+			include("code/sites/vue/inscription.php"); // Ajouter un message
 		}
 	}else{
-		include("vue/inscription.php");
+		include("code/sites/vue/inscription.php");
 	}
 }else
-	include("vue/accueil.html");
+	include("code/sites/vue/accueil.html");
