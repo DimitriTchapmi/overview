@@ -12,8 +12,15 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		include("code/sites/vue/supervision.php");
 	}elseif ($_GET["c"] == "inv") {
 		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
+
 	}elseif ($_GET["c"] == "alertes") {
 		$items = getMaterielByMachine($_GET["id"]);
+		$html_items = "<select name='item'>";
+		for($i=0;$i<count($items);$i++){
+			$html_items = $html_items."<option value='".$items[$i]["nom"]."'>".$items[$i]["nom"]."</option>";
+		}
+		$html_items = $html_items."</select>";
+
 		if(isset($_POST["add_alerte"])){
 			ajouter_alerte($nom_entreprise,$nom_machine,$_POST);
 		}
