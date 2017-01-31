@@ -24,4 +24,5 @@ include ('header.php');
     	for($i=0;$i<count($graphes["semaine"]);$i++){
     		echo "<img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["semaine"][$i]."'>";
     	}
+    	
     ?>
