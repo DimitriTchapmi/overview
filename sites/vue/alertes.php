@@ -9,7 +9,7 @@
 <div class="login-triangle"></div>
 <h1> Ajouter une alerte </h1>
 <?php echo'<form class="form-horizontal" action="machine?id='.$_GET["id"].'&c=alertes" role="form" method="post">';
-echo "<select>";
+echo "<select value='item'>";
 
 for($i=0;$i<count($items);$i++){
 	echo "<option value='".$items[$i]["nom"]."'>".$items[$i]["nom"]."</option>";
