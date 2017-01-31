@@ -28,9 +28,9 @@ echo "
   </table>
   </form>";
 echo '<div class="col-md-5"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer">';
-echo '<h2 style="width: 918px; 
+echo '<h2 style="width: 400px; 
                  margin-bottom: 47px; 
-                 margin-top: 83px;"> Groupes</h2>';
+                 margin-top: 40px;"> Groupes</h2>';
 echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajout de groupe</a></li>
               <div id="popup1" class="popup_block">
               <div class="login">
@@ -43,10 +43,10 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 </div>
 </button>
 </div>
-<div class="col-md-8">
+<div class="col-md-6">
 <h2 style="width: 400px;"> Tags</h2>
 Tag <div class="form-group">
-	<div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
+	<div class="col-md-5"><input name="tag"class="form-control" type="text"></div>
             <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
                 </div>
 ';
