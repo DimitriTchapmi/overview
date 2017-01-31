@@ -7,11 +7,11 @@
 <br></br>
 <h3> Alertes en cours </h3>
 
-<?php echo "$html"."<br></br>";
+<?php 
+echo "<a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a>";
+echo "<a href='machine?id=".$_GET["id"]."'>Inventaire</a>";
+echo "$html"."<br></br>";
 
-echo '<h2 style="width: 400px; 
-                 margin-bottom: 47px; 
-                 margin-top: 40px;"> Groupes</h2>';
 echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajouter une alerte</a></li>
               <div id="popup1" class="popup_block">
               <div class="login">

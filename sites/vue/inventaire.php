@@ -3,7 +3,7 @@
 
 <?php include ('header.php');
 
-
+echo"<h2> Machine de l'entreprise ".$nom_entreprise;
 echo'<div class="tabcontainer">';
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped'>

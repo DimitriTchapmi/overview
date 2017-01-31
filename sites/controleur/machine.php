@@ -15,7 +15,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 
 	}elseif ($_GET["c"] == "alertes") {
 		$items = getMaterielByMachine($_GET["id"]);
-		$html_items = "<select name='item'>";
+		$html_items = "Item <select name='item'>";
 		for($i=0;$i<count($items);$i++){
 			$html_items = $html_items."<option value='".$items[$i]["nom"]."'>".$items[$i]["nom"]."</option>";
 		}
