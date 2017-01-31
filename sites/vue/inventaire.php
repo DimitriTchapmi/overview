@@ -4,9 +4,7 @@
 <?php include ('header.php');
 
 
-echo'<div class="tabcontainer">
-<h2 style="margin:135px auto -120px; color:red;text-align:center"></h2>';
-
+echo'<div class="tabcontainer">';
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped'>
 <thead>";
