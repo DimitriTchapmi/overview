@@ -7,7 +7,6 @@
 echo'<div class="tabcontainer" style="margin-top: 280px;">
 <h2 style="margin:135px auto -120px; color:red;text-align:center"></h2>';
 
-echo "<div class='tabcontainer' style='margin-bottom: 50px;'>";
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped'>
 <thead>";
@@ -51,7 +50,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
             <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-top: 13px;"/></div>
                 </div>
                 </div>
-                </div>
+               
 ';
 include("footer.php");
 ?>
