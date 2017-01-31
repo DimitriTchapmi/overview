@@ -33,4 +33,12 @@ function recuperer_inventaire($entreprise, $machine, $groupe){
 	}
 }
 
+function recuperer_graphes($entreprise,$machine){
+	$graphes = [];
+	exec("ls projets/".$entreprise."/supervision/".$machine."/graphes | grep _3600",$graphes["heure"]);
+	exec("ls projets/".$entreprise."/supervision/".$machine."/graphes | grep _86400",$graphes["jour"]);
+	exec("ls projets/".$entreprise."/supervision/".$machine."/graphes | grep _604800",$graphes["semaine"]);
+	return $graphes;
+}
+
 ?>

@@ -8,7 +8,8 @@ if($entreprise_machine == $_SESSION["id_user"]){
 	$groupe_machine = GetGroupeByMachine($_GET["id"])["groupe"];
 
 	if(!isset($_GET["c"])){
-		echo "Page supervision";
+		$graphes = recuperer_graphes($nom_entreprise,$nom_machine);
+		var_dump($graphes);
 	}elseif ($_GET["c"] == "inv") {
 		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
 	}elseif ($_GET["c"] == "alertes") {
