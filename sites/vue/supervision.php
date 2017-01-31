@@ -9,7 +9,7 @@ include ('header.php');
     <?php
 
     	for($i=0;$i<count($graphes["heure"]);$i++){
-    		echo "<div class='col-md-4'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["heure"][$i]."'></div>";
+    		echo "<div class='col-md-5'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["heure"][$i]."'></div>";
     	}
     ?>
 
