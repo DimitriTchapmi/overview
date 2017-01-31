@@ -7,7 +7,6 @@
 echo'<div class="tabcontainer">
 <h2 style="margin:135px auto -120px; color:red;text-align:center"></h2>';
 
-echo "<div class='tabcontainer' style='margin-bottom: 50px;'>";
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped'>
 <thead>";
@@ -26,8 +25,9 @@ for($i=0;$i<count($machines);$i++){
 echo "
  </tbody>
   </table>
+  <input name='action' class='btn btn-success btn btn-success' type='submit' value='Gérer'>
   </form>";
-echo '<div class="col-md-5"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer">';
+echo '<div class="col-md-5">';
 echo '<h2 style="width: 400px; 
                  margin-bottom: 47px; 
                  margin-top: 40px;"> Groupes</h2>';
@@ -44,11 +44,13 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 </button>
 </div>
 <div class="col-md-6">
-<h2 style="width: 400px; margin-top: 87px;"> Tags</h2>
-Tag <div class="form-group">
+<h2 style="width: 400px; margin-top: 40px; margin-bottom: 32px;"> Tags</h2>
+<div class="form-group">
 	<div class="col-md-5"><input name="tag"class="form-control" type="text"></div>
-            <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
+            <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-top: 13px;"/></div>
                 </div>
+             </div>
+               
 ';
 //include("footer.php");
 ?>
