@@ -45,7 +45,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 </button>
 </div>
 <div class="col-md-6">
-<h2 style="width: 400px; margin-top: 87px;"> Tags</h2>
+<h2 style="width: 400px; margin-top: 40px;"> Tags</h2>
 Tag <div class="form-group">
 	<div class="col-md-5"><input name="tag"class="form-control" type="text"></div>
             <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-top: 13px;"/></div>
