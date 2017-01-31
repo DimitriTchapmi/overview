@@ -4,9 +4,7 @@
 <?php include ('header.php');
 
 
-echo'<div class="tabcontainer">
-<h2 style="margin:135px auto -120px; color:red;text-align:center"></h2>';
-
+echo'<div class="tabcontainer">';
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped'>
 <thead>";
@@ -27,7 +25,7 @@ echo "
   </table>
   <input name='action' class='btn btn-success btn btn-success' type='submit' value='Gérer'>
   </form>";
-echo '<div class="col-md-5">';
+echo '<div class="col-md-5" style="padding-left: 0px;">';
 echo '<h2 style="width: 400px; 
                  margin-bottom: 47px; 
                  margin-top: 40px;"> Groupes</h2>';
@@ -50,7 +48,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
             <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-top: 13px;"/></div>
                 </div>
              </div>
-               
+             </div>
 ';
 include("footer.php");
 ?>
