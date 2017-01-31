@@ -50,6 +50,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 	<div class="col-md-5"><input name="tag"class="form-control" type="text"></div>
             <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-top: 13px;"/></div>
                 </div>
+                </div>
 ';
 include("footer.php");
 ?>
