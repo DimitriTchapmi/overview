@@ -40,7 +40,6 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
 </div>
 </div>
 </button>
-</div>
 <div class="col-md-6">
 <h2 style="width: 400px; margin-top: 40px; margin-bottom: 32px;"> Tags</h2>
 <div class="form-group">
