@@ -40,16 +40,16 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
     <p><input type="submit" name="add_groupe" value="Ajouter"></p>
 </div>
 </div></div></button>';
-
+echo '<div class="col-md-4">';
 echo "<h2> Tags</h2>";
-echo ' Tag <div class="form-group">
+echo  'Tag <div class="form-group">
 <div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
                 </div>
                 <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
                 </div>';
 
 echo "</form>";
-
+echo '</div>';
 
 //include("footer.php");
 ?>
