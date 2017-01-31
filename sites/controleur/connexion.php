@@ -13,7 +13,7 @@ if(!isset($_SESSION["id_user"])){
 					$_SESSION["id_user"] = $id_user;
 					$_SESSION["login_user"] = $_POST["nom"];
 					$_SESSION["pass_user"] = $_POST["pass"];
-					include("code/sitescontroleur/tableau_bord.php");
+					include("code/sites/controleur/tableau_bord.php");
 				}
 	} else{
 		include_once("code/sites/vue/connexion.php");
