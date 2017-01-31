@@ -52,6 +52,6 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
              </div>
                
 ';
-//include("footer.php");
+include("footer.php");
 ?>
 
