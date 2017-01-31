@@ -26,7 +26,7 @@ for($i=0;$i<count($machines);$i++){
 echo "
  </tbody>
   </table>";
-echo '<div class="col-md-10"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer"></div>';
+echo '<div class="col-md-10"><input name="action" class="btn btn-success btn btn-success" type="submit" value="Gérer">';
 echo '<h2 style="width: 918px; 
                  margin-bottom: 47px; 
                  margin-top: 83px;"> Groupes</h2>';
