@@ -39,17 +39,16 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
     <p><input type="text" name="nom" id="login" placeholder="nom"></p>
     <p><input type="submit" name="add_groupe" value="Ajouter"></p>
 </div>
-</div></div></button>';
-echo '<div class="col-md-4">';
-echo "<h2> Tags</h2>";
-echo  'Tag <div class="form-group">
+</div><div class="col-md-10">;
+<h2 style="width: 400px;"> Tags</h2>;
+echo  Tag <div class="form-group">
 <div class="col-md-3"><input name="tag"class="form-control" type="text"></div>
                 </div>
                 <div class="col-md-offset0 col-sm-2"><input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag"/></div>
-                </div>';
+                </div>;
+</form>;
+</div>;</div></button>';
 
-echo "</form>";
-echo '</div>';
 
 //include("footer.php");
 ?>
