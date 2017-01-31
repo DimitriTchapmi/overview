@@ -40,6 +40,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
     <p><input type="submit" name="add_groupe" value="Ajouter"></p>
 </div>
 </div>
+</button>
 <div class="col-md-4">
 <h2 style="width: 400px;"> Tags</h2>
 Tag <div class="form-group">
@@ -50,7 +51,7 @@ Tag <div class="form-group">
 
 </form>
 </div>
-</div></button>';
+</div>';
 //include("footer.php");
 ?>
 
