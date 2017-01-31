@@ -18,7 +18,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		if(isset($_POST)){
 			var_dump($_POST);
 		}
-		include("vue/alertes.php");
+		include("code/sites/vue/alertes.php");
 
 
 	}else{
