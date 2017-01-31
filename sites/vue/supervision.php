@@ -16,14 +16,14 @@ include ('header.php');
     <div> <h3> Graphes sur une journée </h3>
     <?php
     	for($i=0;$i<count($graphes["jour"]);$i++){
-    		echo "<img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["jour"][$i]."'>";
+    		echo "<div class='col-md-5'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["jour"][$i]."'></div>";
     	}
     ?>
 
     <div> <h3> Graphes sur une semaine </h3>
     <?php
     	for($i=0;$i<count($graphes["semaine"]);$i++){
-    		echo "<img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["semaine"][$i]."'>";
+    		echo "<div class='col-md-5'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["semaine"][$i]."'></div>";
     	}
     	
     ?>
