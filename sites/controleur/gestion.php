@@ -1,5 +1,6 @@
 <?php
 include("code/sites/modele/inventaire.php");
+include("code/sites/modele/serveur.php");
 
 	if(isset($_SESSION["id_user"])){
 		if(isset($_POST["action"])){
