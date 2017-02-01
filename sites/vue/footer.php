@@ -8,17 +8,17 @@ Copyright 2017 OverView | IN'TECH
 
 
 <!-- wow script -->
-<script src="vue/assets/wow/wow.min.js"></script>
+<script src="code/sites/vue/assets/wow/wow.min.js"></script>
 
 <!-- jquery mobile -->
-<script src="vue/assets/mobile/touchSwipe.min.js"></script>
-<script src="vue/assets/respond/respond.js"></script>
+<script src="code/sites/vue/assets/mobile/touchSwipe.min.js"></script>
+<script src="code/sites/vue/assets/respond/respond.js"></script>
 
 <!-- gallery -->
-<script src="vue/assets/gallery/jquery.blueimp-gallery.min.js"></script>
+<script src="code/sites/vue/assets/gallery/jquery.blueimp-gallery.min.js"></script>
 
 <!-- custom script -->
-<script src="vue/assets/script.js"></script>
+<script src="code/sites/vue/assets/script.js"></script>
 
 </body>
 </html>

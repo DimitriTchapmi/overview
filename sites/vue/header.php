@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="code/sites/vue/assets/gallery/blueimp-gallery.min.css">
 
 <!-- favicon -->
-<link rel="shortcut icon" href="code/sites/images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="code/sites/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 
 <link rel="stylesheet" href="code/sites/vue/assets/style.css">
@@ -74,7 +74,26 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
 /*Style du bouton*/
 .shadowbox{position:absolute;left:50%;top:50%;width:100px;}
 </style>
+<style> 
+input[type=text] {
+    width: 140px;
+    box-sizing: border-box;
+    border: 2px solid #9d9d9d;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #111;
+    background-image: url('search.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 30px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
 
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
 </head>
 <body>
 <div class="topbar animated fadeInLeftBig"></div>
@@ -86,7 +105,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
-            <a href="/"><img src="code/sites/img/logo.png" style=" height:50px;margin-top:15px;"></a>
+            <a href="/"><img src="code/sites/img/logo.png" style=" height:90px;margin-top:1px;"></a>
 
 
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -104,7 +123,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
         <ul class="nav navbar-nav navbar-right scroll">
             <?php
             if(isset($_SESSION["id_user"])){
-              echo'<li><a href="/inventaire">Inventaire</a></li><li><a href="/deconnexion">Se déconnecter</a></li>';
+              echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:white;"></li><li><a href="/inventaire">Inventaire</a></li><li><a href="/deconnexion">Se déconnecter</a></li>';
             } else {
               echo '<li><a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>
               <div id="popup1" class="popup_block">
@@ -155,7 +174,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
     var popWidth = $(this).data('width'); //Trouver la largeur
 
     //Faire apparaitre la pop-up et ajouter le bouton de fermeture
-    $('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('<a href="#" class="close"><img src="img/close-button.jpg" class="btn_close" title="Close Window" alt="Close" /></a>');
+    $('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('<a href="#" class="close"><img src="code/sites/img/close-button.jpg" class="btn_close" title="Close Window" alt="Close" /></a>');
     
     //Récupération du margin, qui permettra de centrer la fenêtre - on ajuste de 80px en conformité avec le CSS
     var popMargTop = ($('#' + popID).height() + 80) / 2;
