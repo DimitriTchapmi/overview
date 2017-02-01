@@ -1,7 +1,7 @@
 <?php
 
 function liste_groupes($entreprise){
-	 exec("ls -l projets/".$entreprise."/inventaire | grep ^d |cut -d' ' -f9",$groupes);
+	 exec("ls projets/".$entreprise."/inventaire",$groupes);
         return $groupes;
 }
 
