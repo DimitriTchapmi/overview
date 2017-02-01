@@ -13,11 +13,11 @@ echo "<tr>";
 for($i=0;$i<count($machines);$i++){
 	$tags = getTagsByMachine($machines[$i]["id"]);
 	echo "<tr>";
-	echo "<td style='width:150px; height:25px;'> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
-	echo "<td style='width:150px; height:25px;'>".$machines[$i]["groupe"]."</td>";
+	echo "<td style='width: 150px; height: 25px;'> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
+	echo "<td style='width: 150px; height: 25px;'>".$machines[$i]["groupe"]."</td>";
 	$html_tags = tags_html($tags);
-	echo "<td style='width:150px; height:25px;'>".$html_tags."</td>";
-	echo "<td style='width:150px; height:25px;'><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
+	echo "<td style='width: 150px; height: 25px;'>".$html_tags."</td>";
+	echo "<td style='width: 150px; height: 25px;'><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
 	echo "</tr>";
 }
 echo "
