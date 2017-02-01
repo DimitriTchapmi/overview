@@ -5,7 +5,7 @@ include ('header.php');
 <div class="tabcontainer text-center"> 
     <h3> Graphes sur une heure </h3>
     <?php
-    echo "<table class='table table-striped' style='width: 55%;'>";
+    echo "<table class='table table-condensed' style='width: 55%;'>";
     	echo "<tbody>";
         for($i=0;$i<count($graphes["heure"]);$i++){
             echo "<tr>";
@@ -17,7 +17,7 @@ include ('header.php');
             ?> 
     <h3> Graphes sur une journée </h3>
     <?php
-    echo "<table class='table table-striped' style='width: 55%;'>";
+    echo "<table class='table table-condensed' style='width: 55%;'>";
             echo "<tbody>";
             for($i=0;$i<count($graphes["jour"]);$i++){
             echo "<tr>";    
@@ -29,7 +29,7 @@ include ('header.php');
     ?>
     <h3> Graphes sur une semaine </h3>
     <?php
-        echo "<table class='table table-striped' style='width: 55%;'>";
+        echo "<table class='table table-condensed' style='width: 55%;'>";
     	echo "<tbody>";
         for($i=0;$i<count($graphes["semaine"]);$i++){ 
             echo "<tr>";
