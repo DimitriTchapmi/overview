@@ -23,7 +23,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		if(isset($_POST["add_alerte"])){
 			ajouter_alerte($nom_entreprise,$nom_machine,$_POST);
 		}
-		$html = liste_alertes($nom_entreprise,$nom_machine);
+		$alertes = liste_alertes($nom_entreprise,$nom_machine);
 		include("code/sites/vue/alertes.php");
 
 
