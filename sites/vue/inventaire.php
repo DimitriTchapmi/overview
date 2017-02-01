@@ -6,7 +6,7 @@
 echo'<div class="tabcontainer">';
 echo"<br><br><br><h2> Machines de l'entreprise ".$nom_entreprise."</h2>";
 echo "<form action='gestion' method='post'>";
-echo "<table class='table table-striped'>
+echo "<table class='table table-striped' style='width: 55%;'>
 <thead>";
 echo "<tr>";
 	echo "<td>Machines</td><td>Groupes</td><td>Tags</td></thead><tbody>";
