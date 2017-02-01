@@ -30,8 +30,9 @@ $infos_alerte = preg_split("/_/", $_POST["modifier"]);
 echo '<h2 class="login-header">Modification d une alerte</h2>';
   echo '<form action="machine?id='.$_GET["id"].'&c=alertes" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">';
   echo'Item : '.$infos_alerte[0].'
-    Seuil : <input type="text" name="seuil" value="'.$infos_alerte[1].'">
-    Battement : <input type="text" name="seuil" value="'.$infos_alerte[2].'">';
+    <br></br>Seuil : <input type="text" name="seuil" value="'.$infos_alerte[1].'">
+    Battement : <input type="text" name="battement" value="'.$infos_alerte[2].'">
+    <input type="hidden" name="item" value="'.$infos_alerte[0].'">';
     echo '
     <input type="submit" name="modif_alerte" value="Modifier">
 <br></br>

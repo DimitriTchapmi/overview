@@ -14,12 +14,12 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
 
 	}elseif ($_GET["c"] == "alertes") {
-		var_dump($_POST);
 		if(isset($_GET["a"])){
 			include("code/sites/controleur/modif_alerte.php");
 		}else{
 			if(isset($_POST["modif_alerte"])){
 				var_dump($_POST);
+				modifier_alerte($nom_entreprise,$nom_machine,$_POST);
 			}
 			$items = getMaterielByMachine($_GET["id"]);
 			$html_items = "Item <select name='item'>";
