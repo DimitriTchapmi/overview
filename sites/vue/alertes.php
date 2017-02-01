@@ -18,7 +18,7 @@ echo "<tr>";
   echo "<td>Item</td><td>Battement</td><td>Etat</td></thead><tbody>";
 for($i=0;$i<count($alertes);$i++){
   echo "<tr>";
-  echo "<td style='width: 100px; height: 25px;'>".$alertes[$i]["item"]."</td>";
+  echo "<td style='width: 100px; height: 25px;'>".$alertes[$i]["nom_item"]."</td>";
   echo "<td style='width: 100px; height: 25px;'>".$alertes[$i]["battement"]."</td>";
   if($alertes[$i]["flag"] == 1 ){
     echo "<td style='width: 100px; height: 25px;'>Alerte déclenchée depuis".$alertes[$i]["temps_atteint"]."</td>";
