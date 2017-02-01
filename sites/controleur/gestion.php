@@ -8,7 +8,7 @@ include("code/sites/modele/serveur.php");
                 $groupes_machine = liste_groupes($infos["nom"]);
                 $gr_machine = GetGroupeByMachine($infos["id"])["groupe"];
                 $pos = array_search($groupes_machine,$gr_machine);
-                var_dump($groupes_machine,$gr_machine)
+                var_dump($groupes_machine,$gr_machine);
                 unset($groupes_machine[$pos]);
                 array_values($groupes_machine);
                 var_dump($groupes_machine);
