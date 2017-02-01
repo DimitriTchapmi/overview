@@ -3,21 +3,21 @@
 
 <?php include ('header.php');
 
-echo"<br><br><br><h2> Machines de l'entreprise ".$nom_entreprise."</h2>";
 echo'<div class="tabcontainer">';
+echo"<br><br><br><h2> Machines de l'entreprise ".$nom_entreprise."</h2>";
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped'>
 <thead>";
 echo "<tr>";
-	echo "<td>Machine</td><td>Groupe</td><td>Tags</td></thead><tbody>";
+	echo "<td>Machines</td><td>Groupes</td><td>Tags</td></thead><tbody>";
 for($i=0;$i<count($machines);$i++){
 	$tags = getTagsByMachine($machines[$i]["id"]);
 	echo "<tr>";
-	echo "<td> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
-	echo "<td>".$machines[$i]["groupe"]."</td>";
+	echo "<td style='width: 100px; height: 25px;'> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
+	echo "<td style='width: 100px; height: 25px;'>".$machines[$i]["groupe"]."</td>";
 	$html_tags = tags_html($tags);
-	echo "<td>".$html_tags."</td>";
-	echo "<td><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
+	echo "<td style='width: 100px; height: 25px;'>".$html_tags."</td>";
+	echo "<td style='width: 10px; height: 25px;'><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
 	echo "</tr>";
 }
 echo "

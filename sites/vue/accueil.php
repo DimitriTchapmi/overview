@@ -7,40 +7,40 @@ include ('header.php');
       <div class="carousel-inner">
         <!-- Item 1 -->
       <div class="item active">
-        <img src="img/1.jpeg">
+        <img src="img/1.jpg">
         <div class="carousel-caption">
-          <h2 class="txt-carousel">Héberger votre évènement en toute tranquilité</h2>
-          <h3 class="txt-carousel">Laissez parler votre créativité grâce à nos services proposés (compte mail : alias par évènement,compte chat)</h3>
+          <h2 class="txt-carousel"><b>Inventaire</b></h2>
+          
         </div>      
       </div>
 
      <div class="item">
         <img src="img/2.jpg" >
         <div class="carousel-caption">
-          <h2 class="txt-carousel">Moteur de recherche</h2>
-          <h3 class="txt-carousel">Avec notre moteur de recherche intégré, trouver l'évènement qui vous correspond à votre univers.</h3>
+          <h2 class="txt-carousel"><b>Supervision</b></h2>
+          
         </div>      
       </div>
     
       <div class="item">
         <img src="img/3.jpg">
         <div class="carousel-caption">
-          <h2 class="txt-carousel">Vous voulez vous faire connaitre ?</h2>
-          <h3 class="txt-carousel">Event'izi est là pour vous apporter plus de visibilité</h3>
+          <h2 class="txt-carousel"><b>Alertes</b></h2>
+          
         </div>      
       </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></i></span></a>
     </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon-chevron-left"><i class="fa fa-angle-left"></i></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon-chevron-right"><i class="fa fa-angle-right"></i></span></a>
+      
     </div>
 <!-- #Slider Ends -->
 
 <!-- Container (The Band Section) -->
 <div class="container text-center">
-  <img src="img/eventizi.png">
-    <p><em>Créer votre évènement devient facile !</em></p>
-    <p>Event'Izi vous permet d'héberger votre évènement et dispose de nombreuses fonctionnalités permettant de le promouvoir facilement.
-    Une plateforme où vous pouvez créer et héberger votre site web pour votre évènement
+  <img src="img/logo.png">
+    <h3> <b>Gardez une longueur d'avance ! </b> </h3>
+    <p>OverView est une solution de supervision, d’inventaire et de gestion d’alertes en ligne permettant à un utilisateur de surveiller ses équipements fonctionnant sous Linux et d’être alerté en cas de problèmes.
     </p>
 
     <h3 class="text-center">NOS SERVICES</h3>
@@ -48,12 +48,12 @@ include ('header.php');
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="#">
-                        <i class="fa fa-globe"></i>
+                        <i class="fa fa-list"></i>
                     </a>
                 </div>
                 <div class="service-content">
-                    <h3>Hébergement Web</h3>
-                    <p>Ici, vous pouvez héberger votre site d'évenement avec le choix de templates pour tout type d'évènement, ou d'importer votre propre site. Vous avez la possibilité d'héberger autant de sites que vous le souhaitez, du type "évènement".eventizi.itinet.fr</p>
+                    <h3>Inventaire</h3>
+                    <p style="color: black" >Ici, vous pouvez consulter l'inventaire de tous vos équipements. Catégorisez les ensuite selon les caratéristiques matérielles, logicielles et via des Tags rajoutés par vous-même.</p>
                 </div>
             </div>
 
@@ -61,24 +61,24 @@ include ('header.php');
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://rainloop.com">
-                        <i class="fa fa-envelope"></i>
+                        <i class="fa fa-area-chart"></i>
                     </a>
                 </div>
                 <div class="service-content">
-                    <h3>Hébergement Mail</h3>
-                    <p>Dès la création d'un compte utilisateur, vous disposez d'une boîte mail personnel "utilisateur"@eventizi.itinet.fr et d'un alias du type "évènement"@eventizi.itinet.fr qui renverra à votre évènement</p>
+                    <h3>Supervision</h3>
+                    <p style="color: black">Dès la création d'un compte utilisateur, vous accédez à votre tableau de bord. Visualisez les données supervisées sous forme de tableaux et graphes. </p>
                 </div>
             </div>
 
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://jappix.com">
-                        <i class="fa fa-users"></i>
+                        <i class="fa fa-bell-o"></i>
                     </a>
                 </div>
                 <div class="service-content">
-                    <h3>Service de chat</h3>
-                    <p>Dès la création d'un compte utilisateur, vous disposez d'un compte chat "utilisateur"@eventizi.itinet.fr qui vous permettra de discuter avec les organisateurs et les participants d'un évènement</p>
+                    <h3>Gestion des Alertes</h3>
+                    <p>Nous offrons la possibilité pour chaque machine et pour chaque paramètre supervisable, de définir un seuil au-delà duquel l’entreprise sera prévenue dans son compte par une icône sur la machine concernée.</p>
                 </div>
             </div>
         </div>
@@ -86,27 +86,27 @@ include ('header.php');
        <div class="row" style="margin:auto">
         <div class="col-sm-3 col-md-offset-1 text-center">
             <div class="our-team">
-                <img src="../imlkg/dimi.jpg" alt="">
+                <img src="img/dimi.jpg" alt="">
                 <div class="team-prof">
-                    <h3>DimiBrownZyx</h3>
+                    <h3>Dimitri</h3>
                     <span>Membre de l'équipe</span>
                 </div>
             </div>
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="../imklkg/JC.jpg" alt="">
+                <img src="img/jc.jpg" alt="">
                 <div class="team-prof">
-                    <h3>Jean-Christophe Thiburce</h3>
+                    <h3>Jean-Christophe</h3>
                     <span>Membre de l'équipe</span>
                 </div>
             </div>
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="../img/gui.jpg" alt="">
+                <img src="img/gui.jpg" alt="">
                 <div class="team-prof">
-                    <h3>Guillaume Jauffret</h3>
+                    <h3>Guillaume</h3>
                     <span>Chef de projet</span>
                 </div>
             </div>
