@@ -29,8 +29,7 @@ echo '<h2 class="login-header">Gestion de la machine '.$infos["nom"].'</h2>';?>
     <?php echo '<label class="control-label" for="nom">Groupe</label>
     <select name="groupe"><option value="'.$gr_machine.'">'.$gr_machine.'</option>';
     foreach ($groupes_machine as $groupe) {
-      # code...
-    }{
+    {
       echo"<option value='".$groupe."'>".$groupe."</option>";
     }
     echo'</select>';
