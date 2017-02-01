@@ -17,7 +17,9 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		if(isset($_GET["a"])){
 			include("code/sites/controleur/modif_alerte.php");
 		}else{
-
+			if(isset($_POST["modif_alerte"])){
+				var_dump($_POST);
+			}
 			$items = getMaterielByMachine($_GET["id"]);
 			$html_items = "Item <select name='item'>";
 			for($i=0;$i<count($items);$i++){

@@ -27,11 +27,11 @@ include ('header.php');
 <?php //echo $message; 
 $infos_alerte = preg_split("/_/", $_POST["modifier"]);
 
-echo '<h2 class="login-header">Modification d une alerte</h2>';?>
-  <form action="modif_alerte" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
-    <?php echo'Item : '.$infos_alerte[0].'
-    Seuil : <input type="text" name="seuil" placeholder="'.$infos_alerte[1].'">
-    Battement : <input type="text" name="seuil" placeholder="'.$infos_alerte[2].'">';
+echo '<h2 class="login-header">Modification d une alerte</h2>';
+  echo '<form action="machine?id='.$_GET["id"].'&c=alertes" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">';
+  echo'Item : '.$infos_alerte[0].'
+    Seuil : <input type="text" name="seuil" value="'.$infos_alerte[1].'">
+    Battement : <input type="text" name="seuil" value="'.$infos_alerte[2].'">';
     echo '
     <input type="submit" name="modif" value="Modifier">
 <br></br>
