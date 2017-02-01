@@ -95,7 +95,7 @@ include ('header.php');
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="code/sites/img/jc.jpg" alt="">
+                <img src="code/sites/img/JC.jpg" alt="">
                 <div class="team-prof">
                     <h3>Jean-Christophe</h3>
                     <span>Membre de l'équipe</span>
