@@ -27,7 +27,7 @@ function ajouter_alerte($entreprise,$machine,$infos){
 }
 
 function modifier_alerte($entreprise,$machine,$infos){
-	exec("sed -i '/^".$infos["item"]."/ d' /var/www/overview/projets/".$entreprise."/supervision/".$machine."/alertes");
+	exec("sudo sed -i '/^".$infos["item"]."/ d' /var/www/overview/projets/".$entreprise."/supervision/".$machine."/alertes");
 	exec("echo ".$infos["item"].":".$infos["seuil"].":".$infos["battement"].":0:0:0 >> /var/www/overview/projets/".$entreprise."/supervision/".$machine."/alertes");
 }
 
