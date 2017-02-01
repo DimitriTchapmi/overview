@@ -4,12 +4,12 @@ include("code/sites/modele/serveur.php");
 
 	if(isset($_SESSION["id_user"])){
                 $infos = getMachineById($_POST["machine"][0]);
-                $entreprise = getEntrepriseById($_SESSION["id_user"]);
+                $entreprise = getEntrepriseById($_SESSION["id_user"])["nom"];
 		if(isset($_POST["action"])){
                         $groupes_machine = liste_groupes($entreprise);
                         $gr_machine = GetGroupeByMachine($infos["id"])["groupe"];
-		      $tags_gestion = "";
-		      $tags_machine = getTagsByMachine($_POST["machine"][0]);
+		        $tags_gestion = "";
+		        $tags_machine = getTagsByMachine($_POST["machine"][0]);
 		      for($i=0;$i<count($tags_machine);$i++) {
 			$tags_gestion = $tags_gestion."<button class='btn btn-default tags' value='".$i."'>".$tags_machine[$i]["nom"]."</button> <input type='hidden' name='tags[]' id='tag".$i."' value='".$tags_machine[$i]["nom"]."'>";
 		      }		
