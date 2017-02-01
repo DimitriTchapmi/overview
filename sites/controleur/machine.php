@@ -14,6 +14,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
 
 	}elseif ($_GET["c"] == "alertes") {
+		var_dump($_POST);
 		if(isset($_GET["a"])){
 			include("code/sites/controleur/modif_alerte.php");
 		}else{
