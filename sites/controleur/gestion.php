@@ -1,29 +1,24 @@
 <?php
 include("code/sites/modele/inventaire.php");
+include("code/sites/modele/serveur.php");
 
 	if(isset($_SESSION["id_user"])){
 		if(isset($_POST["action"])){
 		$infos = GetMachineById($_POST["machine"][0]);
+                $groupes_machine = liste_groupes($infos["nom"]);
+                $gr_machine = GetGroupeByMachine($infos["id"])["groupe"];
+                $pos = array_search($groupes_machine,$gr_machine);
+                var_dump($groupes_machine,$gr_machine)
+                unset($groupes_machine[$pos]);
+                array_values($groupes_machine);
+                var_dump($groupes_machine);
+
 		$tags_gestion = "";
 		$tags_machine = getTagsByMachine($_POST["machine"][0]);
 			for($i=0;$i<count($tags_machine);$i++) {
 				$tags_gestion = $tags_gestion."<button class='btn btn-default tags' value='".$i."'>".$tags_machine[$i]["nom"]."</button> <input type='hidden' name='tags[]' id='tag".$i."' value='".$tags_machine[$i]["nom"]."'>";
-			}
-
-		/*echo '<form action="inventaire" name="modifs" role="form" class="form-horizontal" method="post" accept-charset="utf-8">
-                <div class="form-group">
-                <div class="col-md-8"><input type="hidden" name="id[]" value="'.$infos["id"].'</div>
-                <div class="col-md-8">'.$infos["nom"].'</div>
-                </div> 
-                
-                <div class="form-group">
-                <div class="col-md-8"><input name="groupe[]"class="form-control" type="text" id="UserPassword" value="'.$infos["groupe"].'"" /></div>
-                </div>';
-
-		echo '<div class="form-group">
-                <div class="col-md-offset-0 col-md-8"><input name="action" class="btn btn-success btn btn-success" type="submit" value="modifier"/></div>
-                </div>';
-        */include("code/sites/vue/gestion_test.php");
+			}		
+        include("code/sites/vue/gestion_test.php");
         }elseif (isset($_POST["add_groupe"])) {
         	$nom_epse = getEntrepriseById($_SESSION["id_user"])["nom"];
         	exec("sudo mkdir projets/".$nom_epse."/inventaire/".$_POST["nom"]);

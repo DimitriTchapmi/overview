@@ -27,8 +27,12 @@ include ('header.php');
 echo '<h2 class="login-header">Gestion de la machine '.$infos["nom"].'</h2>';?>
   <form action="inventaire" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
     <?php echo '<label class="control-label" for="nom">Groupe</label>
-    <input type="text" name="groupe" value='.$infos["groupe"].'>
-    <input type="hidden" name="id" value="'.$infos["id"].'">
+    <select name="groupe"><option value="'.$gr_machine.'"></option>';
+    for($i=0;$i<count($groupes_machine);$i++){
+      echo"<option value='".$groupes_machine[$i]."'>".$groupes_machine[$i]."</option>";
+    }
+    echo'</select>';
+    echo'<input type="hidden" name="id" value="'.$infos["id"].'">
     <br><br>';?>
     <br><br>
 
