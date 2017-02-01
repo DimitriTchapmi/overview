@@ -33,7 +33,7 @@ echo '<h2 class="login-header">Modification d une alerte</h2>';
     Seuil : <input type="text" name="seuil" value="'.$infos_alerte[1].'">
     Battement : <input type="text" name="seuil" value="'.$infos_alerte[2].'">';
     echo '
-    <input type="submit" name="modif" value="Modifier">
+    <input type="submit" name="modif_alerte" value="Modifier">
 <br></br>
 
   </div>
