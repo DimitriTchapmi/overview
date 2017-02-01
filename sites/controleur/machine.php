@@ -14,18 +14,22 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
 
 	}elseif ($_GET["c"] == "alertes") {
-		$items = getMaterielByMachine($_GET["id"]);
-		$html_items = "Item <select name='item'>";
-		for($i=0;$i<count($items);$i++){
-			$html_items = $html_items."<option value='".$items[$i]["nom"]."'>".$items[$i]["nom"]."</option>";
-		}
+		if(isset($_GET["a"])){
+			include("code/sites/controleur/modif_alerte.php");
+		}else{
 
-		if(isset($_POST["add_alerte"])){
-			ajouter_alerte($nom_entreprise,$nom_machine,$_POST);
-		}
-		$alertes = liste_alertes($nom_entreprise,$nom_machine);
-		include("code/sites/vue/alertes.php");
+			$items = getMaterielByMachine($_GET["id"]);
+			$html_items = "Item <select name='item'>";
+			for($i=0;$i<count($items);$i++){
+				$html_items = $html_items."<option value='".$items[$i]["nom"]."'>".$items[$i]["nom"]."</option>";
+			}
 
+			if(isset($_POST["add_alerte"])){
+				ajouter_alerte($nom_entreprise,$nom_machine,$_POST);
+			}
+			$alertes = liste_alertes($nom_entreprise,$nom_machine);
+			include("code/sites/vue/alertes.php");
+		}
 
 	}else{
 		include("code/sites/vue/page_404.php");

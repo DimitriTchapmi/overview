@@ -15,7 +15,7 @@ echo "<form action='machine?id=".$_GET["id"]."&c=alertes&a=modif' method='post'>
 echo "<table class='table table-striped' style='width: 55%;'>
 <thead>";
 echo "<tr>";
-  echo "<td>Item</td><td>Seuil</td><td>Battement</td>td>Etat</td></thead><tbody>";
+  echo "<td>Item</td><td>Seuil</td><td>Battement</td><td>Etat</td></thead><tbody>";
 for($i=0;$i<count($alertes);$i++){
   echo "<tr>";
   echo "<td style='width: 100px; height: 25px;'>".$alertes[$i]["nom_item"]."</td>";
@@ -24,7 +24,7 @@ for($i=0;$i<count($alertes);$i++){
   if($alertes[$i]["flag"] == 1 ){
     echo "<td style='width: 300px; height: 25px;'>Alerte déclenchée depuis".$alertes[$i]["temps_atteint"]." minutes</td>";
   }
-  echo '<td><input type="radio" name="modifier" value="'.$alertes[$i]["item"].'"></td>';
+  echo '<td><input type="radio" name="modifier" value="'.$alertes[$i]["nom_item"]'_'$alertes[$i]["seuil"]'_'$alertes[$i]["battement"].'"></td>';
   echo "</tr>";
 }
 echo '</tbody>
