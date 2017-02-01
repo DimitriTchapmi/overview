@@ -25,13 +25,13 @@ include ('header.php');
 <div class="event">
 <div class="login-triangle"></div>
 <?php //echo $message; 
-$infos_alerte = preg_split("/_/", $_GET["modifier"]);
+$infos_alerte = preg_split("/_/", $_POST["modifier"]);
 
 echo '<h2 class="login-header">Modification d une alerte</h2>';?>
   <form action="modif_alerte" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
     <?php echo'Item : '.$infos_alerte[0].'
-    <input type="text" name="seuil" placeholder="'.$infos_alerte[1].'">
-    <input type="text" name="seuil" placeholder="'.$infos_alerte[2].'">';
+    Seuil : <input type="text" name="seuil" placeholder="'.$infos_alerte[1].'">
+    Battement : <input type="text" name="seuil" placeholder="'.$infos_alerte[2].'">';
     echo '
     <input type="submit" name="modif" value="Modifier">
 <br></br>
