@@ -14,13 +14,14 @@ function tags_html($tags){
 
 
 if (isset($_SESSION["id_user"])) {
+	$nom_entreprise = getEntrepriseById($_SESSION["id_user"])["nom"];
 	if(isset($_POST["id"])){
 			change_groupe($_POST["id"], $_POST["groupe"]);
 			update_tags($_POST["tags"],$_POST["rm_tags"],$_POST["id"]); // ATTENTION SI RM_tags pas défini
 
 	}
-		$nom_entreprise =($_SESSION["id_user"]);
-		$machines = getMachinesByEntreprise($nom_entreprise);
+		$id_entreprise =($_SESSION["id_user"]);
+		$machines = getMachinesByEntreprise($id_entreprise);
 	include_once("code/sites/vue/inventaire.php");
 } else {
 	include('code/sites/controleur/connexion.php');

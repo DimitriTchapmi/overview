@@ -5,5 +5,5 @@
 
   for cpu in `ls /var/www/overview/projets/$2/supervision/$3/bases | grep cpu | cut -d _ -f 2 | cut -d . -f 1`
   do
-   rrdtool graph /var/www/overview/projets/$2/supervision/$3/graphes/cpu_$cpu"_"$1.png --start -$1 --vertical-label pourcent DEF:utilisation=/var/www/overview/projets/$2/supervision/$3/bases/cpu_$cpu.rrd:cpu:AVERAGE LINE1:utilisation\#0000FF:"utilisation du cpu_$cpu"
+   rrdtool graph /var/www/overview/projets/$2/supervision/$3/graphes/cpu_$cpu.png --start -$1 --vertical-label pourcent DEF:utilisation=/var/www/overview/projets/$2/supervision/$3/bases/cpu_$cpu.rrd:cpu:AVERAGE LINE1:utilisation\#0000FF:"utilisation du cpu_$cpu"
   done
