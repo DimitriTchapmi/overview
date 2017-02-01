@@ -7,7 +7,7 @@ include ('header.php');
       <div class="carousel-inner">
         <!-- Item 1 -->
       <div class="item active">
-        <img src="img/1.jpg">
+        <img src="code/sites/img/1.jpg">
         <div class="carousel-caption">
           <h2 class="txt-carousel"><b>Inventaire</b></h2>
           
@@ -15,7 +15,7 @@ include ('header.php');
       </div>
 
      <div class="item">
-        <img src="img/2.jpg" >
+        <img src="code/sites/img/2.jpg" >
         <div class="carousel-caption">
           <h2 class="txt-carousel"><b>Supervision</b></h2>
           
@@ -23,7 +23,7 @@ include ('header.php');
       </div>
     
       <div class="item">
-        <img src="img/3.jpg">
+        <img src="code/sites/img/3.jpg">
         <div class="carousel-caption">
           <h2 class="txt-carousel"><b>Alertes</b></h2>
           
@@ -38,7 +38,7 @@ include ('header.php');
 
 <!-- Container (The Band Section) -->
 <div class="container text-center">
-  <img src="img/logo.png">
+  <img src="code/sites/img/logo.png">
     <h3> <b>Gardez une longueur d'avance ! </b> </h3>
     <p>OverView est une solution de supervision, d’inventaire et de gestion d’alertes en ligne permettant à un utilisateur de surveiller ses équipements fonctionnant sous Linux et d’être alerté en cas de problèmes.
     </p>
@@ -86,7 +86,7 @@ include ('header.php');
        <div class="row" style="margin:auto">
         <div class="col-sm-3 col-md-offset-1 text-center">
             <div class="our-team">
-                <img src="img/dimi.jpg" alt="">
+                <img src="code/sites/img/dimi.jpg" alt="">
                 <div class="team-prof">
                     <h3>Dimitri</h3>
                     <span>Membre de l'équipe</span>
@@ -95,7 +95,7 @@ include ('header.php');
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="img/jc.jpg" alt="">
+                <img src="code/sites/img/jc.jpg" alt="">
                 <div class="team-prof">
                     <h3>Jean-Christophe</h3>
                     <span>Membre de l'équipe</span>
@@ -104,7 +104,7 @@ include ('header.php');
           </div>
           <div class="col-sm-3 text-center">
             <div class="our-team">
-                <img src="img/gui.jpg" alt="">
+                <img src="code/sites/img/gui.jpg" alt="">
                 <div class="team-prof">
                     <h3>Guillaume</h3>
                     <span>Chef de projet</span>
