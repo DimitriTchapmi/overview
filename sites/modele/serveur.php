@@ -16,6 +16,7 @@ function liste_alertes($entreprise, $machine){
 		$alertes_split[$i]["temps_atteint"]=$champs[3];
 		$alertes_split[$i]["temps_redescendu"]=$champs[4];
 		$alertes_split[$i]["flag"]=$champs[5];
+	}
 
 	return $alertes_split;
 	}
