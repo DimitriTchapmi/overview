@@ -78,10 +78,10 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
 input[type=text] {
     width: 140px;
     box-sizing: border-box;
-    border: 2px solid #9d9d9d;
+    border: 2px solid #000;
     border-radius: 4px;
     font-size: 16px;
-    background-color: #111;
+    background-color: #FFF;
     background-image: url('search.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
@@ -123,7 +123,7 @@ input[type=text]:focus {
         <ul class="nav navbar-nav navbar-right scroll">
             <?php
             if(isset($_SESSION["id_user"])){
-              echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:white;"></li><li><a href="/inventaire">Inventaire</a></li><li><a href="/deconnexion">Se déconnecter</a></li>';
+              echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:black;"></li><li><a href="/inventaire">Inventaire</a></li><li><a href="/deconnexion">Se déconnecter</a></li>';
             } else {
               echo '<li><a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>
               <div id="popup1" class="popup_block">
