@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_URI"] == "/"){
 }elseif($_SERVER["REQUEST_URI"] == "/gestion_test"){
         include_once("controleur/gestion_test.php");
 }elseif($_SERVER["REQUEST_URI"] == "/deconnexion"){
-        include_once("controleur/deconnexion.php");
+        include_once("code/sitescontroleur/deconnexion.php");
 }
 
 ?>
