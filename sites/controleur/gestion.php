@@ -4,12 +4,12 @@ include("code/sites/modele/serveur.php");
 
 	if(isset($_SESSION["id_user"])){
 		if(isset($_POST["action"])){
-		$infos = GetEntrepriseById($_POST["machine"][0]);
-                $groupes_machine = liste_groupes($infos["nom"]);
+		$infos = getMachineById($_POST["machine"][0]);
+                $groupes_machine = liste_groupes($_SESSION["id_user"]);
                 $gr_machine = GetGroupeByMachine($infos["id"])["groupe"];
                 $pos = array_search($gr_machine,$groupes_machine);
-                var_dump($gr_machine,$groupes_machine,$infos["nom"]);
                 unset($groupes_machine[$pos]);
+                var_dump($groupes_machine);
                 array_values($groupes_machine);
                 var_dump($groupes_machine);
 
