@@ -6,14 +6,14 @@ include ('header.php');
     <div> <h3> Graphes sur une heure </h3>
     <?php
     	for($i=0;$i<count($graphes["heure"]);$i++){
-    		echo "<div class='col-lg-14' style='margin-top: 10px;'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["heure"][$i]."'></div>";
+    		echo "<div class='col-lg-6' style='margin-top: 10px;'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["heure"][$i]."'></div>";
     	}
             ?>
 
     <div> <h3> Graphes sur une journée </h3>
     <?php
          	for($i=0;$i<count($graphes["jour"]);$i++){
-    		echo "<div class='col-lg-14' style='margin-top: 10px;'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["jour"][$i]."'></div>";
+    		echo "<div class='col-lg-6' style='margin-top: 10px;'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["jour"][$i]."'></div>";
     	}
         
     ?>
@@ -22,6 +22,6 @@ include ('header.php');
     <?php
         
     	for($i=0;$i<count($graphes["semaine"]);$i++){
-    		echo "<div class='col-lg-14' style='margin-top: 10px;'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["semaine"][$i]."'></div>";
+    		echo "<div class='col-lg-6' style='margin-top: 10px;'><img src='projets/".$nom_entreprise."/supervision/".$nom_machine."/graphes/".$graphes["semaine"][$i]."'></div>";
     	}
     ?>
