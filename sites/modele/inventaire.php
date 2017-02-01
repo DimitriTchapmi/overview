@@ -156,6 +156,17 @@ function GetGroupeByMachine($machine){
 	return $donnees;
 }
 
-
+function getMaterielBymachine($id_machine){
+	global $bdd;
+	$donnees = 0;
+	$i=0;
+	$req = $bdd->prepare('SELECT id,nom FROM materiels WHERE machine = ?');
+	$req->execute(array($id_machine)) or die ( print_r($req->errorInfo()) );
+	while($donnees = $req->fetch()){
+			$renvoyer[$i] = $donnees;
+			$i++;
+	}
+	return $renvoyer;
+}
 
 ?>

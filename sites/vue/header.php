@@ -104,11 +104,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
         <ul class="nav navbar-nav navbar-right scroll">
             <?php
             if(isset($_SESSION["id_user"])){
-              echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
-            }elseif (isset($_SESSION['admin'])){
-              echo '<li><a href="/admin">Tableau d\'administration</a></li>
-                    <li><a href="/recherche">Recherche</a></li>
-                    <li><a href="/deconnexion">Se déconnecter</a></li>';
+              echo'<li><a href="/inventaire">Inventaire</a></li><li><a href="/deconnexion">Se déconnecter</a></li>';
             } else {
               echo '<li><a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>
               <div id="popup1" class="popup_block">
