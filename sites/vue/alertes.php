@@ -7,7 +7,7 @@
 <br></br>
 
 <?php 
-echo "<br></br><a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>";
+echo "<br></br><br></br><a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>";
 echo "<a href='machine?id=".$_GET["id"]."'>Supervision</a><br></br>";
 echo "<h3> Alertes en cours </h3>";
 echo "$html"."<br></br>";
