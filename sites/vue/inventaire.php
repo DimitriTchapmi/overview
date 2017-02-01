@@ -4,7 +4,7 @@
 <?php include ('header.php');
 
 echo'<div class="tabcontainer">';
-echo"<h2> Machines de l'entreprise ".$nom_entreprise."</h2>";
+echo"<h2 style='margin-bottom: 47px;'> Machines de l'entreprise ".$nom_entreprise."</h2>";
 echo "<form action='gestion' method='post'>";
 echo "<table class='table table-striped' style='width: 55%;'>
 <thead>";
