@@ -10,8 +10,8 @@ include ('header.php');
 <h2 style="margin-bottom: 25px;">Recherche</h2>
 
 <form action='inventaire' method='post'>
-<input name="champ" placeholder="nom,groupe,tag" style="color:black;">
- <input name='recherche' class='btn btn-success btn btn-success' type='submit' value='recherche'>
+<input type="text" name="champ" placeholder="nom,groupe,tag" style="color:black;">
+ <input name='recherche' class='btn btn-success btn btn-success' type='submit' value='Rechercher'>
  </form>
 
 <h2 style="width: 400px; 
