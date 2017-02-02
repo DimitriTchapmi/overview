@@ -8,7 +8,6 @@ var_dump($_SESSION["id_user"]);
 		if(isset($_POST["action"])){
                         $groupes_machine = liste_groupes($entreprise);
                         $gr_machine = GetGroupeByMachine($infos["id"])["groupe"];
-			var_dump($groupes_machine);
 		        $tags_gestion = "";
 		        $tags_machine = getTagsByMachine($_POST["machine"][0]);
 		      for($i=0;$i<count($tags_machine);$i++) {
