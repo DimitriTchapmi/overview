@@ -105,7 +105,7 @@ input[type=text]:focus {
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
-            <a href="/"><img src="code/sites/img/logo.png" style=" height:90px;margin-top:1px;"></a>
+            <a href="/"><img src="code/sites/img/logo.png" style=" height:50px;margin-top:25px;"></a>
 
 
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
