@@ -8,7 +8,12 @@ include ('header.php');
 <div class="container-fluid" style="margin-top: 150px;">
 <div class="col-md-5" style="margin-bottom: 15px;">
 <h2 style="margin-bottom: 25px;">Recherche</h2>
-<input type="text" name="search" placeholder="Rechercher..." style="color:black;">
+
+<form action='inventaire' method='post'>
+<input name="champ" placeholder="nom,groupe,tag" style="color:black;">
+ <input name='recherche' class='btn btn-success btn btn-success' type='submit' value='recherche'>
+ </form>
+
 <h2 style="width: 400px; 
                  margin-bottom: 47px; 
                  margin-top: 40px;"> Groupes</h2>

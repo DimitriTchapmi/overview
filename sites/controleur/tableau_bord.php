@@ -21,8 +21,14 @@ if (isset($_SESSION["id_user"])) {
 	}elseif (isset($_POST["Supprimer"])) {
 		echo "SUPPRESSION";
 	}
+
 		$id_entreprise =($_SESSION["id_user"]);
-		$machines = getMachinesByEntreprise($id_entreprise);
+		if(isset($_POST["recherche"])){
+			$machines = recherche($id_entreprise,$_POST["champ"]);
+		}else{
+			$machines = getMachinesByEntreprise($id_entreprise);
+		}
+		
 	include_once("code/sites/vue/inventaire.php");
 } else {
 	include('code/sites/controleur/connexion.php');
