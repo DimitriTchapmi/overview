@@ -51,8 +51,8 @@ for($i=0;$i<count($machines);$i++){
 ?>
  </tbody>
   </table>
-  </form>
   <input name='action' class='btn btn-success btn btn-success' type='submit' value='Gérer'>
+    </form>
     </div>
 </div>       
 <?php
