@@ -124,8 +124,8 @@ input[type=text]:focus {
             <?php
             if(isset($_SESSION["id_user"])){
               echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:black;"></li><li><a href="/inventaire">Inventaire</a></li>
-              <li><a href="#ajout" data-width="500" data-rel="popup1" class="poplight">Ajouter Machine</a>
-                            <div id="popup1" class="popup_block">
+              <li><a href="#ajout" data-width="500" data-rel="popup2" class="poplight">Ajouter Machine</a>
+                            <div id="popup2" class="popup_block">
                             <div class="login">
                 <div class="login-triangle"></div>
                 <h2 class="login-header">Comment ça marche ?</h2>
