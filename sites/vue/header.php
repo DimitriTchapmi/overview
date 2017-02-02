@@ -124,19 +124,20 @@ input[type=text]:focus {
             <?php
             if(isset($_SESSION["id_user"])){
               echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:black;"></li><li><a href="/inventaire">Inventaire</a></li>
-              <li><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajouter Machine</a>
+              <li><a href="#ajout" data-width="500" data-rel="popup1" class="poplight">Ajouter Machine</a>
                             <div id="popup1" class="popup_block">
                             <div class="login">
                 <div class="login-triangle"></div>
                 <h2 class="login-header">Comment ça marche ?</h2>
-                  <ul 
+                <form class="form-horizontal" role="form" method="post">
+                  <ul> 
                     <li><p>Téléchargez le dossier d\'installation <a target="_blank" href="https://github.com/DimitriTchapmi/overview_installation">ici</a> oubien faite le clone du dépôt git.</p></li>
                       <p style="background:#A7A37E" >sudo git clone https://github.com/DimitriTchapmi/overview_installation</p>
                       <li><p>Donnez le droit d\'exécution aux scripts. </p></li>
                       <p style="background:#A7A37E" >sudo chmod +x /chemin/script_install.sh</p>
                       <li><p>Excécutez le script "script_install.sh" en tant qu\'administrateur (root).</p></li>
                       <p style="background:#A7A37E">cd  /chemin/ ensuite sudo ./script_install.sh </p>
-                      <li><p> Connectez-vous enuite à votre compte OverView et consultez les résultats de supervision.</p></li>
+                      <p> Connectez-vous enuite à votre compte OverView et consultez les résultats de supervision.</p>
                   </ul>
               </div>
               </div>
