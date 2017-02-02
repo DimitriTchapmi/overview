@@ -81,7 +81,7 @@ input[type=text] {
     border: 2px solid #000;
     border-radius: 4px;
     font-size: 16px;
-    background-color: #FFF;
+    background-color: #;
     background-image: url('search.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
@@ -123,7 +123,26 @@ input[type=text]:focus {
         <ul class="nav navbar-nav navbar-right scroll">
             <?php
             if(isset($_SESSION["id_user"])){
-              echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:black;"></li><li><a href="/inventaire">Inventaire</a></li><li><a href="/deconnexion">Se déconnecter</a></li>';
+              echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:black;"></li><li><a href="/inventaire">Inventaire</a></li>
+              <li><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajouter Machine</a></li>
+                            <div id="popup1" class="popup_block">
+                            <div class="login">
+                <div class="login-triangle"></div>
+                <h2 class="login-header">Comment ça marche ?</h2>
+                <form class="form-horizontal" role="form" method="post">
+                  <ul> 
+                    <li><p>Téléchargez le dossier d\'installation <a target="_blank" href="https://github.com/DimitriTchapmi/overview_installation">ici</a> oubien faite le clone du dépôt git.</p></li>
+                      <p style="background:#A7A37E" >sudo git clone https://github.com/DimitriTchapmi/overview_installation</p>
+                      <li><p>Donnez le droit d\'exécution aux scripts. </p></li>
+                      <p style="background:#A7A37E" >sudo chmod +x /chemin/script_install.sh</p>
+                      <li><p>Excécutez le script "script_install.sh" en tant qu\'administrateur (root).</p></li>
+                      <p style="background:#A7A37E">cd  /chemin/ ensuite sudo ./script_install.sh </p>
+                      <p> Connectez-vous enuite à votre compte OverView et consultez les résultats de supervision.</p>
+                  </ul>
+                </form>
+              </div>
+              </div>
+              <li><a href="/deconnexion">Se déconnecter</a></li>';
             } else {
               echo '<li><a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>
               <div id="popup1" class="popup_block">
