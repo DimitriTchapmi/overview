@@ -1,7 +1,7 @@
 <?php
 include("code/sites/modele/inventaire.php");
 include("code/sites/modele/serveur.php");
-
+var_dump($_SESSION["id_user"]);
 	if(isset($_SESSION["id_user"])){
                 $infos = getMachineById($_POST["machine"][0]);
                 $entreprise = getEntrepriseById($_SESSION["id_user"])["nom"];
