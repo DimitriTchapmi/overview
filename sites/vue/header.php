@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
@@ -15,7 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script>(function($) {
     if (!$.curCSS) {
        $.curCSS = $.css;
@@ -89,7 +89,6 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-
 input[type=text]:focus {
     width: 100%;
 }
@@ -123,7 +122,7 @@ input[type=text]:focus {
         <ul class="nav navbar-nav navbar-right scroll">
             <?php
             if(isset($_SESSION["id_user"])){
-              echo'<li><a href="/inventaire">Inventaire</a></li>
+              echo'<li><input type="text" name="search" placeholder="Rechercher..." style="color:black;"></li><li><a href="/inventaire">Inventaire</a></li>
               <li><a href="#ajout" data-width="500" data-rel="popup2" class="poplight">Ajouter Machine</a>
                             <div id="popup2" class="popup_block">
                             <div class="login">
@@ -192,7 +191,6 @@ input[type=text]:focus {
   $('a.poplight').on('click', function() {
     var popID = $(this).data('rel'); //Trouver la pop-up correspondante
     var popWidth = $(this).data('width'); //Trouver la largeur
-
     //Faire apparaitre la pop-up et ajouter le bouton de fermeture
     $('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('<a href="#" class="close"><img src="code/sites/img/close-button.jpg" class="btn_close" title="Close Window" alt="Close" /></a>');
     
@@ -222,13 +220,8 @@ input[type=text]:focus {
     
     return false;
   });
-
   
 });
     </script>
 <!-- #Header Starts -->
 </body>
-
-
-       
-
