@@ -116,10 +116,12 @@ function existeTag ($nom_tag,$machine){
 
 function update_tags($tags,$rm_tags,$machine){ // nom des tags 
 	global $bdd;
-
+	var_dump($machine);
 	foreach ($rm_tags as $tag) {
 		$id_tag = getIdByTag($tag)["id"];
+		var_dump($id_tag);
 		if($id_tag){
+			var_dump ($id_tag);
 			remove_tag_machine($id_tag,$machine);
 		}
 

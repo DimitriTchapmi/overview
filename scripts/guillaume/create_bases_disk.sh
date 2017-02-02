@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# script appelé avec nom fichier, nom du disque et noms partitions
+# script appelé avec nom entreprise, nom machine, nom du disque et noms partitions
 
-entreprise=`echo $1 | cut -d _ -f1`
-machine=`echo $1 | cut -d _ -f2`
+entreprise=$1
+machine=$2
 
-cd /var/projects/$entreprise/supervision/$machine/bases
-if [ ! -e carte_$2".rrd" ]
+cd /var/www/overview/projets/$entreprise/supervision/$machine/bases
+if [ ! -e carte_$3".rrd" ]
 then
 
-commande="rrdtool create disque_$2.rrd --step 60" 
+commande="rrdtool create disque_$3.rrd --step 60" 
 
 
 i=0
@@ -20,11 +20,12 @@ do
 done
 unset tab_param[0]
 unset tab_param[1]
+unset tab_param[2]
 
 for elem in ${tab_param[@]}
 do
-  commande="$commande DS:$elem""_free:GAUGE:120:U:U RRA:AVERAGE:0.5:1:1440 RRA:AVERAGE:0.5:15:672 RRA:AVERAGE:0.5:4:744
-  DS:$elem""_used:GAUGE:120:U:U RRA:AVERAGE:0.5:1:1440 RRA:AVERAGE:0.5:15:672 RRA:AVERAGE:0.5:4:744"
+  commande="$commande DS:$elem""_free:GAUGE:180:U:U RRA:AVERAGE:0.5:1:1440 RRA:AVERAGE:0.5:15:672 RRA:AVERAGE:0.5:60:744
+  DS:$elem""_used:GAUGE:180:U:U RRA:AVERAGE:0.5:1:1440 RRA:AVERAGE:0.5:15:672 RRA:AVERAGE:0.5:60:744"
 
 done
 
