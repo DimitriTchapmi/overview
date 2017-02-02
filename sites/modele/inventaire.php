@@ -73,7 +73,6 @@ function getTagsByMachine($machine){
 
 function add_tag($tag, $machine){
 	global $bdd;
-	var_dump($machine,$tag);
 	$req = $bdd-> prepare("SELECT id FROM tags WHERE nom = ?");
 			$req->execute(array($tag)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
@@ -142,7 +141,7 @@ function change_groupe ($machine, $groupe){
 	$a_groupe = GetGroupeByMachine($machine)["groupe"];
 	$nom_machine = getMachineById($machine)["nom"];
 	$nom_epse = getEntrepriseById(getMachineById($machine)["entreprise"])["nom"];
-	$commande = "sudo scripts/change_group_pc.sh ".$entreprise." ".$nom_machine." ".$a_groupe." ".$groupe;
+	$commande = "sudo scripts/change_group_pc.sh ".$nom_epse." ".$nom_machine." ".$a_groupe." ".$groupe;
 	exec($commande);
 	$req = $bdd-> prepare("UPDATE machines SET groupe = ? WHERE id = ?");
 	$req->execute(array($groupe,$machine)) or die ( print_r($req->errorInfo()) );

@@ -37,7 +37,7 @@ echo '<h2 class="login-header">Gestion de la machine '.$infos["nom"].'</h2>';?>
     <br><br>
 
                <label class="control-label" for="lieu">Tags</label>
-               <input type="text" id="newtag" name="" placeholder="Ajouter des tags">
+               <input id="newtag" name="" placeholder="Ajouter des tags">
                 <br><br>
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
