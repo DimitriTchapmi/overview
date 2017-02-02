@@ -23,8 +23,7 @@ for($i=0;$i<count($machines);$i++){
 echo "
  </tbody>
   </table>
-  <input name='action' class='btn btn-success btn btn-success' type='submit' value='Gérer'>
-  </form>";
+  <input name='action' class='btn btn-success btn btn-success' type='submit' value='Gérer'>";
 echo '<div class="col-md-5" style="padding-left: 0px;">';
 echo '<h2 style="width: 400px; 
                  margin-bottom: 47px; 
@@ -49,6 +48,7 @@ echo '<button type="button" class="btn btn-success btn btn-success"><a href="#" 
                 </div>
              </div>
              </div>
+               </form>
 ';
 include("footer.php");
 ?>
