@@ -3,7 +3,6 @@
 	include_once("code/sites/modele/co_in.php");
 
 
-
 function tags_html($tags){
 	$html_tags = "";
 	for($i=0;$i<count($tags);$i++){

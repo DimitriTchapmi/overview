@@ -6,7 +6,7 @@ l_couleurs=(FF3333 FF6A33 3733FF 33B7FF 465C2B 8CFF00 4403FB FB0391)      # roug
 
   for disque in `ls /var/www/overview/projets/$2/supervision/$3/bases | grep disque | cut -d _ -f 2 | cut -d . -f 1`
   do
-   commande="rrdtool graph /var/www/overview/projets/$2/supervision/$3/graphes/disque_$disque.png --start -$1 --vertical-label mb"
+   commande="rrdtool graph /var/www/overview/projets/$2/supervision/$3/graphes/disque_$disque"_"$1.png --start -$1 --vertical-label mb"
 
   i=0
   j=1
