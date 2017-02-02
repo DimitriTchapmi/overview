@@ -129,17 +129,15 @@ input[type=text]:focus {
                             <div class="login">
                 <div class="login-triangle"></div>
                 <h2 class="login-header">Comment ça marche ?</h2>
-                <form class="form-horizontal" role="form" method="post">
-                  <ul> 
-                    <li><p>Téléchargez le dossier d\'installation <a target="_blank" href="https://github.com/DimitriTchapmi/overview_installation">ici</a> ou bien faite le clone du dépôt git.</p></li>
+                  <ul 
+                    <li><p>Téléchargez le dossier d\'installation <a target="_blank" href="https://github.com/DimitriTchapmi/overview_installation">ici</a> oubien faite le clone du dépôt git.</p></li>
                       <p style="background:#A7A37E" >sudo git clone https://github.com/DimitriTchapmi/overview_installation</p>
                       <li><p>Donnez le droit d\'exécution aux scripts. </p></li>
                       <p style="background:#A7A37E" >sudo chmod +x /chemin/script_install.sh</p>
                       <li><p>Excécutez le script "script_install.sh" en tant qu\'administrateur (root).</p></li>
                       <p style="background:#A7A37E">cd  /chemin/ ensuite sudo ./script_install.sh </p>
-                      <p> Connectez-vous enuite à votre compte OverView et consultez les résultats de supervision.</p>
+                      <li><p> Connectez-vous enuite à votre compte OverView et consultez les résultats de supervision.</p></li>
                   </ul>
-                </form>
               </div>
               </div>
               </li>
