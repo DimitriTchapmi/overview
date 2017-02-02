@@ -57,3 +57,4 @@ for($i=0;$i<count($machines);$i++){
 <?php
 include("footer.php");
 ?>
+
