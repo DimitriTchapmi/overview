@@ -15,10 +15,12 @@ function tags_html($tags){
 
 if (isset($_SESSION["id_user"])) {
 	$nom_entreprise = getEntrepriseById($_SESSION["id_user"])["nom"];
-	if(isset($_POST["id"])){
+	if(isset($_POST["Modifier"])){
 			change_groupe($_POST["id"], $_POST["groupe"]);
 			update_tags($_POST["tags"],$_POST["rm_tags"],$_POST["id"]); // ATTENTION SI RM_tags pas défini
 
+	}elseif (isset($_POST["Supprimer"])) {
+		echo "SUPPRESSION";
 	}
 		$id_entreprise =($_SESSION["id_user"]);
 		$machines = getMachinesByEntreprise($id_entreprise);

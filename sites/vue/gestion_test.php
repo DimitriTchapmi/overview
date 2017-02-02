@@ -44,7 +44,7 @@ echo '<h2 class="login-header">Gestion de la machine '.$infos["nom"].'</h2>';?>
          <?php echo $tags_gestion; ?>
         </div>
 
-    <input type="submit" name="action" value="Modifier">
+    <input type="submit" name="action" value="Modifier"><input type="submit" name="action" value="Supprimer">
 <br></br>
 
   </div>
