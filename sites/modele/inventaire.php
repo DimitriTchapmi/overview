@@ -174,11 +174,8 @@ function recherche($entreprise,$chaine){
 	global $bdd;
 	$donnees = 0;
 	$i=0;
-	$req = $bdd->prepare('SELECT id,nom,groupe FROM machines WHERE entreprise = :entreprise AND (nom LIKE "%:chaine%" OR groupe LIKE "%:chaine%" OR id IN (SELECT machine FROM machines_tags JOIN tags ON machines_tags.tag = tags.id AND tags.nom LIKE "%:chaine%"));');
-				$req->execute(array(
-				'entreprise' => $entreprise,
-    			'chaine' => $chaine
-    			)) or die ( print_r($req->errorInfo()) );
+	$req = $bdd->prepare('SELECT id,nom,groupe FROM machines WHERE entreprise = ? AND (nom LIKE "%:?%" OR groupe LIKE "%:?%" OR id IN (SELECT machine FROM machines_tags JOIN tags ON machines_tags.tag = tags.id AND tags.nom LIKE "%:?%"));');
+		$$req->execute(array($entreprise,$chaine,$chaine,$chaine)) or die ( print_r($req->errorInfo()) );
 	while($donnees = $req->fetch()){
 			$renvoyer[$i] = $donnees;
 			$i++;
