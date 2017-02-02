@@ -20,6 +20,7 @@ include ('header.php');
   <form class="form-horizontal" action="gestion" role="form" method="post">
     <p><input type="text" name="nom" id="login" placeholder="nom"></p>
     <p><input type="submit" name="add_groupe" value="Ajouter"></p>
+  </form>
   </div>
 </div>
 <h2 style="width: 400px; margin-top: 40px; margin-bottom: 32px;"> Tags</h2>
