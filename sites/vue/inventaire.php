@@ -17,7 +17,7 @@ for($i=0;$i<count($machines);$i++){
 	echo "<td style='width: 100px; height: 25px;'>".$machines[$i]["groupe"]."</td>";
 	$html_tags = tags_html($tags);
 	echo "<td style='width: 100px; height: 25px;'>".$html_tags."</td>";
-  echo "<td style='width: 100px; height: 25px;'><button class='btn-danger'><i class='fa fa-danger'></button>Tout est normal></td>";
+  echo "<td style='width: 100px; height: 25px;'>Tout est normal</td>";
 	echo "<td style='width: 10px; height: 25px;'><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
 
 	echo "</tr>";
