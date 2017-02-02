@@ -35,17 +35,17 @@ echo "<h2 style='margin-bottom: 40px;'> Machines de l'entreprise ".$nom_entrepri
 <table class='table table-bordered' style='width: 100%; text-align: center;'>
 <thead>
 <tr>
-  <td>Machines</td><td>Groupes</td><td>Tags</td></thead><tbody>
+	<td>Machines</td><td>Groupes</td><td>Tags</td></thead><tbody>
 <?php
 for($i=0;$i<count($machines);$i++){
-  $tags = getTagsByMachine($machines[$i]["id"]);
-  echo "<tr>";
-  echo "<td style='width: 100px; height: 25px;'> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
-  echo "<td style='width: 100px; height: 25px;'>".$machines[$i]["groupe"]."</td>";
-  $html_tags = tags_html($tags);
-  echo "<td style='width: 100px; height: 25px;'>".$html_tags."</td>";
-  echo "<td style='width: 10px; height: 25px;'><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
-  echo "</tr>";
+	$tags = getTagsByMachine($machines[$i]["id"]);
+	echo "<tr>";
+	echo "<td style='width: 100px; height: 25px;'> <a href='machine?id=".$machines[$i]["id"]."'>".$machines[$i]["nom"]."</a> </td>";
+	echo "<td style='width: 100px; height: 25px;'>".$machines[$i]["groupe"]."</td>";
+	$html_tags = tags_html($tags);
+	echo "<td style='width: 100px; height: 25px;'>".$html_tags."</td>";
+	echo "<td style='width: 10px; height: 25px;'><input type='checkbox' name='machine[]' value='".$machines[$i]["id"]."'></td>";
+	echo "</tr>";
 }
 ?>
  </tbody>
@@ -58,3 +58,4 @@ for($i=0;$i<count($machines);$i++){
 include("footer.php");
 
 ?>
+

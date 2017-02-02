@@ -38,8 +38,7 @@ include ('header.php');
 
 <!-- Container (The Band Section) -->
 <div class="container text-center">
-  <img src="code/sites/img/logo.png">
-    <h3> <b>Gardez une longueur d'avance ! </b> </h3>
+     <h3> <b>Gardez une longueur d'avance ! </b> </h3>
     <p>OverView est une solution de supervision, d’inventaire et de gestion d’alertes en ligne permettant à un utilisateur de surveiller ses équipements fonctionnant sous Linux et d’être alerté en cas de problèmes.
     </p>
 
