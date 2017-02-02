@@ -21,7 +21,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 				var_dump($_POST);
 				modifier_alerte($nom_entreprise,$nom_machine,$_POST);
 			}
-			if(isset($_POST["Supprimer"])){
+			if(isset($_POST["supprimer"])){
 				supprimer_alertes($nom_entreprise,$nom_machine,$_POST);
 			}
 

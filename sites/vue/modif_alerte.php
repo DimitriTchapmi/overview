@@ -35,7 +35,7 @@ echo '<h2 class="login-header">Modification d une alerte</h2>';
     <input type="hidden" name="item" value="'.$infos_alerte[0].'">';
     echo '
     <input type="submit" name="modif_alerte" value="Modifier">
-    <input type="submit" name="modif_alerte" value="Modifier">
+    <input type="submit" name="supprimer" value="Supprimer">
 <br></br>
 
   </div>
