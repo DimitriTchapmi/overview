@@ -22,7 +22,7 @@ if($entreprise_machine == $_SESSION["id_user"]){
 				modifier_alerte($nom_entreprise,$nom_machine,$_POST);
 			}
 			if(isset($_POST["supprimer"])){
-				supprimer_alertes($nom_entreprise,$nom_machine,$_POST);
+				supprimer_alerte($nom_entreprise,$nom_machine,$_POST);
 			}
 
 			$items = getMaterielByMachine($_GET["id"]);
