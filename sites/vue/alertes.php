@@ -22,7 +22,9 @@ for($i=0;$i<count($alertes);$i++){
    echo "<td style='width: 100px; height: 25px;'>".$alertes[$i]["seuil"]."</td>";
   echo "<td style='width: 100px; height: 25px;'>".$alertes[$i]["battement"]."</td>";
   if($alertes[$i]["flag"] == 1 ){
-    echo "<td style='width: 300px; height: 25px;'>Alerte déclenchée depuis ".$alertes[$i]["temps_atteint"]." minutes</td>";
+    echo "<td color='red' style='width: 300px; height: 25px;'>Alerte déclenchée depuis ".$alertes[$i]["temps_atteint"]." minutes</td>";
+  }else{
+  	echo "<td color='blue' style='width: 300px; height: 25px;'>Tout est normal</td>";
   }
   echo '<td><input type="radio" name="modifier" value="'.$alertes[$i]["nom_item"].'_'.$alertes[$i]["seuil"].'_'.$alertes[$i]["battement"].'"></td>';
   echo "</tr>";
