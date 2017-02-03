@@ -30,8 +30,8 @@ include ('header.php');
 </div>
 <h2 style="width: 400px; margin-top: 40px; margin-bottom: 32px;"> Tags</h2>
 <div class="form-group" style="width: 80%;">    
-  <input type="text" name="tag" style="position: absolute;"/>
-            <input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-left: 150px; margin-top: 13px;"/>
+  <input type="text" name="tag" style="position: absolute;">
+            <input name="add_tags" class="btn btn-success btn btn-success" type="submit" value="Affecter ce tag" style="margin-left: 150px; margin-top: 13px;">
                 </div>
 </div>
 <div class="col-md-5" style="margin-bottom: 15px;">
