@@ -14,7 +14,21 @@ include ('header.php');
  <input name='recherche' class='btn btn-success btn btn-success' type='submit' value='Rechercher'>
  </form>
 
-
+<h2 style="width: 400px; 
+                 margin-bottom: 47px; 
+                 margin-top: 40px;"> Groupes</h2>
+<button type="button" class="btn btn-success btn btn-success"><a href="#" data-width="500" data-rel="popup1" class="poplight">Ajout de groupe</a></button>
+              <div id="popup1" class="popup_block">
+              <div class="login">
+  <div class="login-triangle"></div>
+  <h2 class="login-header">Ajout de groupe</h2>
+  <form class="form-horizontal" action="inventaire" role="form" method="post">
+    <p><input type="text" name="nom" id="login" placeholder="nom"></p>
+    <p><input type="submit" name="add_groupe" value="Ajouter"></p>
+  </form>
+  </div>
+</div>
+<h2 style="width: 400px; margin-top: 40px; margin-bottom: 32px;"> Tags</h2>
 
 <div class="col-md-5" style="margin-bottom: 15px;">
 <?php
