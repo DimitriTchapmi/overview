@@ -1,9 +1,10 @@
 <?php
 include ('header.php');
 ?>
-<br><br><br><a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>
-<a href='machine?id=".$_GET["id"].&c=alertes"'>Alertes</a><br></br>
+
 <div class="tabcontainer text-center"> 
+<a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>
+<a href='machine?id=".$_GET["id"].&c=alertes"'>Alertes</a><br></br>
     <h3> Graphes sur une heure </h3>
     <?php
     echo "<table class='table table-condensed' style='width: 55%;'>";
