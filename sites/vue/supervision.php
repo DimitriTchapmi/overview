@@ -1,7 +1,7 @@
 <?php
 include ('header.php');
 ?>
-<br></br><br></br><a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>
+<br><br><br><a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>
 <a href='machine?id=".$_GET["id"].&c=alertes"'>Alertes</a><br></br>
 <div class="tabcontainer text-center"> 
     <h3> Graphes sur une heure </h3>
