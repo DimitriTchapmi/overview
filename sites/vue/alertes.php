@@ -24,7 +24,7 @@ for($i=0;$i<count($alertes);$i++){
   if($alertes[$i]["flag"] == 1 ){
     echo "<td style='width: 300px; height: 25px;'>Alerte déclenchée depuis ".$alertes[$i]["temps_atteint"]." minutes</td>";
   }else{
-  	echo "<td  style='width: 300px; height: 25px><p style='color: red' Tout est normal></p></td>";
+  	echo "<td  style='width: 300px; height: 25px><p style='color: red;'>Tout est normal</p></td>";
   }
   echo '<td><input type="radio" name="modifier" value="'.$alertes[$i]["nom_item"].'_'.$alertes[$i]["seuil"].'_'.$alertes[$i]["battement"].'"></td>';
   echo "</tr>";
