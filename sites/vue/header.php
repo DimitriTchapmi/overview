@@ -85,7 +85,7 @@ input[type=text] {
     background-repeat: no-repeat;
     padding: 30px 20px 12px 20px;
 }
-input[type=text]:focus {
+input[type=texjjkkt]:focus {
     width: 100%;
 }
 </style>
