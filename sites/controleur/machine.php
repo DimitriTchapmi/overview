@@ -11,7 +11,8 @@ if($entreprise_machine == $_SESSION["id_user"]){
 		$graphes = recuperer_graphes($nom_entreprise,$nom_machine);
 		include("code/sites/vue/supervision.php");
 	}elseif ($_GET["c"] == "inv") {
-		recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
+		$html = recuperer_inventaire($nom_entreprise,$nom_machine,$groupe_machine);
+		include("code/sites/vue/caracteristiques.php");
 
 	}elseif ($_GET["c"] == "alertes") {
 		if(isset($_GET["a"])){

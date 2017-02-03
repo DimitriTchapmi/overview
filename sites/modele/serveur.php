@@ -36,10 +36,12 @@ function supprimer_alerte($entreprise,$machine,$infos){
 }
 
 function recuperer_inventaire($entreprise, $machine, $groupe){
+	$html = "";
 	exec("cat projets/".$entreprise."/inventaire/".$groupe."/$machine/".$entreprise."_".$machine,$lignes);
 	for($i=0;$i<count($lignes);$i++){
-		echo $lignes[$i]."<br></br>";
+		$html = $html.$lignes[$i]."<br></br>";
 	}
+	return $html;
 }
 
 function recuperer_graphes($entreprise,$machine){
