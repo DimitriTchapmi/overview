@@ -18,8 +18,9 @@ if (isset($_SESSION["id_user"])) {
 			change_groupe($_POST["id"], $_POST["groupe"]);
 			update_tags($_POST["tags"],$_POST["rm_tags"],$_POST["id"]); // ATTENTION SI RM_tags pas défini
 
-	}elseif (isset($_POST["Supprimer"])) {
-		echo "SUPPRESSION";
+	}elseif (isset($_POST["add_groupe"])) {
+        	exec("sudo mkdir projets/".$nom_epse."/inventaire/".$_POST["nom"]);
+	        echo"LALALA"; 
 	}
 
 		$id_entreprise =($_SESSION["id_user"]);
