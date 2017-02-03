@@ -77,12 +77,10 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
 <style> 
 input[type=text] {
     width: 140px;
-    box-sizing: border-box;
     border: 2px solid #000;
     border-radius: 4px;
     font-size: 16px;
     background-color: #;
-    background-image: url('search.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 30px 20px 12px 20px;
