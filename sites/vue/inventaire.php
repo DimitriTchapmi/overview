@@ -22,7 +22,7 @@ include ('header.php');
               <div class="login">
   <div class="login-triangle"></div>
   <h2 class="login-header">Ajout de groupe</h2>
-  <form class="form-horizontal" action="gestion" role="form" method="post">
+  <form class="form-horizontal" action="inventaire" role="form" method="post">
     <p><input type="text" name="nom" id="login" placeholder="nom"></p>
     <p><input type="submit" name="add_groupe" value="Ajouter"></p>
   </form>
