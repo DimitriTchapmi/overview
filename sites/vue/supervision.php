@@ -4,7 +4,7 @@ include ('header.php');
 
 <div class="tabcontainer text-center"> 
 <?php echo"<a href='machine?id=".$_GET["id"]."&c=inv'>Inventaire</a><br></br>
-<a href='machine?id=".$_GET["id"]."&c=alertes"'>Alertes</a><br></br>";
+<a href='machine?id=".$_GET["id"]."&c=alertes'>Alertes</a><br></br>";
 ?>
     <h3> Graphes sur une heure </h3>
     <?php
