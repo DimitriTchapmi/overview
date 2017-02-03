@@ -23,6 +23,7 @@ var_dump($_SESSION["id_user"]);
         	       }
                 }
         }else{
+                echo"LALALALALALALALALALALALAL";
                 include("code/sites/vue/connexion.php");
 	}
 	
